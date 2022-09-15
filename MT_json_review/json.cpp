@@ -22,7 +22,7 @@ int main()
             // file >> row;
             stringstream sstream(row);
             string column;
-            string tweet = "RT @peruvill: Interseismic coupling model prior to the 8.2Mw northern #Chile #Earthquake (Chlieh etal2011) http://t.co/PbH3BSIfeS http://t.…";
+            string tweet = "Arutz7: Watch: CCTV Shows The Moment Powerful Earthquake Struck in Chile: Officer workers scatter as 8... http://t.co/6XMwL5hSuL #israel";
             cout << "tweet" << tweet << endl
                  << endl;
             int count = 0;

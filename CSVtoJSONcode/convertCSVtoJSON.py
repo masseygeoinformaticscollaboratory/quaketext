@@ -20,13 +20,16 @@ def csv_to_json(csv_file_path, json_file_path):
  
             #assuming a column named 'No'
             #to be the primary key
-            try:
-                json_object = json.loads(rows['Answer.taskAnswers'])
-            except:
-                print("count %d" % count)
-                print(json_object)
+            # try:
+            #     json_object = json.loads(rows['Answer.taskAnswers'])
+            # except:
+            #     print("count %d" % count)
+            #     for i in json_object['entities']:
+            #         print(i)
+            #     # print(json_object.entities)
+            #     print("\n")
             
-            key = rows['HITId']
+            key = rows['AssignmentId']
 
             # rows = json_object
 
@@ -35,12 +38,14 @@ def csv_to_json(csv_file_path, json_file_path):
             # json_object = json.loads(rows['Answer.taskAnswers'])
             # data_dict[key] = json_object
 
-            if count < 2:
-                # json_object = json.loads(rows['Answer.taskAnswers'])
-                # print("row= %s" % json_object)
-                print("\n")
-                print("data_dict[key]= %s" % data_dict[key])
-                print("\n")
+            # if count < 2:
+            #     # json_object = json.loads(rows['Answer.taskAnswers'])
+            #     # print("row= %s" % json_object)
+            #     print("\n")
+            #     # print("data_dict[key]= %s" % data_dict[key])
+            #     print("\n")
+            #     print("Answer.taskAnswers= %s" % rows['Answer.taskAnswers'])
+                
 
             count+=1
             
@@ -52,13 +57,12 @@ def csv_to_json(csv_file_path, json_file_path):
     with open(json_file_path, 'w', encoding = 'utf-8') as json_file_handler:
         #Step 4
         json_file_handler.write(json.dumps(data_dict, indent = 4))
- 
-#driver code
-#be careful while providing the path of the csv file
-#provide the file path relative to your machine
- 
+# ----------------------------------------------------------------------------------
+# main code
+
 #Step 1
 csv_file_path = input('Enter the absolute path of the CSV file: ')
 json_file_path = input('Enter the absolute path of the JSON file: ')
  
 csv_to_json(csv_file_path, json_file_path)
+
