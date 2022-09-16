@@ -11,7 +11,7 @@ csv_file_path = input('Enter the absolute path of the OUTPUT CSV file: ')
 data_dict = {}
 
 csv_file_handler = open(csv_file_path, 'w', encoding = 'utf-8')
-csv_file_handler.write('Answer.taskAnswers' + "\t" + 'Input.id' + "\t" + 'WorkerId' + "\t" + 'Input.text' + "\t" + 'Answer.taskAnswers' + "\n")
+csv_file_handler.write('AssignmentStatus' + "\t" + 'Input.id' + "\t" + 'WorkerId' + "\t" + 'label' + "\t" + 'instance' +"\t" + 'startOffset' +"\t" + 'endOffset' +"\t" + 'Input.text' +"\t" + 'Answer.taskAnswers' + "\n")
  
 with open(json_file_path, encoding = 'utf-8') as json_file_handler:
     
@@ -38,15 +38,27 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
             print(name)
             print()
 
-            for j in task_object[0][name]['entities']:
-                print(j)
+            for tag in task_object[0][name]['entities']:
+                print(tag['endOffset'])
+                print("===")
+                print(tag['label'])
                 print("==")
+                print(tag['startOffset'])
+                print("=")
                 print()
 
+                start = tag['startOffset']
+                end = tag['endOffset']
+
+                # https://www.pythoncentral.io/cutting-and-slicing-strings-in-python/
+                instance = i['Input.text'][start:end]
+
+                print(instance)
+
+                csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(tag['startOffset']) + "\t" + str(tag['endOffset']) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+
+
             
-
-
-            csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
 
         # only look at accepted tags from approved tasks
         # extracting of the words - new line for each?
