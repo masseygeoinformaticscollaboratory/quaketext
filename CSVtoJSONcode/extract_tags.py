@@ -1,6 +1,8 @@
 # https://www.askpython.com/python/examples/convert-csv-to-json
 import csv
+from html import entities
 import json
+import re
 
 
 json_file_path = input('Enter the absolute path of the INPUT JSON file: ')
@@ -9,6 +11,7 @@ csv_file_path = input('Enter the absolute path of the OUTPUT CSV file: ')
 data_dict = {}
 
 csv_file_handler = open(csv_file_path, 'w', encoding = 'utf-8')
+csv_file_handler.write('Answer.taskAnswers' + "\t" + 'Input.id' + "\t" + 'WorkerId' + "\t" + 'Input.text' + "\t" + 'Answer.taskAnswers' + "\n")
  
 with open(json_file_path, encoding = 'utf-8') as json_file_handler:
     
@@ -19,11 +22,37 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
     # https://stackoverflow.com/questions/41445573/python-loop-through-json-file
     for i in data.values():
      
-        count = count + 1
-        print(i['WorkerId'])
-        print()
+        if i['AssignmentStatus'] == "Approved":
+            count = count + 1
+            print(i['WorkerId'])
 
-        csv_file_handler.write(i['WorkerId'] + "\t" + i['Input.id'] + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+            print(i['Answer.taskAnswers'])
+
+            print()
+
+       
+            task_object = json.loads(i['Answer.taskAnswers'])
+
+            name = 'annotation-tweet-id-'+ i['Input.id']
+
+            print(name)
+            print()
+
+            for j in task_object[0][name]['entities']:
+                print(j)
+                print("==")
+                print()
+
+            
+
+
+            csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+
+        # only look at accepted tags from approved tasks
+        # extracting of the words - new line for each?
+        else:
+            csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\n")
+
     
     print(count)
     # csv_reader = csv.DictReader(csv_file_handler)
