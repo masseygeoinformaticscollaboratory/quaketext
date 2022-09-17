@@ -1,9 +1,27 @@
 # https://www.askpython.com/python/examples/convert-csv-to-json
-from cProfile import label
+
 import csv
 from html import entities
 import json
 import re
+
+def save_tweet_tag_count(instance_dict):
+
+    print(instance_dict)
+    print("from function")
+
+    for i in instance_dict:
+        if i != 'tweetId' and i != 'tweetText':
+            print(i)
+
+            instance = instance_dict[i][0]
+            label = instance_dict[i][1]
+            count = str(instance_dict[i][2])
+            start = str(instance_dict[i][3])
+            end = str(instance_dict[i][4])
+
+            csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + label + "\t" + instance + "\t"+ count + "\t"+ start + "\t"+ end + "\n")
+            # csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + instance + "\t" + label + "\t"+ count + "\t"+ start + "\t"+ end + "\t" + instance_dict['tweetText'] + "\n")
 
 
 json_file_path = input('Enter the absolute path of the INPUT JSON file: ')
@@ -11,8 +29,10 @@ csv_file_path = input('Enter the absolute path of the OUTPUT CSV file: ')
 
 instance_dict = {}
 
-csv_file_handler = open(csv_file_path, 'w', encoding = 'utf-8')
-csv_file_handler.write('AssignmentStatus' + "\t" + 'Input.id' + "\t" + 'WorkerId' + "\t" + 'label' + "\t" + 'instance' +"\t" + 'startOffset' +"\t" + 'endOffset' +"\t" + 'Input.text' +"\t" + 'Answer.taskAnswers' + "\n")
+csv_worker_tags_file = open(csv_file_path, 'w', encoding = 'utf-8')
+csv_worker_tags_file.write('AssignmentStatus' + "\t" + 'Input.id' + "\t" + 'WorkerId' + "\t" + 'label' + "\t" + 'instance' +"\t" + 'startOffset' +"\t" + 'endOffset' +"\t" + 'Input.text' +"\t" + 'Answer.taskAnswers' + "\n")
+
+csv_tag_count_file = open("tagcount.csv", 'w', encoding = 'utf-8')
  
 with open(json_file_path, encoding = 'utf-8') as json_file_handler:
     
@@ -25,11 +45,16 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
 
         if count == 0:
             instance_dict.update({"tweetId" : i['Input.id']})
+            instance_dict.update({"tweetText" : i['Input.text']})
             print(instance_dict)
         elif instance_dict["tweetId"] != i['Input.id']:
             # new tweet change dictionary
+            
+            save_tweet_tag_count(instance_dict)
+
             instance_dict.clear()
-            instance_dict["tweetId"] = i['Input.id']
+            instance_dict.update({"tweetId" : i['Input.id']})
+            instance_dict.update({"tweetText" : i['Input.text']})
             print(instance_dict)
         else:
             # tweet ID is the same use existing counts
@@ -73,22 +98,23 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
 
                 print(instance)
 
-                csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(tag['startOffset']) + "\t" + str(tag['endOffset']) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+                csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(tag['startOffset']) + "\t" + str(tag['endOffset']) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
 
                 num = 1
-                key = instance+"-"+tag['label']
+                key = instance+"-"+tag['label']+"-"+str(start)+"-"+str(end)
 
                 curr_dict_state = instance_dict.keys()
 
                 if key in curr_dict_state:
                     num = instance_dict[key][2] + 1
 
-                instance_dict.update({key:[instance, tag['label'], num]})
+                instance_dict.update({key:[instance, tag['label'], num, start, end]})
+                print("dictonary")
                 print(instance_dict)
 
 
             if entitiesPresent == False:
-                csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + "\t" + "\t" + "\t" + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+                csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + "\t" + "\t" + "\t" + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
 
             entitiesPresent = False
             
@@ -96,19 +122,23 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
         # only look at accepted tags from approved tasks
         # extracting of the words - new line for each?
         else:
-            csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\n")
+            csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\n")
 
-    
+
+    # last save for last tweet in file
+    save_tweet_tag_count(instance_dict)
     print(count)
 
-csv_file_handler.close()
+csv_worker_tags_file.close()
+
+
 
 
 # Checking agreement from the 5 taggers
 
-with open(csv_file_path, 'r', encoding = 'utf-8') as csv_file:
+# with open(csv_file_path, 'r', encoding = 'utf-8') as csv_file:
     
-    print()
+#     print()
 
 
     # csv_reader = csv.DictReader(csv_file_handler)
