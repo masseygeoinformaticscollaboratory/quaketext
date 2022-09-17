@@ -1,4 +1,5 @@
 # https://www.askpython.com/python/examples/convert-csv-to-json
+from cProfile import label
 import csv
 from html import entities
 import json
@@ -8,7 +9,7 @@ import re
 json_file_path = input('Enter the absolute path of the INPUT JSON file: ')
 csv_file_path = input('Enter the absolute path of the OUTPUT CSV file: ')
 
-data_dict = {}
+instance_dict = {}
 
 csv_file_handler = open(csv_file_path, 'w', encoding = 'utf-8')
 csv_file_handler.write('AssignmentStatus' + "\t" + 'Input.id' + "\t" + 'WorkerId' + "\t" + 'label' + "\t" + 'instance' +"\t" + 'startOffset' +"\t" + 'endOffset' +"\t" + 'Input.text' +"\t" + 'Answer.taskAnswers' + "\n")
@@ -21,14 +22,27 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
 
     # https://stackoverflow.com/questions/41445573/python-loop-through-json-file
     for i in data.values():
+
+        if count == 0:
+            instance_dict.update({"tweetId" : i['Input.id']})
+            print(instance_dict)
+        elif instance_dict["tweetId"] != i['Input.id']:
+            # new tweet change dictionary
+            instance_dict.clear()
+            instance_dict["tweetId"] = i['Input.id']
+            print(instance_dict)
+        else:
+            # tweet ID is the same use existing counts
+            print("same")
+
      
         if i['AssignmentStatus'] == "Approved":
             count = count + 1
-            print(i['WorkerId'])
+            # print(i['WorkerId'])
 
-            print(i['Answer.taskAnswers'])
+            # print(i['Answer.taskAnswers'])
 
-            print()
+            # print()
 
        
             task_object = json.loads(i['Answer.taskAnswers'])
@@ -38,14 +52,18 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
             print(name)
             print()
 
+            entitiesPresent = False
+
+            # https://stackoverflow.com/questions/24708634/python-and-json-typeerror-list-indices-must-be-integers-not-str
             for tag in task_object[0][name]['entities']:
-                print(tag['endOffset'])
-                print("===")
-                print(tag['label'])
-                print("==")
-                print(tag['startOffset'])
-                print("=")
-                print()
+                entitiesPresent = True
+                # print(tag['endOffset'])
+                # print("===")
+                # print(tag['label'])
+                # print("==")
+                # print(tag['startOffset'])
+                # print("=")
+                # print()
 
                 start = tag['startOffset']
                 end = tag['endOffset']
@@ -57,7 +75,22 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
 
                 csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(tag['startOffset']) + "\t" + str(tag['endOffset']) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
 
+                num = 1
+                key = instance+"-"+tag['label']
 
+                curr_dict_state = instance_dict.keys()
+
+                if key in curr_dict_state:
+                    num = instance_dict[key][2] + 1
+
+                instance_dict.update({key:[instance, tag['label'], num]})
+                print(instance_dict)
+
+
+            if entitiesPresent == False:
+                csv_file_handler.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + "\t" + "\t" + "\t" + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+
+            entitiesPresent = False
             
 
         # only look at accepted tags from approved tasks
@@ -67,6 +100,17 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
 
     
     print(count)
+
+csv_file_handler.close()
+
+
+# Checking agreement from the 5 taggers
+
+with open(csv_file_path, 'r', encoding = 'utf-8') as csv_file:
+    
+    print()
+
+
     # csv_reader = csv.DictReader(csv_file_handler)
  
         #convert each row into a dictionary
