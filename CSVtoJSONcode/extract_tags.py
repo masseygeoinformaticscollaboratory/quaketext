@@ -20,8 +20,7 @@ def save_tweet_tag_count(instance_dict):
             start = str(instance_dict[i][3])
             end = str(instance_dict[i][4])
 
-            csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + label + "\t" + instance + "\t"+ count + "\t"+ start + "\t"+ end + "\n")
-            # csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + instance + "\t" + label + "\t"+ count + "\t"+ start + "\t"+ end + "\t" + instance_dict['tweetText'] + "\n")
+            csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + label + "\t" + instance + "\t"+ count + "\t"+ start + "\t"+ end + "\t"+  instance_dict['tweetText'] + "\n")
 
 
 json_file_path = input('Enter the absolute path of the INPUT JSON file: ')
@@ -33,6 +32,7 @@ csv_worker_tags_file = open(csv_file_path, 'w', encoding = 'utf-8')
 csv_worker_tags_file.write('AssignmentStatus' + "\t" + 'Input.id' + "\t" + 'WorkerId' + "\t" + 'label' + "\t" + 'instance' +"\t" + 'startOffset' +"\t" + 'endOffset' +"\t" + 'Input.text' +"\t" + 'Answer.taskAnswers' + "\n")
 
 csv_tag_count_file = open("tagcount.csv", 'w', encoding = 'utf-8')
+csv_tag_count_file.write('tweetId' + "\t" + 'label' + "\t" + 'instance' + "\t"+ 'count' + "\t"+ 'start' + "\t"+ 'end' + "\t"+'tweetText' + "\n")
  
 with open(json_file_path, encoding = 'utf-8') as json_file_handler:
     
@@ -46,7 +46,7 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
         if count == 0:
             instance_dict.update({"tweetId" : i['Input.id']})
             instance_dict.update({"tweetText" : i['Input.text']})
-            print(instance_dict)
+            # print(instance_dict)
         elif instance_dict["tweetId"] != i['Input.id']:
             # new tweet change dictionary
             
@@ -55,7 +55,7 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
             instance_dict.clear()
             instance_dict.update({"tweetId" : i['Input.id']})
             instance_dict.update({"tweetText" : i['Input.text']})
-            print(instance_dict)
+            # print(instance_dict)
         else:
             # tweet ID is the same use existing counts
             print("same")
@@ -130,26 +130,33 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
     print(count)
 
 csv_worker_tags_file.close()
+csv_tag_count_file.close()
 
 
 
-
+# ---------------------------------------------------------------
 # Checking agreement from the 5 taggers
 
-# with open(csv_file_path, 'r', encoding = 'utf-8') as csv_file:
+with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
     
-#     print()
+    print()
 
+    agreement_dict = {}
+    annotation_dict = {}
 
-    # csv_reader = csv.DictReader(csv_file_handler)
+    csv_reader = csv.DictReader(csv_file, delimiter='\t')
  
-        #convert each row into a dictionary
-        #and add the converted data to the data_variable
- 
-#     
- 
-#     for rows in csv_reader:
- 
+    first = True
+    currentId = ""
+
+    for rows in csv_reader:
+
+        if first == True:
+            currentId = rows['tweetId']
+            first = False
+        elif currentId != rows['tweetId']:
+            currentId = rows['tweetId']
+
 #             #assuming a column named 'No'
 #             #to be the primary key
 #         try:
@@ -160,12 +167,31 @@ csv_worker_tags_file.close()
 #                 print(i)
 #                 # print(json_object.entities)
 #             print("\n")
+
+        annotation_dict.update({"label": rows['label']})
+        annotation_dict.update({"count": rows['count']})
+        annotation_dict.update({"instance": rows['instance']})
+        annotation_dict.update({"start": rows['start']})
+        annotation_dict.update({"end": rows['end']})
+
+
+        print(rows)
+        print(annotation_dict)
             
-#         key = rows['HITId']
+        key = rows['tweetId']
 
 #             # rows = json_object
+        agreement_dict[key].update({"tweetId": rows['tweetId']})
+        agreement_dict[key].update({"tweetText": rows['tweetText']})
+        # agreement_dict[key].update({"annotations": []})
+        # agreement_dict[key] = rows
+        # agreement_dict[key] = {rows['tweetId'], rows['tweetText']}
+        # agreement_dict[key] = rows['tweetText']
 
-#         data_dict[key] = rows
+
+
+
+        print(rows['tweetId'])
 
 #             # json_object = json.loads(rows['Answer.taskAnswers'])
 #             # data_dict[key] = json_object
@@ -178,16 +204,10 @@ csv_worker_tags_file.close()
 #             print("\n")
 #             print("Answer.taskAnswers= %s" % rows['Answer.taskAnswers'])
                 
-
 #         count+=1
             
 
- 
-#     #open a json file handler and use json.dumps
-#     #method to dump the data
-#     #Step 3
-# with open(json_file_path, 'w', encoding = 'utf-8') as json_file_handler:
-#         #Step 4
-#     json_file_handler.write(json.dumps(data_dict, indent = 4))
+with open("finaltags.json", 'w', encoding = 'utf-8') as json_file:
+    json_file.write(json.dumps(agreement_dict, indent = 4))
 
 
