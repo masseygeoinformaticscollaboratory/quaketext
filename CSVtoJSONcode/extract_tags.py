@@ -143,47 +143,69 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
 
     agreement_dict = {}
     annotation_dict = {}
+    
 
     csv_reader = csv.DictReader(csv_file, delimiter='\t')
- 
+
     first = True
     currentId = ""
+    currentText = ""
+    tagCount = 0
 
     for rows in csv_reader:
+        annotation_list= []
+        stack = []
 
+        
         if first == True:
+            # if the first row in the file, that is the current
             currentId = rows['tweetId']
-            first = False
+            currentText = rows['tweetText']
+            first = False       
         elif currentId != rows['tweetId']:
+            # if the ids do not match then all the annotations for the previous tweet have been read save to dictionary and change current it and text, and clear annotation list for new tweet 
+            agreement_dict[currentId] = ({"tweetId":currentId, "tweetText": currentText,"annotations":annotation_list})
+
             currentId = rows['tweetId']
-
-#             #assuming a column named 'No'
-#             #to be the primary key
-#         try:
-#             json_object = json.loads(rows['Answer.taskAnswers'])
-#         except:
-#             print("count %d" % count)
-#             for i in json_object['entities']:
-#                 print(i)
-#                 # print(json_object.entities)
-#             print("\n")
-
-        annotation_dict.update({"label": rows['label']})
-        annotation_dict.update({"count": rows['count']})
-        annotation_dict.update({"instance": rows['instance']})
-        annotation_dict.update({"start": rows['start']})
-        annotation_dict.update({"end": rows['end']})
+            currentText = rows['tweetText']
+            annotation_list.clear()
+            stack.clear()
+            tagCount = 0
+            print("new id")
 
 
-        print(rows)
-        print(annotation_dict)
+        instance_count = int(rows['count'])
+        print(tagCount)
+
+        if instance_count >= 2:
+
+            # annotation_dict.update({"label": rows['label']})
+            # annotation_dict.update({"count": rows['count']})
+            # annotation_dict.update({"instance": rows['instance']})
+            # annotation_dict.update({"start": rows['start']})
+            # annotation_dict.update({"end": rows['end']})
+
+            # ann = "annotations"
+            # stack = stack[:] + [{"label": rows['label'],"count": rows['count'],"instance": rows['instance'], "start": rows['start'],"end": rows['end']}]
+
+            # annotation_list.append(stack)
+
+            annotation_list.insert(tagCount,{"label": rows['label'],"count": rows['count'],"instance": rows['instance'], "start": rows['start'],"end": rows['end']})
+
+            print(rows)
+            print("annotationlist")
+            print(annotation_list)
             
-        key = rows['tweetId']
+            # key = rows['tweetId']
 
-#             # rows = json_object
-        agreement_dict[key].update({"tweetId": rows['tweetId']})
-        agreement_dict[key].update({"tweetText": rows['tweetText']})
+            # agreement_dict[key] = ({"annotations":[{"label": rows['label'],"count": rows['count'],"instance": rows['instance'], "start": rows['start'],"end": rows['end']}]})
+
+        tagCount += 1
+        # agreement_dict[key].update({rows['tweetId']}.get: rows['tweetId']})
+        # agreement_dict[key].update({"tweetText": rows['tweetText']})
         # agreement_dict[key].update({"annotations": []})
+
+
         # agreement_dict[key] = rows
         # agreement_dict[key] = {rows['tweetId'], rows['tweetText']}
         # agreement_dict[key] = rows['tweetText']
@@ -191,7 +213,7 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
 
 
 
-        print(rows['tweetId'])
+        # print(rows['tweetId'])
 
 #             # json_object = json.loads(rows['Answer.taskAnswers'])
 #             # data_dict[key] = json_object
