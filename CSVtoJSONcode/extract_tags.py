@@ -151,25 +151,36 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
     currentId = ""
     currentText = ""
     tagCount = 0
+    rowCount = 0
+    tagFound = False
 
     for rows in csv_reader:
+
+        rowCount += 1
         annotation_list= []
         stack = []
 
-        
+        # agreement_dict[currentId] = ({"tweetId":currentId, "tweetText": currentText,})
+        # agreement_dict[currentId]["annotations"] = []
+                
         if first == True:
             # if the first row in the file, that is the current
             currentId = rows['tweetId']
             currentText = rows['tweetText']
+            agreement_dict[currentId] = ({"tweetId":currentId, "tweetText": currentText,})
             first = False       
         elif currentId != rows['tweetId']:
             # if the ids do not match then all the annotations for the previous tweet have been read save to dictionary and change current it and text, and clear annotation list for new tweet 
-            agreement_dict[currentId] = ({"tweetId":currentId, "tweetText": currentText,"annotations":annotation_list})
-
             currentId = rows['tweetId']
             currentText = rows['tweetText']
-            annotation_list.clear()
-            stack.clear()
+            agreement_dict[currentId] = ({"tweetId":currentId, "tweetText": currentText,})
+            
+            agreement_dict[currentId]["annotations"] = []
+
+            # currentId = rows['tweetId']
+            # currentText = rows['tweetText']
+            # annotation_list.clear()
+            # stack.clear()
             tagCount = 0
             print("new id")
 
@@ -178,6 +189,9 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
         print(tagCount)
 
         if instance_count >= 2:
+            tagFound = True
+
+            agreement_dict[currentId]["annotations"] = ([{"label": rows['label'],"count": rows['count'],"instance": rows['instance'], "start": rows['start'],"end": rows['end']}])
 
             # annotation_dict.update({"label": rows['label']})
             # annotation_dict.update({"count": rows['count']})
@@ -190,17 +204,24 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
 
             # annotation_list.append(stack)
 
-            annotation_list.insert(tagCount,{"label": rows['label'],"count": rows['count'],"instance": rows['instance'], "start": rows['start'],"end": rows['end']})
+            # annotation_list.extend({"label": rows['label'],"count": rows['count'],"instance": rows['instance'], "start": rows['start'],"end": rows['end']})
 
-            print(rows)
-            print("annotationlist")
-            print(annotation_list)
+            # print(rows)
+            # print("annotationlist")
+            # print(annotation_list)
             
             # key = rows['tweetId']
 
             # agreement_dict[key] = ({"annotations":[{"label": rows['label'],"count": rows['count'],"instance": rows['instance'], "start": rows['start'],"end": rows['end']}]})
 
         tagCount += 1
+        print("row->" + str(rowCount))
+        print(csv_reader.line_num)
+
+ 
+
+        
+        
         # agreement_dict[key].update({rows['tweetId']}.get: rows['tweetId']})
         # agreement_dict[key].update({"tweetText": rows['tweetText']})
         # agreement_dict[key].update({"annotations": []})
