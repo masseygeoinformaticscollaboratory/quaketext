@@ -22,7 +22,7 @@ int main()
             // file >> row;
             stringstream sstream(row);
             string column;
-            string tweet = "Arutz7: Watch: CCTV Shows The Moment Powerful Earthquake Struck in Chile: Officer workers scatter as 8... http://t.co/6XMwL5hSuL #israel";
+            string tweet = "Death toll passes 4,400 amid Nepal earthquake: Reports are circulating that entire villages have been leveled ... http://t.co/q1m92YTFYd";
             cout << "tweet" << tweet << endl
                  << endl;
             int count = 0;
