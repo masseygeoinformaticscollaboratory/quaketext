@@ -121,7 +121,7 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                 # -------------------------------------------------
                 
 
-                csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(tag['startOffset']) + "\t" + str(tag['endOffset']) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+                csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(start) + "\t" + str(end) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
 
                 num = 1
                 key = instance+"-"+tag['label']+"-"+str(start)+"-"+str(end)
@@ -150,7 +150,7 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
 
     # last save for last tweet in file
     save_tweet_tag_count(instance_dict)
-    # print(count)
+    print(count)
 
 csv_worker_tags_file.close()
 csv_tag_count_file.close()
@@ -171,6 +171,7 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
     currentId = ""
     currentText = ""
     tagCount = 0
+    total_tweet_count = 0
 
     for rows in csv_reader:
                 
@@ -180,7 +181,8 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
             currentText = rows['tweetText']
             agreement_dict[currentId] = ({"tweetId":currentId, "content": currentText,})
             agreement_dict[currentId]["annotations"] = []
-            first = False       
+            first = False 
+            total_tweet_count += 1      
         elif currentId != rows['tweetId']:
             # if the ids do not match then all the annotations for the previous tweet have been read save to dictionary and change current it and text, and clear annotation list for new tweet 
             currentId = rows['tweetId']
@@ -189,6 +191,7 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
             agreement_dict[currentId]["annotations"] = []
 
             tagCount = 0
+            total_tweet_count += 1
             # print("new id")
 
 
@@ -207,6 +210,7 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
         tagCount += 1
     
     final_dict["examples"] = [agreement_dict]
+    print("total tweet count = " + str(total_tweet_count))
 
             
 
