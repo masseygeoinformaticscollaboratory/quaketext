@@ -1,9 +1,91 @@
 # https://www.askpython.com/python/examples/convert-csv-to-json
 
+from cProfile import label
 import csv
 from html import entities
 import json
 import re
+
+MIN_THRESHOLD = 3
+
+def check_for_overlapping_tags(instance_dict, count):
+
+    # create empty dictionary to store each instance under each label
+    label_type_dict = {"type of impact" : [],"item affected" : [],"severity or quantity" : [],"place name" : [],"location modifier" : [],}
+
+    # if count < 35:
+        
+    print(instance_dict)
+    print()
+    # for each tag that is in the current tweet, loop through and store any thatare under the minimum threshold to the label dictionary
+    for i in instance_dict:
+        if i != 'tweetId' and i != 'tweetText':
+            print(i)
+            instance = instance_dict[i][0]
+            label = instance_dict[i][1]
+            count = str(instance_dict[i][2])
+            start = str(instance_dict[i][3])
+            end = str(instance_dict[i][4])
+            # print(instance)
+            # print(label)
+            # print(count)
+            # print(start)
+            # print(end)
+            if(int(count) < MIN_THRESHOLD):
+                label_type_dict[label].append({'instance':instance,'count':count,'label':label,'start':start,'end':end})
+
+    print(label_type_dict)
+    print()
+
+    # loops through each label category type: impact, place name etc
+    for category in label_type_dict:
+        print(category)
+        top_item = ""
+        top_count = 0
+        top = {}
+        
+        # loops through each tag in current category
+        for x in label_type_dict[category]:
+            print(x)
+            curr_count = 0
+            current_item = x['instance']
+            print(current_item)
+            
+            # for the current tag item compare to the others in the current label category 
+            for y in label_type_dict[category]:
+                
+                if(y['instance'] == current_item): 
+                    # if they are the same add current count
+                    curr_count = curr_count + int(y['count'])
+                else:
+                    # else check if current tag is within the comparison tag
+                    if current_item in y['instance']:
+                        # if it is, then add to count
+                        print(y['instance'])
+                        print("TRUE")
+                        curr_count = curr_count + int(y['count'])
+            
+            if(curr_count > top_count):
+                top_count = curr_count
+                top_item = current_item
+                top = x
+        
+        if(top_count > 0):
+            # update the instance dictionary with a new count if other tags have that text inside them
+            print("TOP " + top_item + " " + str(top_count))
+            print(top)
+
+            key = top_item+"-"+top['label']+"-"+str(top['start'])+"-"+str(top['end'])
+
+            instance_dict.update({key:[top_item, top['label'], top_count, str(top['start']), str(top['end'])]})
+                
+
+
+
+
+
+
+            
 
 def save_tweet_tag_count(instance_dict):
 
@@ -49,6 +131,8 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
             # print(instance_dict)
         elif instance_dict["tweetId"] != i['Input.id']:
             # new tweet change dictionary
+
+            check_for_overlapping_tags(instance_dict, count)
             
             save_tweet_tag_count(instance_dict)
 
@@ -94,44 +178,45 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                 # if(count < 50):
                 letter_count = 0
                 string_length = len(instance)
-                print(string_length)
+                # print(string_length)
                 for letter in instance:
                     if letter == ' ':
-                        print(letter_count)
+                        # print(letter_count)
 
                         if(letter_count == 0):
-                            print("inbefore-" + instance + "-")
+                            # print("inbefore-" + instance + "-")
                             instance = instance.lstrip()
-                            print("inafter-" + instance + "-")
+                            # print("inafter-" + instance + "-")
                             start = start + 1
                             string_length = string_length = 1
                         
                         elif(letter_count == string_length - 1):
-                            print("before-" + instance + "-")
+                            # print("before-" + instance + "-")
                             instance = instance.rstrip()
-                            print("after-" + instance + "-")
+                            # print("after-" + instance + "-")
                             end = end - 1
                     
                     letter_count += 1
                 
-                print("-" + instance + "-")
-                print(end)
-                print(start)
-                print()
+                # print("-" + instance + "-")
+                # print(end)
+                # print(start)
+                # print()
                 # -------------------------------------------------
                 
 
                 csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(start) + "\t" + str(end) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
 
-                num = 1
+                instance_count = 1
                 key = instance+"-"+tag['label']+"-"+str(start)+"-"+str(end)
 
                 curr_dict_state = instance_dict.keys()
 
                 if key in curr_dict_state:
-                    num = instance_dict[key][2] + 1
+                    # if it exists in the instance_dict add one to the count
+                    instance_count = instance_dict[key][2] + 1
 
-                instance_dict.update({key:[instance, tag['label'], num, start, end]})
+                instance_dict.update({key:[instance, tag['label'], instance_count, start, end]})
                 # print("dictonary")
                 # print(instance_dict)
 
@@ -198,7 +283,7 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
         instance_count = int(rows['count'])
         # print(tagCount)
 
-        if instance_count >= 3:
+        if instance_count >= MIN_THRESHOLD:
 
             current_annotation_state = agreement_dict[currentId]["annotations"]
             # print("curr state")
