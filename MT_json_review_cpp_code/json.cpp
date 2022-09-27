@@ -22,7 +22,7 @@ int main()
             // file >> row;
             stringstream sstream(row);
             string column;
-            string tweet = "Death toll passes 4,400 amid Nepal earthquake: Reports are circulating that entire villages have been leveled ... http://t.co/q1m92YTFYd";
+            string tweet = "RT @NVR_Photo: Damage at #NapaPostOffice from #NapaQuake http://t.co/h266KkVExK";
             cout << "tweet" << tweet << endl
                  << endl;
             int count = 0;
