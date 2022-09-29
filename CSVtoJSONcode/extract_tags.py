@@ -294,13 +294,16 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
 
         tagCount += 1
     
-    final_dict["examples"] = [agreement_dict]
+    # final_dict["examples"] = [agreement_dict]
+    final_dict = agreement_dict
     print("total tweet count = " + str(total_tweet_count))
 
             
 
 # add dictionary to json file
-with open("finaltags_lighttag_format.json", 'w', encoding = 'utf-8') as json_file:
+json_lightTag_format = "finaltags_lighttag_format.json"
+json_output = "finaltags.json"
+with open(json_output, 'w', encoding = 'utf-8') as json_file:
     json_file.write(json.dumps(final_dict, indent = 4))
 
 
