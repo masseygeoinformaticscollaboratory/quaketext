@@ -7,6 +7,8 @@ from spacy.training.example import Example
 from spacy.tokens import DocBin
 import random
 
+# https://turbolab.in/build-a-custom-ner-model-using-spacy-3-0/ #VERY HELPFUL
+
 nlp=spacy.load('en_core_web_sm')
 
 ner=nlp.get_pipe('ner')
@@ -74,20 +76,25 @@ for i in json_data:
 #             print("losses",losses)
 print ("--")
 none_count = 0
+count = 0
 nlp = spacy.blank("en")
 # training_data = [
 #   ("Tokyo Tower is 333m tall.", [(0, 11, "BUILDING")]),
 # ]
 # the DocBin will store the example documents
-db = DocBin()
+db_train = DocBin()
+db_dev = DocBin()
 for text, annotations in training_data:
+    
     # print(annotations)
     # print(text)
-    doc = nlp(text)
-    ents = []
+    doc_train = nlp(text)
+    doc_dev = nlp(text)
+    ents_train = []
+    ents_dev = []
     for start, end, label in annotations['entities']:
         
-        span = doc.char_span(int(start), int(end), label=label)
+        span = doc_train.char_span(int(start), int(end), label=label)
         # print(span)
         if str(span) == "None":
             # TODO issue here with tokenizing words without spaces between them
@@ -97,18 +104,34 @@ for text, annotations in training_data:
             print(end)
             none_count += 1
         else:
-            ents.append(span)
+            count += 1
+            if(count < 500):
+                ents_train.append(span)
+            else:
+                ents_dev.append(span)
+            
     # print(ents)
     
 
-    doc.ents = ents
-    db.add(doc)
-db.to_disk("./train.spacy")
+    doc_train.ents = ents_train
+    db_train.add(doc_train)
+    doc_dev.ents = ents_dev
+    db_dev.add(doc_dev)
 
+
+db_dev.to_disk("./dev.spacy")
+db_train.to_disk("./train.spacy")
+
+print("count", count)
 print("none_count", none_count)
 
 
 raw_text="BREAKING: A 7.8-magnitude earthquake struck off Chile's northern coast Wednesday night, triggering a tsunami... http://t.co/WRbyO79to2"
+
+doc = nlp(raw_text)
+print("Entities in '%s'" % raw_text)
+for ent in doc.ents:
+    print(ent)
 
 # text1= NER(raw_text)
 
