@@ -15,8 +15,8 @@ def check_for_overlapping_tags(instance_dict, count):
 
     # if count < 35:
         
-    print(instance_dict)
-    print()
+    # print(instance_dict)
+    # print()
     # for each tag that is in the current tweet, loop through and store any that are under the minimum threshold to the label dictionary
     for i in instance_dict:
         if i != 'tweetId' and i != 'tweetText':
@@ -102,9 +102,14 @@ def save_tweet_tag_count(instance_dict):
             start = str(instance_dict[i][3])
             end = str(instance_dict[i][4])
 
+            if(start == end):
+                print("here", label)
+            
+
             csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + label + "\t" + instance + "\t"+ count + "\t"+ start + "\t"+ end + "\t"+  instance_dict['tweetText'] + "\n")
 
 
+# ----------------------------------------------------------------------------------
 # output from convertCSVtoJSON - in this case mt_combined.json
 json_file_path = input('Enter the absolute path of the INPUT JSON file: ')
 csv_file_path = "all_tags_with_workers.csv" # input('Enter the absolute path of the OUTPUT CSV file: ')
@@ -117,6 +122,7 @@ csv_worker_tags_file.write('AssignmentStatus' + "\t" + 'Input.id' + "\t" + 'Work
 csv_tag_count_file = open("tagcount.csv", 'w', encoding = 'utf-8')
 csv_tag_count_file.write('tweetId' + "\t" + 'label' + "\t" + 'instance' + "\t"+ 'count' + "\t"+ 'start' + "\t"+ 'end' + "\t"+'tweetText' + "\n")
  
+#  read in input json and output data to all_tags_with_workers.csv and tag_count.csv
 with open(json_file_path, encoding = 'utf-8') as json_file_handler:
     
     data = json.load(json_file_handler)
@@ -131,10 +137,11 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
             instance_dict.update({"tweetText" : i['Input.text']})
             # print(instance_dict)
         elif instance_dict["tweetId"] != i['Input.id']:
-            # new tweet change dictionary
+            # reached a new tweet id file row - change dictionary
 
-            check_for_overlapping_tags(instance_dict, count)
+            # check_for_overlapping_tags(instance_dict, count)
             
+            # writing to tag_count file once all the tags for that tweet have been read
             save_tweet_tag_count(instance_dict)
 
             instance_dict.clear()
@@ -143,32 +150,21 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
             # print(instance_dict)
         # else:
         #     # tweet ID is the same use existing counts
-        #     print("same")
 
-     
+        # if the MT tag is approved  
         if i['AssignmentStatus'] == "Approved":
-            count = count + 1
-            # print(i['WorkerId'])
-
-            # print(i['Answer.taskAnswers'])
-
-            # print()
-
-       
+            
             task_object = json.loads(i['Answer.taskAnswers'])
 
             name = 'annotation-tweet-id-'+ i['Input.id']
-
-            # print(name)
-            # print()
 
             entitiesPresent = False
 
             # https://stackoverflow.com/questions/24708634/python-and-json-typeerror-list-indices-must-be-integers-not-str
             for tag in task_object[0][name]['entities']:
+                # for all the entities if there are any
                 entitiesPresent = True
                 
-
                 start = tag['startOffset']
                 end = tag['endOffset']
 
@@ -176,13 +172,11 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                 instance = i['Input.text'][start:end]
 
                 # removing edge whitespace from the tag
-                # if(count < 50):
                 letter_count = 0
                 string_length = len(instance)
-                # print(string_length)
+
                 for letter in instance:
                     if letter == ' ':
-                        # print(letter_count)
 
                         if(letter_count == 0):
                             # print("inbefore-" + instance + "-")
@@ -199,28 +193,23 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                     
                     letter_count += 1
                 
-                # print("-" + instance + "-")
-                # print(end)
-                # print(start)
-                # print()
                 # -------------------------------------------------
                 
+                if start != end:
+                    # if in the case that an empty space was tagged
+                    csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(start) + "\t" + str(end) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+                    count = count + 1
 
-                csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(start) + "\t" + str(end) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
+                    instance_count = 1
+                    key = instance+"-"+tag['label']+"-"+str(start)+"-"+str(end)
 
-                instance_count = 1
-                key = instance+"-"+tag['label']+"-"+str(start)+"-"+str(end)
+                    curr_dict_state = instance_dict.keys()
 
-                curr_dict_state = instance_dict.keys()
+                    if key in curr_dict_state:
+                        # if it exists in the instance_dict add one to the count
+                        instance_count = instance_dict[key][2] + 1
 
-                if key in curr_dict_state:
-                    # if it exists in the instance_dict add one to the count
-                    instance_count = instance_dict[key][2] + 1
-
-                instance_dict.update({key:[instance, tag['label'], instance_count, start, end]})
-                # print("dictonary")
-                # print(instance_dict)
-
+                    instance_dict.update({key:[instance, tag['label'], instance_count, start, end]})
 
             if entitiesPresent == False:
                 csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + "\t" + "\t" + "\t" + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
