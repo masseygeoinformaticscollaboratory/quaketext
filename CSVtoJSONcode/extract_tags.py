@@ -17,7 +17,7 @@ def check_for_overlapping_tags(instance_dict, count):
         
     print(instance_dict)
     print()
-    # for each tag that is in the current tweet, loop through and store any thatare under the minimum threshold to the label dictionary
+    # for each tag that is in the current tweet, loop through and store any that are under the minimum threshold to the label dictionary
     for i in instance_dict:
         if i != 'tweetId' and i != 'tweetText':
             print(i)
@@ -105,6 +105,7 @@ def save_tweet_tag_count(instance_dict):
             csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + label + "\t" + instance + "\t"+ count + "\t"+ start + "\t"+ end + "\t"+  instance_dict['tweetText'] + "\n")
 
 
+# output from convertCSVtoJSON - in this case mt_combined.json
 json_file_path = input('Enter the absolute path of the INPUT JSON file: ')
 csv_file_path = "all_tags_with_workers.csv" # input('Enter the absolute path of the OUTPUT CSV file: ')
 

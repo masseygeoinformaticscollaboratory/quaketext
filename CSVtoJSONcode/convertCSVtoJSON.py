@@ -58,11 +58,13 @@ def csv_to_json(csv_file_path, json_file_path):
         #Step 4
         json_file_handler.write(json.dumps(data_dict, indent = 4))
 # ----------------------------------------------------------------------------------
-# main code
 
-#Step 1
+
+# file names
 csv_file_path = input('Enter the absolute path of the CSV file: ')
+# Batch_MT_results_combined_amp_removed.csv
 json_file_path = input('Enter the absolute path of the JSON file: ')
+# mt_combined.json
  
 csv_to_json(csv_file_path, json_file_path)
 
