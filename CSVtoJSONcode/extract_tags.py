@@ -20,7 +20,7 @@ def check_for_overlapping_tags(instance_dict, count):
     # for each tag that is in the current tweet, loop through and store any that are under the minimum threshold to the label dictionary
     for i in instance_dict:
         if i != 'tweetId' and i != 'tweetText':
-            print(i)
+            # print(i)
             instance = instance_dict[i][0]
             label = instance_dict[i][1]
             count = str(instance_dict[i][2])
@@ -34,22 +34,22 @@ def check_for_overlapping_tags(instance_dict, count):
             if(int(count) < MIN_THRESHOLD):
                 label_type_dict[label].append({'instance':instance,'count':count,'label':label,'start':start,'end':end})
 
-    print(label_type_dict)
-    print()
+    # print(label_type_dict)
+    # print()
 
     # loops through each label category type: impact, place name etc
     for category in label_type_dict:
-        print(category)
+        # print(category)
         top_item = ""
         top_count = 0
         top = {}
         
         # loops through each tag in current category
         for x in label_type_dict[category]:
-            print(x)
+            # print(x)
             curr_count = 0
             current_item = x['instance']
-            print(current_item)
+            # print(current_item)
             
             # for the current tag item compare to the others in the current label category 
             for y in label_type_dict[category]:
@@ -61,8 +61,8 @@ def check_for_overlapping_tags(instance_dict, count):
                     # else check if current tag is within the comparison tag
                     if current_item in y['instance']:
                         # if it is, then add to count
-                        print(y['instance'])
-                        print("TRUE")
+                        # print(y['instance'])
+                        # print("TRUE")
                         curr_count = curr_count + int(y['count'])
             
             if(curr_count > top_count):
@@ -72,8 +72,8 @@ def check_for_overlapping_tags(instance_dict, count):
         
         if(top_count > 0):
             # update the instance dictionary with a new count if other tags have that text inside them
-            print("TOP " + top_item + " " + str(top_count))
-            print(top)
+            # print("TOP " + top_item + " " + str(top_count))
+            # print(top)
 
             key = top_item+"-"+top['label']+"-"+str(top['start'])+"-"+str(top['end'])
 
@@ -139,7 +139,7 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
         elif instance_dict["tweetId"] != i['Input.id']:
             # reached a new tweet id file row - change dictionary
 
-            # check_for_overlapping_tags(instance_dict, count)
+            check_for_overlapping_tags(instance_dict, count)
             
             # writing to tag_count file once all the tags for that tweet have been read
             save_tweet_tag_count(instance_dict)
