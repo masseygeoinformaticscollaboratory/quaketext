@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 #  keep data files local
-*.json
+# *.json
 *.csv
 *.exe
 

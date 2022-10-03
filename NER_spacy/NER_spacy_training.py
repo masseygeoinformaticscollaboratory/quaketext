@@ -121,7 +121,7 @@ print("total tag count",light_tag_count+mt_tag_count)
 #                 nlp.update([example], losses=losses, drop=0.35)
 #             print("losses",losses)
 
-# random.shuffle(all_training_data)
+random.shuffle(training_data)
 print ("--")
 none_count = 0
 count = 0
