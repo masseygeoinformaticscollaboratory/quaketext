@@ -185,7 +185,7 @@ with open("light_tag_results.csv", 'r', encoding = 'utf-8') as csv_file:
     for rows in csv_reader:
         print(rows)
 
-        if(rows['AssignmentStatus'] != False):
+        if(rows['AssignmentStatus'] != "False"):
                 
             if first == True:
              # if the first row in the file, that is the current

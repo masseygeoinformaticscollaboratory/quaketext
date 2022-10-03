@@ -1,4 +1,3 @@
-# from __future__ import annotations
 import json
 import spacy
 from spacy import displacy
@@ -7,43 +6,90 @@ from spacy.training.example import Example
 from spacy.tokens import DocBin
 import random
 
+training_data = []
+
 # https://turbolab.in/build-a-custom-ner-model-using-spacy-3-0/ #VERY HELPFUL
+
+def add_json_data_for_training(json_data):
+    print("here")
+
+    entity_tags = {'entities':[]}
+
+    for i in json_data:
+    # print(json_data[i]['content'])
+        tweet_text = json_data[i]['content']
+        for tag in json_data[i]['annotations']:
+            # print(tag['tag'])
+
+            # looking only at impact tags first
+            if(tag['tag'] == 'type of impact'):
+                entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
+
+    
+    # training_data.append((tweet_text,{"entities":[(0,9,"IMP")]}))
+    training_data.append((tweet_text,entity_tags))
+    entity_tags = {'entities':[]}
+
+
+# ------------------------------------------------------------------------
 
 nlp=spacy.load('en_core_web_sm')
 
 ner=nlp.get_pipe('ner')
 
-training_file = open('../CSVtoJSONcode/finaltags.json')
-json_data = json.load(training_file)
+training_MT_file = open('../CSVtoJSONcode/finaltags.json')
+json_MT_data = json.load(training_MT_file)
+
+training_Lighttag_file = open('../CSVtoJSONcode/lighttag_finaltags.json')
+json_Lighttag_data = json.load(training_Lighttag_file)
 
 IMPACT_LABEL = "IMPACT"
 
-training_data = []
-
 entity_tags = {'entities':[]}
 
-for i in json_data:
+# add_json_data_for_training (json_MT_data)
+# add_json_data_for_training (all_training_data, json_Lighttag_data)
+
+mt_tag_count = 0
+
+for i in json_MT_data:
     # print(json_data[i]['content'])
-    tweet_text = json_data[i]['content']
-    for tag in json_data[i]['annotations']:
+    tweet_text = json_MT_data[i]['content']
+    for tag in json_MT_data[i]['annotations']:
         # print(tag['tag'])
 
         # looking only at impact tags first
         if(tag['tag'] == 'type of impact'):
             entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
-            if(tag['value'] == "Riots"):
-                print(tag['value'])
+            mt_tag_count += 1
             
+    # training_data.append((tweet_text,{"entities":[(0,9,"IMP")]}))
+    training_data.append((tweet_text,entity_tags))
+    entity_tags = {'entities':[]}
+
+print(len(training_data))
+print("mt tag count",mt_tag_count)
+
+light_tag_count = 0
+
+for i in json_Lighttag_data:
+# print(json_data[i]['content'])
+    tweet_text = json_Lighttag_data[i]['content']
+    for tag in json_Lighttag_data[i]['annotations']:
+        # print(tag['tag'])
+
+        # looking only at impact tags first
+        if(tag['tag'] == 'type of impact'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
+            light_tag_count += 1
         
-    
     # training_data.append((tweet_text,{"entities":[(0,9,"IMP")]}))
     training_data.append((tweet_text,entity_tags))
     entity_tags = {'entities':[]}
     
-    # for anno in json_data[i]['annotations']:
-        # if count < 10:
-            # print(anno)
-            # count = count+1
+print(len(training_data))
+print("light tag count",light_tag_count)
+print("total tag count",light_tag_count+mt_tag_count)
 
 # print(training_data)
 # print(entity_tags)
@@ -74,6 +120,8 @@ for i in json_data:
 #                 example = Example.from_dict(doc, annotations)
 #                 nlp.update([example], losses=losses, drop=0.35)
 #             print("losses",losses)
+
+# random.shuffle(all_training_data)
 print ("--")
 none_count = 0
 count = 0
@@ -105,7 +153,7 @@ for text, annotations in training_data:
             none_count += 1
         else:
             count += 1
-            if(count < 500):
+            if(count < 900):
                 ents_train.append(span)
             else:
                 ents_dev.append(span)
@@ -126,14 +174,16 @@ print("count", count)
 print("none_count", none_count)
 
 
-raw_text="BREAKING: A 7.8-magnitude earthquake struck off Chile's northern coast Wednesday night, triggering a tsunami... http://t.co/WRbyO79to2"
+# raw_text="BREAKING: A 7.8-magnitude earthquake struck off Chile's northern coast Wednesday night, triggering a tsunami... http://t.co/WRbyO79to2"
 
-doc = nlp(raw_text)
-print("Entities in '%s'" % raw_text)
-for ent in doc.ents:
-    print(ent)
+# doc = nlp(raw_text)
+# print("Entities in '%s'" % raw_text)
+# for ent in doc.ents:
+#     print(ent)
 
 # text1= NER(raw_text)
 
 # for word in text1.ents:
 #     print(word.text,word.label_)
+
+# TODO Run on more examples -  calculate scores of things 
