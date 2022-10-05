@@ -787,7 +787,7 @@
     },
     "'503650192499818496'": {
         "tweetId": "'503650192499818496'",
-        "content": "Strong Magnitude 6 Earthquake Rocks San Francisco Bay Area, Dozens Hurt, Significant Damage In Napa ?\ufffd CBS San Fran http://t.co/yCJtW6z3FJ",
+        "content": "Strong Magnitude 6 Earthquake Rocks San Francisco Bay Area, Dozens Hurt, Significant Damage In Napa -- CBS San Fran http://t.co/yCJtW6z3FJ",
         "annotations": [
             {
                 "tag": "place name",
@@ -1441,7 +1441,7 @@
     },
     "'503894831975133184'": {
         "tweetId": "'503894831975133184'",
-        "content": "@vickydnguyen: Meadowbrook Lane in Napa-- skaters finding upside to quake damage. Photo from #nbcbayarea ... http://t.co/2LbJCxEG5i\t\nTrue\t'503894831975133184'\t1\tlocation modifier\tin\t33\t35\t@vickydnguyen: Meadowbrook Lane in Napa-- skaters finding upside to quake damage. Photo from #nbcbayarea ... http://t.co/2LbJCxEG5i",
+        "content": "-@vickydnguyen: Meadowbrook Lane in Napa-- skaters finding upside to quake damage. Photo from #nbcbayarea ... http://t.co/2LbJCxEG5i",
         "annotations": [
             {
                 "tag": "place name",
@@ -1449,6 +1449,13 @@
                 "value": "Napa",
                 "start": "36",
                 "end": "40"
+            },
+            {
+                "tag": "location modifier",
+                "count": "1",
+                "value": "in",
+                "start": "33",
+                "end": "35"
             },
             {
                 "tag": "place name",
@@ -1463,6 +1470,128 @@
                 "value": "damage",
                 "start": "75",
                 "end": "81"
+            }
+        ]
+    },
+    "'382890319273943041'": {
+        "tweetId": "'382890319273943041'",
+        "content": "meanwhile in Pakistan the death toll rises to 330. #Earthquake",
+        "annotations": [
+            {
+                "tag": "severity or quantity",
+                "count": "3",
+                "value": "330",
+                "start": "46",
+                "end": "49"
+            },
+            {
+                "tag": "place name",
+                "count": "4",
+                "value": "Pakistan",
+                "start": "13",
+                "end": "21"
+            },
+            {
+                "tag": "type of impact",
+                "count": "1",
+                "value": "death toll",
+                "start": "26",
+                "end": "36"
+            },
+            {
+                "tag": "location modifier",
+                "count": "3",
+                "value": "in",
+                "start": "10",
+                "end": "12"
+            }
+        ]
+    },
+    "'503712597154091008'": {
+        "tweetId": "'503712597154091008'",
+        "content": "RT @ginalimp: USA ?\ufffd NEWS ?\ufffd http://t.co/sjWhS6XzS3 HOT NEWS 152 earthquake Three Critically Injured, Almost 90 Treated At Napa Hospital Foll\ufffd??",
+        "annotations": [
+            {
+                "tag": "place name",
+                "count": "3",
+                "value": "Napa Hospital",
+                "start": "123",
+                "end": "136"
+            },
+            {
+                "tag": "type of impact",
+                "count": "1",
+                "value": "Injured",
+                "start": "93",
+                "end": "100"
+            },
+            {
+                "tag": "severity or quantity",
+                "count": "1",
+                "value": "90",
+                "start": "109",
+                "end": "111"
+            },
+            {
+                "tag": "location modifier",
+                "count": "3",
+                "value": "At",
+                "start": "120",
+                "end": "122"
+            },
+            {
+                "tag": "place name",
+                "count": "1",
+                "value": "USA",
+                "start": "14",
+                "end": "17"
+            },
+            {
+                "tag": "severity or quantity",
+                "count": "1",
+                "value": "Three Critically",
+                "start": "76",
+                "end": "92"
+            }
+        ]
+    },
+    "'592109590625558529'": {
+        "tweetId": "'592109590625558529'",
+        "content": "Hi @acharya_saugat, we detected a M5.6 earthquake at 23:16 UTC (19m, 8s ago) in Kirtipur, Nepal. Did you feel it?",
+        "annotations": [
+            {
+                "tag": "location modifier",
+                "count": "1",
+                "value": "Kirtipur",
+                "start": "80",
+                "end": "88"
+            },
+            {
+                "tag": "place name",
+                "count": "1",
+                "value": "Nepal",
+                "start": "90",
+                "end": "95"
+            },
+            {
+                "tag": "location modifier",
+                "count": "3",
+                "value": "in",
+                "start": "77",
+                "end": "79"
+            }
+        ]
+    },
+    "'593440530542931968'": {
+        "tweetId": "'593440530542931968'",
+        "content": "Time of the essence for Nepal victims says UN in $415 million appeal http://t.co/lvr6FZt9ET",
+        "annotations": [
+            {
+                "tag": "place name",
+                "count": "1",
+                "value": "Nepal",
+                "start": "26",
+                "end": "31"
             }
         ]
     },
