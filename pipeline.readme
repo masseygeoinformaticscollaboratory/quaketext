@@ -1,0 +1,16 @@
+Commands to train the spacy pipeline:
+
+python NER_spacy_training.py
+
+fill config file up 
+python -m spacy init fill-config base_config.cfg config.cfg
+
+
+training
+
+python -m spacy train config.cfg --output ./output --paths.train ./train.spacy --paths.dev ./dev.spacy
+
+
+create evaluation of training pipeline and html output of samples default number is 25 but can increase this with --displacy-limit  https://spacy.io/api/cli#evaluate 
+
+python -m spacy evaluate output\model-last dev.spacy --output .\eval.json --displacy-path .

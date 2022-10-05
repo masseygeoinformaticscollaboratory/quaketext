@@ -118,7 +118,7 @@ print("total tag count",light_tag_count+mt_tag_count)
 #                 print(text)
 #                 doc = nlp.make_doc(text)
 #                 example = Example.from_dict(doc, annotations)
-#                 nlp.update([example], losses=losses, drop=0.35)
+#                 nlp.update([example])
 #             print("losses",losses)
 
 random.shuffle(training_data)
@@ -152,6 +152,7 @@ for text, annotations in training_data:
             print(end)
             none_count += 1
         else:
+            # ents_train.append(span)
             count += 1
             if(count < 900):
                 ents_train.append(span)
@@ -169,6 +170,8 @@ for text, annotations in training_data:
 
 db_dev.to_disk("./dev.spacy")
 db_train.to_disk("./train.spacy")
+# db_train.to_disk("./dev.spacy")
+
 
 print("count", count)
 print("none_count", none_count)
