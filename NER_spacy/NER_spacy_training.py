@@ -1,7 +1,7 @@
 import json
 import spacy
 from spacy import displacy
-from spacy.util import minibatch, compounding
+from spacy.util import minibatch, compounding, filter_spans
 from spacy.training.example import Example
 from spacy.tokens import DocBin
 import random
@@ -52,74 +52,83 @@ entity_tags = {'entities':[]}
 
 mt_tag_count = 0
 
-for i in json_MT_data:
-    # print(json_data[i]['content'])
-    tweet_text = json_MT_data[i]['content']
-    for tag in json_MT_data[i]['annotations']:
-        # print(tag['tag'])
+# for i in json_MT_data:
+#     # print(json_data[i]['content'])
+#     tweet_text = json_MT_data[i]['content']
+#     for tag in json_MT_data[i]['annotations']:
+#         # print(tag['tag'])
 
-        # looking only at impact tags first
-        if(tag['tag'] == 'type of impact'):
-            entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
-            mt_tag_count += 1
-            
-    # training_data.append((tweet_text,{"entities":[(0,9,"IMP")]}))
-    training_data.append((tweet_text,entity_tags))
-    entity_tags = {'entities':[]}
+#         # looking only at impact tags first
+#         if(tag['tag'] == 'type of impact'):
+#             entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
+#         elif(tag['tag'] == 'item affected'):
+#             entity_tags['entities'].append((tag['start'], tag['end'],"AFFECTED"))
+#         elif(tag['tag'] == 'severity or quantity'):
+#             entity_tags['entities'].append((tag['start'], tag['end'],"SEVERITY"))  
+#         elif(tag['tag'] == 'place name'):
+#             entity_tags['entities'].append((tag['start'], tag['end'],"PLACE"))
+#         elif(tag['tag'] == 'location modifier'):
+#             entity_tags['entities'].append((tag['start'], tag['end'],"LOC MOD"))
+#         mt_tag_count += 1
+#     # training_data.append((tweet_text,{"entities":[(0,9,"IMP")]}))
+#     training_data.append((tweet_text,entity_tags))
+#     entity_tags = {'entities':[]}
 
 print(len(training_data))
 print("mt tag count",mt_tag_count)
 
 light_tag_count = 0
+imp_count = 0
+aff_count = 0
+sev_count = 0
+place_count = 0
+mod_count = 0
 
 for i in json_Lighttag_data:
 # print(json_data[i]['content'])
     tweet_text = json_Lighttag_data[i]['content']
     for tag in json_Lighttag_data[i]['annotations']:
-        # print(tag['tag'])
+        
+        light_tag_count += 1 
 
         # looking only at impact tags first
         if(tag['tag'] == 'type of impact'):
             entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
-            light_tag_count += 1
+            imp_count += 1
+        elif(tag['tag'] == 'item affected'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"AFFECTED"))
+            aff_count += 1
+        elif(tag['tag'] == 'severity or quantity'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"SEVERITY"))  
+            sev_count += 1
+        elif(tag['tag'] == 'place name'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"PLACE"))
+            place_count += 1
+        elif(tag['tag'] == 'location modifier'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"LOC MOD"))
+            mod_count += 1
+        else:
+            print(tag['tag'])
+            print(tweet_text)
+            print("here")
+        
         
     # training_data.append((tweet_text,{"entities":[(0,9,"IMP")]}))
     training_data.append((tweet_text,entity_tags))
     entity_tags = {'entities':[]}
-    
+
+print("imp_count",imp_count)
+print("aff_count",aff_count)
+print("sev_count",sev_count)
+print("place_count",place_count)
+print("mod_count",mod_count)
+
+print("total tag count from each",imp_count+aff_count+sev_count+mod_count+place_count)
+
 print(len(training_data))
 print("light tag count",light_tag_count)
 print("total tag count",light_tag_count+mt_tag_count)
 
-# print(training_data)
-# print(entity_tags)
-
-# ner.add_label(IMPACT_LABEL)
-
-# optimizer = nlp.resume_training()
-# move_names = list(ner.move_names)
-
-# pipe_exceptions = ["ner", "trf_wordpiecer", "trf_tok2vec"]
-
-# other_pipes = [pipe for pipe in nlp.pipe_names if pipe not in pipe_exceptions]
-
-# with nlp.disable_pipes(*other_pipes):
-#     sizes = compounding(1.0, 4.0, 1.001)
-#     for itn in range(114):
-#         random.shuffle(training_data)
-#         batches = minibatch(training_data, size = sizes)
-#         losses = {}
-#         for batch in batches:
-#             texts, annotations = zip(*batch)
-#             # nlp.update(texts, annotations, sgd=optimizer, drop=0.35, losses=losses)
-#             # print("losses", losses)
-#             for text, annotations in batch:
-#                 print(annotations)
-#                 print(text)
-#                 doc = nlp.make_doc(text)
-#                 example = Example.from_dict(doc, annotations)
-#                 nlp.update([example])
-#             print("losses",losses)
 
 random.shuffle(training_data)
 print ("--")
@@ -146,25 +155,26 @@ for text, annotations in training_data:
         # print(span)
         if str(span) == "None":
             # TODO issue here with tokenizing words without spaces between them
-            print(text)
-            print(label)
-            print(start)
-            print(end)
+            # print(text)
+            # print(label)
+            # print(start)
+            # print(end)
             none_count += 1
         else:
             # ents_train.append(span)
             count += 1
-            if(count < 900):
+            if(count < 4700):
                 ents_train.append(span)
             else:
                 ents_dev.append(span)
             
     # print(ents)
-    
+    ents_train_filtered = filter_spans(ents_train)
+    ents_dev_filtered = filter_spans(ents_dev)
 
-    doc_train.ents = ents_train
+    doc_train.ents = ents_train_filtered
     db_train.add(doc_train)
-    doc_dev.ents = ents_dev
+    doc_dev.ents = ents_dev_filtered
     db_dev.add(doc_dev)
 
 
@@ -176,17 +186,5 @@ db_train.to_disk("./train.spacy")
 print("count", count)
 print("none_count", none_count)
 
-
-# raw_text="BREAKING: A 7.8-magnitude earthquake struck off Chile's northern coast Wednesday night, triggering a tsunami... http://t.co/WRbyO79to2"
-
-# doc = nlp(raw_text)
-# print("Entities in '%s'" % raw_text)
-# for ent in doc.ents:
-#     print(ent)
-
-# text1= NER(raw_text)
-
-# for word in text1.ents:
-#     print(word.text,word.label_)
 
 # TODO Run on more examples -  calculate scores of things 
