@@ -105,6 +105,18 @@ print("true pos", true_pos)
 print("false pos", false_pos)
 print("false neg", false_neg)
 
+precision = true_pos /(true_pos + false_pos)
+
+recall = true_pos /( true_pos + false_neg)
+
+f1score = 2 * ((precision*recall)/(precision+recall))
+
+print ("precision", precision)
+
+print ("recall", recall)
+
+print("f1score", f1score)
+
 with open("test_result.json", 'w', encoding = 'utf-8') as json_file_handler:
     json_file_handler.write(json.dumps(impact_list_dict, indent = 4))
 
