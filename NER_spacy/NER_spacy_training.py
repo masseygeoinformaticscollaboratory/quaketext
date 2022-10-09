@@ -52,27 +52,27 @@ entity_tags = {'entities':[]}
 
 mt_tag_count = 0
 
-# for i in json_MT_data:
-#     # print(json_data[i]['content'])
-#     tweet_text = json_MT_data[i]['content']
-#     for tag in json_MT_data[i]['annotations']:
-#         # print(tag['tag'])
+for i in json_MT_data:
+    # print(json_data[i]['content'])
+    tweet_text = json_MT_data[i]['content']
+    for tag in json_MT_data[i]['annotations']:
+        # print(tag['tag'])
 
-#         # looking only at impact tags first
-#         if(tag['tag'] == 'type of impact'):
-#             entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
-#         elif(tag['tag'] == 'item affected'):
-#             entity_tags['entities'].append((tag['start'], tag['end'],"AFFECTED"))
-#         elif(tag['tag'] == 'severity or quantity'):
-#             entity_tags['entities'].append((tag['start'], tag['end'],"SEVERITY"))  
-#         elif(tag['tag'] == 'place name'):
-#             entity_tags['entities'].append((tag['start'], tag['end'],"PLACE"))
-#         elif(tag['tag'] == 'location modifier'):
-#             entity_tags['entities'].append((tag['start'], tag['end'],"LOC MOD"))
-#         mt_tag_count += 1
-#     # training_data.append((tweet_text,{"entities":[(0,9,"IMP")]}))
-#     training_data.append((tweet_text,entity_tags))
-#     entity_tags = {'entities':[]}
+        # looking only at impact tags first
+        if(tag['tag'] == 'type of impact'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
+        elif(tag['tag'] == 'item affected'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"AFFECTED"))
+        elif(tag['tag'] == 'severity or quantity'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"SEVERITY"))  
+        elif(tag['tag'] == 'place name'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"PLACE"))
+        elif(tag['tag'] == 'location modifier'):
+            entity_tags['entities'].append((tag['start'], tag['end'],"LOC MOD"))
+        mt_tag_count += 1
+    # training_data.append((tweet_text,{"entities":[(0,9,"IMP")]}))
+    training_data.append((tweet_text,entity_tags))
+    entity_tags = {'entities':[]}
 
 print(len(training_data))
 print("mt tag count",mt_tag_count)
@@ -133,6 +133,7 @@ print("total tag count",light_tag_count+mt_tag_count)
 random.shuffle(training_data)
 print ("--")
 none_count = 0
+none_type = {"IMPACT": 0, "AFFECTED" : 0, "SEVERITY" : 0, "PLACE": 0, "LOC MOD": 0}
 count = 0
 nlp = spacy.blank("en")
 # training_data = [
@@ -152,18 +153,19 @@ for text, annotations in training_data:
     for start, end, label in annotations['entities']:
         
         span = doc_train.char_span(int(start), int(end), label=label)
+
         # print(span)
         if str(span) == "None":
             # TODO issue here with tokenizing words without spaces between them
-            # print(text)
-            # print(label)
-            # print(start)
-            # print(end)
+            print(text)
+            print(label)
+            print(text[int(start):int(end)])
+            none_type[label] += 1
             none_count += 1
         else:
             # ents_train.append(span)
             count += 1
-            if(count < 4700):
+            if(count < 4237): #20% = 4237 10% = 4767
                 ents_train.append(span)
             else:
                 ents_dev.append(span)
@@ -185,6 +187,7 @@ db_train.to_disk("./train.spacy")
 
 print("count", count)
 print("none_count", none_count)
+print(none_type)
 
 
 # TODO Run on more examples -  calculate scores of things 
