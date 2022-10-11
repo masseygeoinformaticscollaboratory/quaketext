@@ -3,25 +3,20 @@ from __future__ import annotations
 import csv
 import json
 
-# ----------------------------------------------------------------------------------
-# output from convertCSVtoJSON - in this case mt_combined.json
-light_tag_json_file_path = "lighttag-800-tweets-annotated.json" # input('Enter the absolute path of the INPUT JSON file: ')
-csv_file_path = "light_tag_results.csv" # input('Enter the absolute path of the OUTPUT CSV file: ')
-
-instance_dict = {}
+# -------------------------------------------------------------------------
+light_tag_json_file_path = "lighttag-800-tweets-annotated.json" 
+csv_file_path = "light_tag_results.csv" 
 
 light_tag_csv_file = open(csv_file_path, 'w', encoding = 'utf-8')
 light_tag_csv_file.write('AssignmentStatus' + "\t" + 'tweetId' + "\t" + 'num taggers' + "\t" + 'label' + "\t" + 'instance' +"\t" + 'start' +"\t" + 'end' +"\t" + 'tweetText' + "\n")
-
-# csv_tag_count_file = open("tagcount.csv", 'w', encoding = 'utf-8')
-# csv_tag_count_file.write('tweetId' + "\t" + 'label' + "\t" + 'instance' + "\t"+ 'count' + "\t"+ 'start' + "\t"+ 'end' + "\t"+'tweetText' + "\n")
  
-#  read in input json and output data to all_tags_with_workers.csv and tag_count.csv
+#  read in input json and output data to light_tag_results.csv
 with open(light_tag_json_file_path, encoding = 'utf-8') as json_file_handler:
     
     data = json.load(json_file_handler)
 
     count = 0
+    tc = 0
 
     # https://stackoverflow.com/questions/41445573/python-loop-through-json-file
     for i in data['data']:
@@ -42,8 +37,10 @@ with open(light_tag_json_file_path, encoding = 'utf-8') as json_file_handler:
 
                 if (tag['correct'] == False):
                     status = False
+                    tc -= 1
 
                 light_tag_csv_file.write(str(status) + "\t" + tweet['metadata']['tweet_id'] + "\t" + str(len(tag['annotated_by'])) + "\t" + tag['tag'] + "\t" + tag['value'] + "\t" + str(tag['start']) + "\t" + str(tag['end']) + "\t" + tweet['content'] + "\n")
+                tc += 1
 
 
             count += 1
@@ -51,16 +48,12 @@ with open(light_tag_json_file_path, encoding = 'utf-8') as json_file_handler:
     print(count)
 
 light_tag_csv_file.close()
-# csv_tag_count_file.close()
-
-
+print("count tags",tc)
 
 # # ---------------------------------------------------------------
-# # Checking agreement from the 5 taggers
+light_dict = {}
 
 with open("light_tag_results.csv", 'r', encoding = 'utf-8') as csv_file:
-    
-    light_dict = {}
 
     csv_reader = csv.DictReader(csv_file, delimiter='\t')
 
@@ -72,42 +65,53 @@ with open("light_tag_results.csv", 'r', encoding = 'utf-8') as csv_file:
 
     for rows in csv_reader:
         # print(rows)
-
-        if(rows['AssignmentStatus'] != "False"):
+        foundid = False
                 
-            if first == True:
-             # if the first row in the file, that is the current
-                currentId = rows['tweetId']
-                currentText = rows['tweetText']
-                light_dict[currentId] = ({"tweetId":currentId, "content": currentText,})
-                light_dict[currentId]["annotations"] = []
-                first = False 
-                total_tweet_count += 1      
-            elif currentId != rows['tweetId']:
+        if first == True:
+            # if the first row in the file, that is the current
+            currentId = rows['tweetId']
+            currentText = rows['tweetText']
+            light_dict[currentId] = ({"tweetId":currentId, "content": currentText,})
+            light_dict[currentId]["annotations"] = []
+            first = False 
+            total_tweet_count += 1      
+        elif currentId != rows['tweetId']:
             # if the ids do not match then all the annotations for the previous tweet have been read save to dictionary and change current it and text, and clear annotation list for new tweet 
-                currentId = rows['tweetId']
-                currentText = rows['tweetText']
-                light_dict[currentId] = ({"tweetId":currentId, "content": currentText,})
+            currentId = rows['tweetId']
+            currentText = rows['tweetText']
+
+            for tweet in light_dict:
+                if tweet == currentId:
+                    any_annotations = light_dict[currentId]["annotations"]
+                    # print(tweet)
+                    # print(any_annotations)
+                    foundid = True
+            
+            if(foundid == False):
+                light_dict[currentId] = ({"tweetId":currentId, "content": currentText,})      
                 light_dict[currentId]["annotations"] = []
-
-                tagCount = 0
                 total_tweet_count += 1
-            # print("new id")
+            
+            foundid = False
 
+           
 
-            # instance_count = int(rows['count'])
-            # print(tagCount)
-
-            # if instance_count >= MIN_THRESHOLD:
+        if(rows['AssignmentStatus'] == "True"):
+            foundtag = False
 
             current_annotation_state = light_dict[currentId]["annotations"]
-            # print("curr state")
-            # print(current_annotation_state)
+            for each in current_annotation_state:
+                if(rows['instance'] == each['value']):
+                    foundtag = True
+                    # tag already exists
 
-            light_dict[currentId]["annotations"] = (current_annotation_state + [{"tag": rows['label'],"count": rows['num taggers'],"value": rows['instance'], "start": rows['start'],"end": rows['end']}])
-
-
-    print("total tweet count = " + str(total_tweet_count))
+            if(foundtag == False):
+                # only add tags if they are unique
+                tagCount += 1
+                light_dict[currentId]["annotations"] = (current_annotation_state + [{"tag": rows['label'],"count": rows['num taggers'],"value": rows['instance'], "start": rows['start'],"end": rows['end']}])
+        
+    print("LT_tagcount" ,tagCount)
+    print("total LT_tweet count = ",total_tweet_count)
 
 csv_file.close()
 
@@ -115,6 +119,11 @@ csv_file.close()
 json_lightTag_format = "lighttag_finaltags.json"
 with open(json_lightTag_format, 'w', encoding = 'utf-8') as json_file:
     json_file.write(json.dumps(light_dict, indent = 4))
+
+
+
+
+
 
 
 
@@ -127,33 +136,24 @@ def create_joined_csv_for_LT_MT():
     num = 0
     
     # lighttag data-------------------------------------------------------------------
-    with open("light_tag_results.csv", 'r', encoding = 'utf-8') as LT_csv_file:
+    with open("lighttag_finaltags.json", encoding = 'utf-8') as json_file_h:
+    
+        LT_data = json.load(json_file_h)
 
-        LT_csv_reader = csv.DictReader(LT_csv_file, delimiter='\t')
-
-        for LT_rows in LT_csv_reader:
+        for LT_rows in LT_data.values():
         
+            source = "lightTag"
+            id = LT_rows['tweetId']
+            tweet = LT_rows['content']
 
-            if(LT_rows['AssignmentStatus'] == "True"):
-           
-                # if(num == 173):
-                #     print (LT_rows)
-                # if(num == 174):
-                #     print (LT_rows)
+            for anno in LT_rows['annotations']:
+                tag = anno['tag']
+                value = anno['value']
+                start = str(anno['start'])
+                end = str(anno['end'])
 
-                source = "lightTag"
-                id = LT_rows['tweetId']
-                label = LT_rows['label']
-                instance = LT_rows['instance']
-                start = str(LT_rows['start'])
-                end = str(LT_rows['end'])
-                tweet = LT_rows['tweetText']
+                final_tags_combined_csv.write(source + "\t" + id + "\t" + tag + "\t"+    value + "\t" + start + "\t" + end + "\t" + tweet + "\n")
 
-                final_tags_combined_csv.write(source + "\t" + id + "\t" + label + "\t" +    instance + "\t" + start + "\t" + end + "\t" + tweet + "\n")
-
-                # print(source)
-                num += 1
-                # print(num)
 
     # Mechanical Turk data----------------------------------------------------------
     with open("tagcount.csv", 'r', encoding = 'utf-8') as MT_csv_file:
@@ -161,13 +161,9 @@ def create_joined_csv_for_LT_MT():
         MT_csv_reader = csv.DictReader(MT_csv_file, delimiter='\t')
 
         for MT_rows in MT_csv_reader:
-        
 
             if(int(MT_rows['count']) > 3):
            
-                if(num < 17):
-                    print (MT_rows)
-
                 source = "MechanicalTurk"
                 id = MT_rows['tweetId']
                 label = MT_rows['label']
@@ -177,6 +173,9 @@ def create_joined_csv_for_LT_MT():
                 tweet = MT_rows['tweetText']
 
                 final_tags_combined_csv.write(source + "\t" + id + "\t" + label + "\t" +    instance + "\t" + start + "\t" + end + "\t" + tweet + "\n")
+                num += 1
+    
+    print("MT num", num)
 
     
 

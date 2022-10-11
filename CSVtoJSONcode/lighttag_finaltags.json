@@ -291,13 +291,6 @@
                 "end": "113"
             },
             {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "106",
-                "end": "108"
-            },
-            {
                 "tag": "type of impact",
                 "count": "1",
                 "value": "buckled",
@@ -343,13 +336,6 @@
                 "value": "Nepal",
                 "start": "15",
                 "end": "20"
-            },
-            {
-                "tag": "place name",
-                "count": "2",
-                "value": "Nepal",
-                "start": "22",
-                "end": "27"
             }
         ]
     },
@@ -359,28 +345,42 @@
         "annotations": [
             {
                 "tag": "place name",
+                "count": "2",
+                "value": "Pakistan",
+                "start": "1",
+                "end": "9"
+            },
+            {
+                "tag": "place name",
                 "count": "1",
+                "value": "Nepal",
+                "start": "76",
+                "end": "81"
+            },
+            {
+                "tag": "place name",
+                "count": "3",
                 "value": "Balochistan",
                 "start": "40",
                 "end": "51"
             },
             {
                 "tag": "location modifier",
-                "count": "1",
+                "count": "3",
                 "value": "in",
                 "start": "36",
                 "end": "38"
             },
             {
                 "tag": "type of impact",
-                "count": "1",
+                "count": "2",
                 "value": "dead",
                 "start": "31",
                 "end": "35"
             },
             {
                 "tag": "severity or quantity",
-                "count": "1",
+                "count": "3",
                 "value": "Hundreds",
                 "start": "22",
                 "end": "30"
@@ -471,13 +471,6 @@
                 "value": "Napa",
                 "start": "0",
                 "end": "4"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Napa",
-                "start": "56",
-                "end": "60"
             }
         ]
     },
@@ -660,13 +653,6 @@
                 "value": "didn't do so well",
                 "start": "95",
                 "end": "112"
-            },
-            {
-                "tag": "place name",
-                "count": "2",
-                "value": "Napa",
-                "start": "90",
-                "end": "94"
             }
         ]
     },
@@ -728,60 +714,67 @@
         "content": "Five Indian Soldiers and Six Policemen dead in Indian occupied Kashmir. #Pakistan http://t.co/es7W944i9S",
         "annotations": [
             {
+                "tag": "item affected",
+                "count": "3",
+                "value": "Indian Soldiers",
+                "start": "5",
+                "end": "20"
+            },
+            {
                 "tag": "severity or quantity",
+                "count": "3",
+                "value": "Five",
+                "start": "0",
+                "end": "4"
+            },
+            {
+                "tag": "location modifier",
+                "count": "2",
+                "value": "in",
+                "start": "44",
+                "end": "46"
+            },
+            {
+                "tag": "type of impact",
                 "count": "1",
+                "value": "occupied",
+                "start": "54",
+                "end": "62"
+            },
+            {
+                "tag": "severity or quantity",
+                "count": "3",
                 "value": "Six",
                 "start": "25",
                 "end": "28"
             },
             {
                 "tag": "place name",
-                "count": "1",
-                "value": "Indian occupied Kashmir",
-                "start": "47",
-                "end": "70"
-            },
-            {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "dead",
-                "start": "39",
-                "end": "43"
-            },
-            {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "Five",
-                "start": "0",
-                "end": "4"
-            },
-            {
-                "tag": "item affected",
-                "count": "1",
-                "value": "Policemen",
-                "start": "29",
-                "end": "38"
-            },
-            {
-                "tag": "item affected",
-                "count": "1",
-                "value": "Indian Soldiers",
-                "start": "5",
-                "end": "20"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
+                "count": "4",
                 "value": "Pakistan",
                 "start": "73",
                 "end": "81"
             },
             {
-                "tag": "location modifier",
+                "tag": "item affected",
+                "count": "3",
+                "value": "Policemen",
+                "start": "29",
+                "end": "38"
+            },
+            {
+                "tag": "type of impact",
+                "count": "3",
+                "value": "dead",
+                "start": "39",
+                "end": "43"
+            },
+            {
+                "tag": "place name",
                 "count": "1",
-                "value": "in",
-                "start": "44",
-                "end": "46"
+                "value": "Kashmir",
+                "start": "63",
+                "end": "70"
             }
         ]
     },
@@ -857,13 +850,6 @@
                 "value": "Northern",
                 "start": "29",
                 "end": "37"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "Off",
-                "start": "25",
-                "end": "28"
             },
             {
                 "tag": "place name",
@@ -1034,13 +1020,6 @@
                 "value": "5",
                 "start": "44",
                 "end": "45"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Chile",
-                "start": "100",
-                "end": "105"
             },
             {
                 "tag": "type of impact",
@@ -1951,8 +1930,15 @@
         "content": "RT @Twittistaan: NASA has released images of the new island formed after an earthquake in #Pakistan http://t.co/X3zSNm0Ma8 via @Independent",
         "annotations": [
             {
+                "tag": "type of impact",
+                "count": "2",
+                "value": "formed",
+                "start": "60",
+                "end": "66"
+            },
+            {
                 "tag": "place name",
-                "count": "1",
+                "count": "3",
                 "value": "Pakistan",
                 "start": "91",
                 "end": "99"
@@ -1965,15 +1951,8 @@
                 "end": "59"
             },
             {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "formed",
-                "start": "60",
-                "end": "66"
-            },
-            {
                 "tag": "location modifier",
-                "count": "1",
+                "count": "3",
                 "value": "in",
                 "start": "87",
                 "end": "89"
@@ -2065,22 +2044,8 @@
         "content": "When 400 dead people get less coverage than a new island. #Balochistan  #moralities",
         "annotations": [
             {
-                "tag": "item affected",
-                "count": "1",
-                "value": "people",
-                "start": "14",
-                "end": "20"
-            },
-            {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "400",
-                "start": "5",
-                "end": "8"
-            },
-            {
                 "tag": "place name",
-                "count": "1",
+                "count": "3",
                 "value": "Balochistan",
                 "start": "59",
                 "end": "70"
@@ -2088,9 +2053,30 @@
             {
                 "tag": "type of impact",
                 "count": "1",
+                "value": "new island",
+                "start": "46",
+                "end": "56"
+            },
+            {
+                "tag": "severity or quantity",
+                "count": "3",
+                "value": "400",
+                "start": "5",
+                "end": "8"
+            },
+            {
+                "tag": "type of impact",
+                "count": "2",
                 "value": "dead",
                 "start": "9",
                 "end": "13"
+            },
+            {
+                "tag": "item affected",
+                "count": "2",
+                "value": "people",
+                "start": "14",
+                "end": "20"
             }
         ]
     },
@@ -2163,28 +2149,42 @@
     },
     "'383122537850212352'": {
         "tweetId": "'383122537850212352'",
-        "content": "Death toll of Balochistan earthquake hits 350 with more casualties feared #Pakistan http://t.co/JYxR9O1f7V \u00e2\u20ac\u00a6",
+        "content": "Death toll of Balochistan earthquake hits 350 with more casualties feared #Pakistan http://t.co/JYxR9O1f7V \ufffd??",
         "annotations": [
             {
-                "tag": "type of impact",
+                "tag": "severity or quantity",
+                "count": "3",
+                "value": "350",
+                "start": "42",
+                "end": "45"
+            },
+            {
+                "tag": "place name",
+                "count": "3",
+                "value": "Balochistan",
+                "start": "14",
+                "end": "25"
+            },
+            {
+                "tag": "location modifier",
                 "count": "1",
+                "value": "of",
+                "start": "11",
+                "end": "13"
+            },
+            {
+                "tag": "type of impact",
+                "count": "2",
                 "value": "Death",
                 "start": "0",
                 "end": "5"
             },
             {
                 "tag": "place name",
-                "count": "1",
-                "value": "Balochistan",
-                "start": "14",
-                "end": "25"
-            },
-            {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "350",
-                "start": "42",
-                "end": "45"
+                "count": "2",
+                "value": "Pakistan",
+                "start": "75",
+                "end": "83"
             }
         ]
     },
@@ -2300,13 +2300,6 @@
                 "value": "the Bay Area",
                 "start": "98",
                 "end": "110"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "95",
-                "end": "97"
             }
         ]
     },
@@ -2401,13 +2394,6 @@
                 "value": "Nepal",
                 "start": "50",
                 "end": "55"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Nepal",
-                "start": "43",
-                "end": "48"
             },
             {
                 "tag": "place name",
@@ -2648,14 +2634,14 @@
         "annotations": [
             {
                 "tag": "place name",
-                "count": "1",
-                "value": "Daly City, CA, United",
+                "count": "4",
+                "value": "Daly City, CA, United States",
                 "start": "37",
-                "end": "58"
+                "end": "65"
             },
             {
                 "tag": "location modifier",
-                "count": "1",
+                "count": "2",
                 "value": "4 mi from",
                 "start": "27",
                 "end": "36"
@@ -2822,13 +2808,6 @@
                 "end": "31"
             },
             {
-                "tag": "place name",
-                "count": "1",
-                "value": "Chile",
-                "start": "14",
-                "end": "19"
-            },
-            {
                 "tag": "location modifier",
                 "count": "2",
                 "value": "northern",
@@ -2856,32 +2835,11 @@
                 "end": "44"
             },
             {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "104",
-                "end": "106"
-            },
-            {
                 "tag": "place name",
                 "count": "2",
                 "value": "Delhi",
                 "start": "63",
                 "end": "68"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Balochistan",
-                "start": "107",
-                "end": "118"
-            },
-            {
-                "tag": "location modifier",
-                "count": "2",
-                "value": "in",
-                "start": "59",
-                "end": "61"
             }
         ]
     },
@@ -3161,13 +3119,6 @@
                 "end": "54"
             },
             {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "77",
-                "end": "79"
-            },
-            {
                 "tag": "place name",
                 "count": "1",
                 "value": "relative",
@@ -3425,13 +3376,6 @@
                 "end": "98"
             },
             {
-                "tag": "place name",
-                "count": "2",
-                "value": "Chile",
-                "start": "14",
-                "end": "19"
-            },
-            {
                 "tag": "location modifier",
                 "count": "2",
                 "value": "off",
@@ -3587,6 +3531,11 @@
             }
         ]
     },
+    "'451370422186278912'": {
+        "tweetId": "'451370422186278912'",
+        "content": "RT @Carlos_Jobs: #instacollage Open Bar #arica tras el terremoto #earthquake http://t.co/Wl7NF5ezOG",
+        "annotations": []
+    },
     "'592680844331974658'": {
         "tweetId": "'592680844331974658'",
         "content": "Israel An Early Responder to Nepal Earthquake | Washington Free Beacon http://t.co/ctGWb3L2c0",
@@ -3667,13 +3616,6 @@
                 "end": "144"
             },
             {
-                "tag": "place name",
-                "count": "3",
-                "value": "Peru",
-                "start": "125",
-                "end": "129"
-            },
-            {
                 "tag": "type of impact",
                 "count": "2",
                 "value": "injured",
@@ -3701,39 +3643,39 @@
         "content": "This is horrible - #Pakistan earthquake: Hundreds dead in Balochistan http://t.co/88HHJKM1uu",
         "annotations": [
             {
-                "tag": "place name",
-                "count": "1",
-                "value": "Balochistan",
-                "start": "58",
-                "end": "69"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "55",
-                "end": "57"
-            },
-            {
                 "tag": "type of impact",
-                "count": "1",
+                "count": "2",
                 "value": "dead",
                 "start": "50",
                 "end": "54"
             },
             {
                 "tag": "severity or quantity",
-                "count": "1",
+                "count": "3",
                 "value": "Hundreds",
                 "start": "41",
                 "end": "49"
             },
             {
                 "tag": "place name",
-                "count": "1",
+                "count": "2",
+                "value": "Balochistan",
+                "start": "58",
+                "end": "69"
+            },
+            {
+                "tag": "place name",
+                "count": "4",
                 "value": "Pakistan",
                 "start": "20",
                 "end": "28"
+            },
+            {
+                "tag": "location modifier",
+                "count": "2",
+                "value": "in",
+                "start": "55",
+                "end": "57"
             }
         ]
     },
@@ -3828,13 +3770,6 @@
                 "value": "Nepal",
                 "start": "128",
                 "end": "133"
-            },
-            {
-                "tag": "place name",
-                "count": "2",
-                "value": "Nepal",
-                "start": "48",
-                "end": "53"
             }
         ]
     },
@@ -3945,8 +3880,22 @@
         "content": "RT @JeromeTaylor: Breaking: USGS reporting another quake in Baluchistan. This time 6.8, 14km depth. 27.263N, 65.587E #Pakistan",
         "annotations": [
             {
+                "tag": "location modifier",
+                "count": "3",
+                "value": "in",
+                "start": "57",
+                "end": "59"
+            },
+            {
                 "tag": "place name",
-                "count": "1",
+                "count": "3",
+                "value": "Pakistan",
+                "start": "118",
+                "end": "126"
+            },
+            {
+                "tag": "place name",
+                "count": "3",
                 "value": "Baluchistan",
                 "start": "60",
                 "end": "71"
@@ -4206,25 +4155,32 @@
         "content": "Toll in Quake in #Pakistan Rises Past 300 http://t.co/pnGpwrxdbg #Earthquake",
         "annotations": [
             {
-                "tag": "place name",
+                "tag": "severity or quantity",
                 "count": "1",
+                "value": "Rises Past 300",
+                "start": "27",
+                "end": "41"
+            },
+            {
+                "tag": "type of impact",
+                "count": "2",
+                "value": "Toll",
+                "start": "0",
+                "end": "4"
+            },
+            {
+                "tag": "place name",
+                "count": "4",
                 "value": "Pakistan",
                 "start": "18",
                 "end": "26"
             },
             {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "Past 300",
-                "start": "33",
-                "end": "41"
-            },
-            {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "Toll",
-                "start": "0",
-                "end": "4"
+                "tag": "location modifier",
+                "count": "2",
+                "value": "in",
+                "start": "14",
+                "end": "16"
             }
         ]
     },
@@ -4259,13 +4215,6 @@
                 "value": "Nepal",
                 "start": "70",
                 "end": "75"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Nepal",
-                "start": "14",
-                "end": "19"
             }
         ]
     },
@@ -4473,6 +4422,13 @@
             {
                 "tag": "place name",
                 "count": "1",
+                "value": "pakistan",
+                "start": "87",
+                "end": "95"
+            },
+            {
+                "tag": "place name",
+                "count": "2",
                 "value": "Pakistan",
                 "start": "29",
                 "end": "37"
@@ -4671,13 +4627,6 @@
                 "end": "21"
             },
             {
-                "tag": "place name",
-                "count": "2",
-                "value": "Napa",
-                "start": "85",
-                "end": "89"
-            },
-            {
                 "tag": "item affected",
                 "count": "3",
                 "value": "Residents",
@@ -4751,13 +4700,6 @@
                 "value": "Chile",
                 "start": "118",
                 "end": "123"
-            },
-            {
-                "tag": "place name",
-                "count": "3",
-                "value": "Chile",
-                "start": "100",
-                "end": "105"
             }
         ]
     },
@@ -4943,6 +4885,11 @@
                 "end": "81"
             }
         ]
+    },
+    "'383526957893156864'": {
+        "tweetId": "'383526957893156864'",
+        "content": "Khanchey bazi start on account of #earthquake victims  http://t.co/MgTkaQrq5l",
+        "annotations": []
     },
     "'384288232185159680'": {
         "tweetId": "'384288232185159680'",
@@ -5248,13 +5195,6 @@
                 "end": "37"
             },
             {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "flood toll",
-                "start": "6",
-                "end": "16"
-            },
-            {
                 "tag": "place name",
                 "count": "1",
                 "value": "India",
@@ -5267,13 +5207,6 @@
                 "value": "45",
                 "start": "105",
                 "end": "107"
-            },
-            {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "45",
-                "start": "26",
-                "end": "28"
             },
             {
                 "tag": "item affected",
@@ -5329,13 +5262,6 @@
                 "value": "India",
                 "start": "123",
                 "end": "128"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "53",
-                "end": "55"
             }
         ]
     },
@@ -5451,20 +5377,6 @@
                 "value": "India",
                 "start": "4",
                 "end": "9"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "UP, Bihar, Assam",
-                "start": "40",
-                "end": "56"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "80",
-                "end": "82"
             }
         ]
     },
@@ -5690,13 +5602,6 @@
                 "value": "in",
                 "start": "19",
                 "end": "21"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "121",
-                "end": "123"
             }
         ]
     },
@@ -5965,25 +5870,11 @@
                 "end": "92"
             },
             {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "28",
-                "start": "15",
-                "end": "17"
-            },
-            {
                 "tag": "place name",
                 "count": "1",
                 "value": "India",
                 "start": "62",
                 "end": "67"
-            },
-            {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "kill",
-                "start": "10",
-                "end": "14"
             }
         ]
     },
@@ -6114,13 +6005,6 @@
                 "value": "India",
                 "start": "0",
                 "end": "5"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "69",
-                "end": "74"
             },
             {
                 "tag": "place name",
@@ -6347,13 +6231,6 @@
                 "end": "30"
             },
             {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "63",
-                "end": "68"
-            },
-            {
                 "tag": "severity or quantity",
                 "count": "1",
                 "value": "45",
@@ -6380,13 +6257,6 @@
                 "value": "people",
                 "start": "83",
                 "end": "89"
-            },
-            {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "45",
-                "start": "13",
-                "end": "15"
             },
             {
                 "tag": "item affected",
@@ -6599,13 +6469,6 @@
                 "value": "Nepal",
                 "start": "1",
                 "end": "6"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Nepal",
-                "start": "107",
-                "end": "112"
             },
             {
                 "tag": "location modifier",
@@ -8446,20 +8309,6 @@
                 "end": "55"
             },
             {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in eastern",
-                "start": "67",
-                "end": "77"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "78",
-                "end": "83"
-            },
-            {
                 "tag": "type of impact",
                 "count": "1",
                 "value": "kill",
@@ -8472,13 +8321,6 @@
                 "value": "killed",
                 "start": "88",
                 "end": "94"
-            },
-            {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "45",
-                "start": "25",
-                "end": "27"
             }
         ]
     },
@@ -8845,23 +8687,9 @@
             {
                 "tag": "place name",
                 "count": "1",
-                "value": "India",
-                "start": "89",
-                "end": "94"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
                 "value": "Odisha",
                 "start": "7",
                 "end": "13"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "73",
-                "end": "78"
             }
         ]
     },
@@ -8917,13 +8745,6 @@
                 "value": "Odisha",
                 "start": "87",
                 "end": "93"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Odisha",
-                "start": "11",
-                "end": "17"
             }
         ]
     },
@@ -8965,20 +8786,6 @@
                 "value": "NEW DELHI",
                 "start": "54",
                 "end": "63"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "85",
-                "end": "90"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in eastern",
-                "start": "74",
-                "end": "84"
             }
         ]
     },
@@ -9135,13 +8942,6 @@
                 "value": "cane fields",
                 "start": "16",
                 "end": "27"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "28",
-                "end": "30"
             },
             {
                 "tag": "place name",
@@ -9743,13 +9543,6 @@
                 "value": "More than 100",
                 "start": "56",
                 "end": "69"
-            },
-            {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "killed",
-                "start": "7",
-                "end": "13"
             }
         ]
     },
@@ -9987,13 +9780,6 @@
                 "value": "Odisha",
                 "start": "0",
                 "end": "6"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "131",
-                "end": "136"
             },
             {
                 "tag": "type of impact",
@@ -11048,13 +10834,6 @@
                 "end": "34"
             },
             {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "64",
-                "end": "66"
-            },
-            {
                 "tag": "place name",
                 "count": "1",
                 "value": "Nepal, India",
@@ -11827,13 +11606,6 @@
                 "end": "60"
             },
             {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "81",
-                "end": "86"
-            },
-            {
                 "tag": "location modifier",
                 "count": "1",
                 "value": "in",
@@ -11895,13 +11667,6 @@
                 "end": "84"
             },
             {
-                "tag": "place name",
-                "count": "1",
-                "value": "Nepal and India",
-                "start": "13",
-                "end": "28"
-            },
-            {
                 "tag": "type of impact",
                 "count": "1",
                 "value": "dead",
@@ -11916,25 +11681,11 @@
                 "end": "68"
             },
             {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "dead",
-                "start": "5",
-                "end": "9"
-            },
-            {
                 "tag": "severity or quantity",
                 "count": "1",
                 "value": "Many",
                 "start": "0",
                 "end": "4"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "10",
-                "end": "12"
             }
         ]
     },
@@ -12372,13 +12123,6 @@
                 "value": "India and Nepal",
                 "start": "39",
                 "end": "54"
-            },
-            {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "killed",
-                "start": "87",
-                "end": "93"
             }
         ]
     },
@@ -12688,25 +12432,11 @@
                 "end": "30"
             },
             {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "45",
-                "start": "13",
-                "end": "15"
-            },
-            {
                 "tag": "location modifier",
                 "count": "1",
                 "value": "in eastern",
                 "start": "52",
                 "end": "62"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "63",
-                "end": "68"
             },
             {
                 "tag": "item affected",
@@ -12776,13 +12506,6 @@
                 "value": "life",
                 "start": "45",
                 "end": "49"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Assam",
-                "start": "0",
-                "end": "5"
             },
             {
                 "tag": "place name",
@@ -13379,25 +13102,11 @@
                 "end": "29"
             },
             {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "Flood",
-                "start": "90",
-                "end": "95"
-            },
-            {
                 "tag": "severity or quantity",
                 "count": "1",
                 "value": "Severe",
                 "start": "17",
                 "end": "23"
-            },
-            {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "Severe",
-                "start": "83",
-                "end": "89"
             },
             {
                 "tag": "place name",
@@ -13945,25 +13654,11 @@
                 "end": "46"
             },
             {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "10",
-                "end": "12"
-            },
-            {
                 "tag": "place name",
                 "count": "1",
                 "value": "Uttarakhand",
                 "start": "60",
                 "end": "71"
-            },
-            {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "81",
-                "end": "83"
             },
             {
                 "tag": "location modifier",
@@ -15201,13 +14896,6 @@
                 "end": "40"
             },
             {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in eastern",
-                "start": "69",
-                "end": "79"
-            },
-            {
                 "tag": "place name",
                 "count": "1",
                 "value": "NEW DELHI",
@@ -15243,25 +14931,11 @@
                 "end": "7"
             },
             {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "45",
-                "start": "97",
-                "end": "99"
-            },
-            {
                 "tag": "item affected",
                 "count": "1",
                 "value": "people",
                 "start": "100",
                 "end": "106"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "India",
-                "start": "41",
-                "end": "46"
             }
         ]
     },
@@ -15412,13 +15086,6 @@
                 "value": "Marooned",
                 "start": "72",
                 "end": "80"
-            },
-            {
-                "tag": "place name",
-                "count": "1",
-                "value": "Odisha",
-                "start": "38",
-                "end": "44"
             }
         ]
     },
@@ -15850,13 +15517,6 @@
                 "end": "110"
             },
             {
-                "tag": "location modifier",
-                "count": "1",
-                "value": "in",
-                "start": "35",
-                "end": "37"
-            },
-            {
                 "tag": "type of impact",
                 "count": "1",
                 "value": "Dead",
@@ -15883,13 +15543,6 @@
                 "value": "180",
                 "start": "0",
                 "end": "3"
-            },
-            {
-                "tag": "severity or quantity",
-                "count": "1",
-                "value": "180",
-                "start": "92",
-                "end": "95"
             },
             {
                 "tag": "place name",
@@ -17883,13 +17536,6 @@
                 "end": "13"
             },
             {
-                "tag": "type of impact",
-                "count": "1",
-                "value": "dead",
-                "start": "33",
-                "end": "37"
-            },
-            {
                 "tag": "severity or quantity",
                 "count": "1",
                 "value": "44",
@@ -18086,6 +17732,11 @@
                 "end": "88"
             }
         ]
+    },
+    "'384816298569379840'": {
+        "tweetId": "'384816298569379840'",
+        "content": "#SISMO #Earthquake - Magnitude 5.4 - #TONGA - 2013 September 30, 22:41:03 UTC: http://t.co/FmfzCDWzpq v\u00c3\u00ada @lastquake",
+        "annotations": []
     },
     "'383867357074292736'": {
         "tweetId": "'383867357074292736'",
