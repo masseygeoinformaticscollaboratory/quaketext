@@ -66,7 +66,7 @@ for i in json_MT_data:
         elif(tag['tag'] == 'severity or quantity'):
             entity_tags['entities'].append((tag['start'], tag['end'],"SEVERITY"))  
         elif(tag['tag'] == 'place name'):
-            entity_tags['entities'].append((tag['start'], tag['end'],"PLACE"))
+            entity_tags['entities'].append((tag['start'], tag['end'],"LOCATION"))
         elif(tag['tag'] == 'location modifier'):
             entity_tags['entities'].append((tag['start'], tag['end'],"LOC MOD"))
         mt_tag_count += 1
@@ -102,7 +102,7 @@ for i in json_Lighttag_data:
             entity_tags['entities'].append((tag['start'], tag['end'],"SEVERITY"))  
             sev_count += 1
         elif(tag['tag'] == 'place name'):
-            entity_tags['entities'].append((tag['start'], tag['end'],"PLACE"))
+            entity_tags['entities'].append((tag['start'], tag['end'],"LOCATION"))
             place_count += 1
         elif(tag['tag'] == 'location modifier'):
             entity_tags['entities'].append((tag['start'], tag['end'],"LOC MOD"))
@@ -133,7 +133,7 @@ print("total tag count",light_tag_count+mt_tag_count)
 random.shuffle(training_data)
 print ("--")
 none_count = 0
-none_type = {"IMPACT": 0, "AFFECTED" : 0, "SEVERITY" : 0, "PLACE": 0, "LOC MOD": 0}
+none_type = {"IMPACT": 0, "AFFECTED" : 0, "SEVERITY" : 0, "LOCATION": 0, "LOC MOD": 0}
 count = 0
 nlp = spacy.blank("en")
 # training_data = [
@@ -152,7 +152,9 @@ for text, annotations in training_data:
     ents_dev = []
     for start, end, label in annotations['entities']:
         
-        span = doc_train.char_span(int(start), int(end), label=label)
+        span = doc_train.char_span(int(start), int(end), label=label, alignment_mode="contract")
+        # alignment_mode="strict" has no token snapping
+        # alignment_mode="contract" has span of all tokens completely within the character span
 
         # print(span)
         if str(span) == "None":
@@ -165,7 +167,7 @@ for text, annotations in training_data:
         else:
             # ents_train.append(span)
             count += 1
-            if(count < 4237): #20% = 4237 10% = 4767
+            if(count < 4198): #20% = 4198 10% = 4723
                 ents_train.append(span)
             else:
                 ents_dev.append(span)
@@ -182,12 +184,7 @@ for text, annotations in training_data:
 
 db_dev.to_disk("./dev.spacy")
 db_train.to_disk("./train.spacy")
-# db_train.to_disk("./dev.spacy")
-
 
 print("count", count)
 print("none_count", none_count)
 print(none_type)
-
-
-# TODO Run on more examples -  calculate scores of things 
