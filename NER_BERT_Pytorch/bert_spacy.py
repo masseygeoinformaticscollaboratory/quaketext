@@ -18,8 +18,11 @@ impact_dict = {"type of impact": "IMPACT", "item affected" : "AFFECTED", "severi
 training_MT_file = open('../CSVtoJSONcode/finaltags.json')
 json_MT_data = json.load(training_MT_file)
 
-train_bio_file = open("train_bio_tagged_data_MT.tsv", 'w', encoding = 'utf-8')
-dev_bio_file = open("dev_bio_tagged_data_MT.tsv", 'w', encoding = 'utf-8')
+# train_bio_file = open("train_bio_tagged_data_MT.tsv", 'w', encoding = 'utf-8')
+# dev_bio_file = open("dev_bio_tagged_data_MT.tsv", 'w', encoding = 'utf-8')
+
+bio_file = open("bio_tagged_data_MT.csv", 'w', encoding = 'utf-8')
+bio_file.write("word" + "\t" + "tag" + "\n")
 
 
 # training_Lighttag_file = open('../CSVtoJSONcode/lighttag_finaltags.json')
@@ -37,30 +40,35 @@ for i in json_MT_data:
     
     tweet_text = json_MT_data[i]['content']
 
-    for word in re.split('\s|, |: |-',tweet_text):
+    for word in re.split('\s|, |: |- |"',tweet_text):
         # print(word)
         for tag in json_MT_data[i]['annotations']:
             # print(tag['tag'])
+            
 
             if word in tag['value'] and word != "":
                 if(lastVal == tag['value']):
                     pre = "I-"
                 else:
                     pre = "B-"
+
                 lastVal = tag['value']
                 bio_tag = pre + impact_dict[tag['tag']]
                 foundTag = True
                 mt_tag_count += 1
+                
 
         if foundTag == False:
             bio_tag = "O"
 
         foundTag = False
         if word != "":
-            if tweet_count < 1000:
-                train_bio_file.write(word + " " + bio_tag + "\n")
-            else:
-                dev_bio_file.write(word + " " + bio_tag + "\n")
+
+            bio_file.write(word + "\t" + bio_tag + "\n")
+            # if tweet_count < 1000:
+            #     train_bio_file.write(word + "\t" + bio_tag + "\n")
+            # else:
+            #     dev_bio_file.write(word + "\t" + bio_tag + "\n")
     
     tweet_count += 1
 
