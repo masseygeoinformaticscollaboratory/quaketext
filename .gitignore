@@ -11,11 +11,15 @@ __pycache__/
 *.model
 
 BERT_test/
-BERT_impacts/t*/
+BERT_impacts/tagged*/
+BERT_impacts/test-ner/
 
 NER_spacy/output*/
 NER_spacy/testing/
 NER_spacy/training/
+
+NER_BERT_Pytorch/bio_data/
+NER_BERT_Pytorch/results/
 
 # C extensions
 *.so
