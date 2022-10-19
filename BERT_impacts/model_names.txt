@@ -1,0 +1,10 @@
+DisillBERT = distilbert-base-uncased
+           = distilbert-base-cased
+
+
+BERT = bert-base-uncased
+     = bert-base-cased
+
+XLNet = xlnet-base-cased
+
+TransformerXL = transfo-xl-wt103 - is a not fast tokeniser so is not able to run

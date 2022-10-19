@@ -356,5 +356,3 @@ trainer.add_callback(cb_early_stop)
 trainer.train()
 trainer.evaluate()
 trainer.save_model('impact-ner.model')
-
-
