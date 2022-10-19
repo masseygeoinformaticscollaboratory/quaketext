@@ -8,7 +8,7 @@ __pycache__/
 *.csv
 *.exe
 
-*.model
+*-ner.model
 
 BERT_test/
 BERT_impacts/tagged*/
