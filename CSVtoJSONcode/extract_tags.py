@@ -6,6 +6,8 @@ from html import entities
 import json
 import re
 
+include_empty_tweets = False
+
 MIN_THRESHOLD = 3
 
 def check_for_overlapping_tags(instance_dict, count):
@@ -88,13 +90,17 @@ def check_for_overlapping_tags(instance_dict, count):
             
 
 def save_tweet_tag_count(instance_dict):
-
-    # print(instance_dict)
+    found = False
+    # if(instance_dict['key'] == []):
+    #     print(instance_dict)
     # print("from function")
-
+    # if(instance_dict["tweetId"] == "'503866104444620800'"):
+    #     print(instance_dict)
     for i in instance_dict:
+        
         if i != 'tweetId' and i != 'tweetText':
             # print(i)
+            found = True
 
             instance = instance_dict[i][0]
             label = instance_dict[i][1]
@@ -107,19 +113,26 @@ def save_tweet_tag_count(instance_dict):
             
 
             csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + label + "\t" + instance + "\t"+ count + "\t"+ start + "\t"+ end + "\t"+  instance_dict['tweetText'] + "\n")
+    
+    if found == False and include_empty_tweets == True:
+        csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + "\t" + "\t"+ "0" + "\t"+ "\t"+ "\t"+  instance_dict['tweetText'] + "\n")
 
 
 # ----------------------------------------------------------------------------------
 # output from convertCSVtoJSON - in this case mt_combined.json
-json_file_path = input('Enter the absolute path of the INPUT JSON file: ')
-csv_file_path = "all_tags_with_workers.csv" # input('Enter the absolute path of the OUTPUT CSV file: ')
+json_file_path = "mt_combined.json" #input('Enter the absolute path of the INPUT JSON file: ')
+csv_worker_file_path = "all_tags_with_workers.csv" # input('Enter the absolute path of the OUTPUT CSV file: ')
 
 instance_dict = {}
 
-csv_worker_tags_file = open(csv_file_path, 'w', encoding = 'utf-8')
+csv_worker_tags_file = open(csv_worker_file_path, 'w', encoding = 'utf-8')
 csv_worker_tags_file.write('AssignmentStatus' + "\t" + 'Input.id' + "\t" + 'WorkerId' + "\t" + 'label' + "\t" + 'instance' +"\t" + 'startOffset' +"\t" + 'endOffset' +"\t" + 'Input.text' +"\t" + 'Answer.taskAnswers' + "\n")
 
-csv_tag_count_file = open("tagcount.csv", 'w', encoding = 'utf-8')
+csv_tag_path = "tagcount.csv"
+if include_empty_tweets == True:
+    csv_tag_path = "tagcount_all_tweets.csv"
+
+csv_tag_count_file = open(csv_tag_path, 'w', encoding = 'utf-8')
 csv_tag_count_file.write('tweetId' + "\t" + 'label' + "\t" + 'instance' + "\t"+ 'count' + "\t"+ 'start' + "\t"+ 'end' + "\t"+'tweetText' + "\n")
  
 #  read in input json and output data to all_tags_with_workers.csv and tag_count.csv
@@ -233,9 +246,9 @@ csv_tag_count_file.close()
 
 
 # ---------------------------------------------------------------
-# Checking agreement from the 5 taggers
+# Checking agreement from the 5 taggers = tagcount.csv file
 
-with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
+with open(csv_tag_path, 'r', encoding = 'utf-8') as csv_file:
     
     agreement_dict = {}
     final_dict = {}
@@ -287,12 +300,17 @@ with open("tagcount.csv", 'r', encoding = 'utf-8') as csv_file:
     # final_dict["examples"] = [agreement_dict]
     final_dict = agreement_dict
     print("total tweet count = " + str(total_tweet_count))
+    print(len(final_dict))
 
             
 
 # add dictionary to json file
 json_lightTag_format = "finaltags_lighttag_format.json"
 json_output = "finaltags.json"
+
+if include_empty_tweets == True:
+    json_output = "finaltags_all_tweets.json"
+
 with open(json_output, 'w', encoding = 'utf-8') as json_file:
     json_file.write(json.dumps(final_dict, indent = 4))
 
