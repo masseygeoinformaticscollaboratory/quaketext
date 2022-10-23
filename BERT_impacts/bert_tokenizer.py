@@ -12,6 +12,7 @@ from transformers import AutoTokenizer
 from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer, DistilBertForTokenClassification
 from transformers import DataCollatorForTokenClassification
 import torch
+import winsound
 
 label_list = ['O','B-IMPACT','I-IMPACT','B-AFFECTED','I-AFFECTED','B-SEVERITY','I-SEVERITY','B-LOCATION','I-LOCATION','B-MODIFIER','I-MODIFIER']
 label_encoding_dict = {
@@ -27,6 +28,14 @@ label_encoding_dict = {
 'B-MODIFIER': 9, 
 'I-MODIFIER': 10}
 
+# label_list = ['O','B-IMPACT','I-IMPACT']
+# label_encoding_dict = {
+# 'O': 0, 
+# 'B-IMPACT': 1, 
+# 'I-IMPACT': 2}
+
+metric_count = 0
+
 unique_tags = set(label_list)
 # tag2id = {tag: id for id, tag in enumerate(unique_tags)}
 # id2tag = {id: tag for tag, id in tag2id.items()}
@@ -34,13 +43,16 @@ tag2id = label_encoding_dict
 id2tag = {id: tag for tag, id in tag2id.items()}
 
 task = "ner" 
-model_checkpoint = "xlm-roberta-base" # try changing this to other this with auto tokeniser AND to one tag at a time need more dat files for that
+model_checkpoint = "xlnet-base-cased" # try changing this to other this with auto tokeniser AND to one tag at a time need more dat files for that
 batch_size = 16
+
+csv_10fold_results_file = open("results_{}.csv".format(model_checkpoint), 'w', encoding = 'utf-8')
+csv_10fold_results_file.write( 'round' + "\t" + "metric_count" + "\t" + model_checkpoint  + "\t"  + "overall" + "\t"  + 'precision' + "\t" + 'recall' + "\t" + 'f1' + "\t" + 'number' + "\n")
     
-# tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
+tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 
 # for roberta
-tokenizer = AutoTokenizer.from_pretrained(model_checkpoint,add_prefix_space=True)
+# tokenizer = AutoTokenizer.from_pretrained(model_checkpoint,add_prefix_space=True)
 
 
 def get_all_tokens_and_ner_tags(directory):
@@ -61,8 +73,6 @@ def get_un_token_dataset(train_directory, test_directory):
     test_dataset = Dataset.from_pandas(test_df)
 
     return (train_dataset, test_dataset)
-
-train_dataset, test_dataset = get_un_token_dataset('./tagged-training/', './tagged-test/')
 
 
 
@@ -91,27 +101,8 @@ def tokenize_and_align_labels(examples):
     return tokenized_inputs
 
 
-train_tokenized_datasets = train_dataset.map(tokenize_and_align_labels, batched=True)
-test_tokenized_datasets = test_dataset.map(tokenize_and_align_labels, batched=True)
-
-model = AutoModelForTokenClassification.from_pretrained(model_checkpoint, num_labels=len(label_list), label2id=tag2id, id2label=id2tag)
-# model = DistilBertForTokenClassification.from_pretrained(model_checkpoint, num_labels=len(label_list), label2id=tag2id, id2label=id2tag)
-
-args = TrainingArguments(
-    f"test-{task}",
-    evaluation_strategy = "epoch",
-    learning_rate=1e-4,
-    per_device_train_batch_size=batch_size,
-    per_device_eval_batch_size=batch_size,
-    num_train_epochs=3,
-    weight_decay=1e-5,
-)
-
-data_collator = DataCollatorForTokenClassification(tokenizer)
-metric = load_metric("seqeval")
-
-
 def compute_metrics(p):
+    global metric_count
     predictions, labels = p
     predictions = np.argmax(predictions, axis=2)
 
@@ -119,20 +110,75 @@ def compute_metrics(p):
     true_labels = [[label_list[l] for (p, l) in zip(prediction, label) if l != -100] for prediction, label in zip(predictions, labels)]
 
     results = metric.compute(predictions=true_predictions, references=true_labels)
+    print(model_checkpoint, " ____RESULTS_____",results)
+
+    for i in results:
+        count = 0
+        if("overall" not in i):
+            print(i)
+            print(results[i])
+            print(results[i]['precision'])
+            csv_10fold_results_file.write(str(round) + "\t" + str(metric_count) + "\t" + i  + "\t"  + "\t" + str(results[i]['precision']) + "\t" + str(results[i]['recall']) + "\t" + str(results[i]['f1']) + "\t" + str(results[i]['number']) + "\n")
+        else:
+            print(i)
+            print(results[i])
+            csv_10fold_results_file.write(str(round) + "\t" + str(metric_count) + "\t" + i + "\t" + str(results[i]) + "\n")
+        count +=1
+        metric_count = metric_count + 1
+        
+        
+
     return {"precision": results["overall_precision"], "recall": results["overall_recall"], "f1": results["overall_f1"], "accuracy": results["overall_accuracy"]}
+
+
+round = 0
+while round < 10:
+    metric_count = 0
+    print('./training_{}/tagged-training/'.format(round), './training_{}/tagged-test/'.format(round))
+    train_dataset, test_dataset = get_un_token_dataset('./training_{}/tagged-training/'.format(round), './training_{}/tagged-test/'.format(round))
+
+# train_dataset, test_dataset = get_un_token_dataset('./training-all/', './test-all/')
+
+
+# train_dataset, test_dataset = get_un_token_dataset('../NER_BERT_Pytorch/individual_tags_bio_files/impact/', '../NER_BERT_Pytorch/individual_tags_bio_files/impact-testing/')
+
+    train_tokenized_datasets = train_dataset.map(tokenize_and_align_labels, batched=True)
+    test_tokenized_datasets = test_dataset.map(tokenize_and_align_labels, batched=True)
+
+    model = AutoModelForTokenClassification.from_pretrained(model_checkpoint, num_labels=len(label_list), label2id=tag2id, id2label=id2tag)
+
+
+    args = TrainingArguments(
+        f"test-{task}",
+        evaluation_strategy = "epoch",
+        learning_rate=1e-4,
+        per_device_train_batch_size=batch_size,
+        per_device_eval_batch_size=batch_size,
+        num_train_epochs=3,
+        weight_decay=1e-5,
+    )
+
+    data_collator = DataCollatorForTokenClassification(tokenizer)
+    metric = load_metric("seqeval")
+
     
-trainer = Trainer(
-    model,
-    args,
-    train_dataset=train_tokenized_datasets,
-    eval_dataset=test_tokenized_datasets,
-    data_collator=data_collator,
-    tokenizer=tokenizer,
-    compute_metrics=compute_metrics
-)
+    trainer = Trainer(
+        model,
+        args,
+        train_dataset=train_tokenized_datasets,
+        eval_dataset=test_tokenized_datasets,
+        data_collator=data_collator,
+        tokenizer=tokenizer,
+        compute_metrics=compute_metrics
+    )
 
-trainer.train()
-trainer.evaluate()
+    trainer.train()
+    trainer.evaluate()
 
-model_filename = model_checkpoint + "-ner.model"
-trainer.save_model(model_filename)
+    model_filename = "./models/" + model_checkpoint + "-ner-" + str(round) + ".model"
+    trainer.save_model(model_filename)
+    round += 1
+
+
+
+winsound.Beep(440,500)
