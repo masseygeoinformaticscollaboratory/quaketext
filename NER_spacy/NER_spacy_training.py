@@ -2,17 +2,19 @@
 # Spacy. Training Pipelines & Models. https://spacy.io/usage/training
 # Turbolab. Build a Custom NER model using spaCy 3.0. https://turbolab.in/build-a-custom-ner-model-using-spacy-3-0/
 import json
+from pydoc import doc
 import spacy
 from spacy import displacy
 from spacy.util import minibatch, compounding, filter_spans
 from spacy.training.example import Example
 from spacy.tokens import DocBin
+from spacy.training import offsets_to_biluo_tags
 import random
 
 training_data = []
 validation_data = []
 
-TEN_FOLD_ROUND_NUM = 9 # 0-9
+TEN_FOLD_ROUND_NUM = 0 # 0-9
 
 nlp=spacy.load('en_core_web_sm')
 ner=nlp.get_pipe('ner')
@@ -167,15 +169,15 @@ for text, annotations in training_data:
             none_type[label] += 1
             none_count += 1
 
-            doc_train = nlp(newtext)
-            newspan = doc_train.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
-            # print(span)
-            # print(newspan)
-            if(str(newspan) != "None"):
-                ents_train.append(newspan)
-                none_type[label] -= 1
-                none_count -= 1
-                count+=1
+            # doc_train = nlp(newtext)
+            # newspan = doc_train.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
+            # # print(span)
+            # # print(newspan)
+            # if(str(newspan) != "None"):
+            #     ents_train.append(newspan)
+            #     none_type[label] -= 1
+            #     # none_count -= 1
+            #     count+=1
             # else:
             #     print(text)
             #     print(text[int(start):int(end)])
@@ -216,15 +218,15 @@ for text, annotations in validation_data:
             none_type[label] += 1
             none_count += 1
 
-            doc_dev = nlp(newtext)
-            newspan = doc_dev.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
-            # print(span)
-            # print(newspan)
-            if(str(newspan) != "None"):
-                ents_dev.append(newspan)
-                none_type[label] -= 1
-                none_count -= 1
-                count+=1
+            # doc_dev = nlp(newtext)
+            # newspan = doc_dev.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
+            # # print(span)
+            # # print(newspan)
+            # if(str(newspan) != "None"):
+            #     ents_dev.append(newspan)
+            #     none_type[label] -= 1
+            #     # none_count -= 1
+            #     count+=1
             # else:
             #     print(text)
             #     print(text[int(start):int(end)])
@@ -233,15 +235,24 @@ for text, annotations in validation_data:
         else:
             count += 1
             ents_dev.append(span)
-             
+    
+    # print(doc_dev)
+    # print("BILUO:", offsets_to_biluo_tags(doc_dev, [(int(start),int(end),label)]))
+
+        # for span in offsets_to_biluo_tags(doc_dev, [(int(start),int(end),label)]):
+        #     print(span)
             
     ents_dev_filtered = filter_spans(ents_dev)
     doc_dev.ents = ents_dev_filtered
     db_dev.add(doc_dev)
 
 
-db_dev.to_disk("./testing/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
-db_train.to_disk("./training/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+# db_dev.to_disk("./testing/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+# db_train.to_disk("./training/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+db_dev.to_disk("./testing-none-ex/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+db_train.to_disk("./training-none-ex/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+# db_dev.to_disk("./dev.spacy")
+# db_train.to_disk("./train.spacy")
 
 print("count", count)
 print("none_count", none_count)
