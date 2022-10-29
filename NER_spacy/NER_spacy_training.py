@@ -169,15 +169,15 @@ for text, annotations in training_data:
             none_type[label] += 1
             none_count += 1
 
-            # doc_train = nlp(newtext)
-            # newspan = doc_train.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
-            # # print(span)
-            # # print(newspan)
-            # if(str(newspan) != "None"):
-            #     ents_train.append(newspan)
-            #     none_type[label] -= 1
-            #     # none_count -= 1
-            #     count+=1
+            doc_train = nlp(newtext)
+            newspan = doc_train.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
+            # print(span)
+            # print(newspan)
+            if(str(newspan) != "None"):
+                ents_train.append(newspan)
+                # none_type[label] -= 1
+                # none_count -= 1
+                count+=1
             # else:
             #     print(text)
             #     print(text[int(start):int(end)])
@@ -197,6 +197,10 @@ for text, annotations in validation_data:
     
     doc_dev = nlp(text)
     ents_dev = []
+
+    print (text)
+    print(annotations)
+    print()
 
     for start, end, label in annotations['entities']:
         
@@ -218,15 +222,15 @@ for text, annotations in validation_data:
             none_type[label] += 1
             none_count += 1
 
-            # doc_dev = nlp(newtext)
-            # newspan = doc_dev.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
-            # # print(span)
-            # # print(newspan)
-            # if(str(newspan) != "None"):
-            #     ents_dev.append(newspan)
-            #     none_type[label] -= 1
-            #     # none_count -= 1
-            #     count+=1
+            doc_dev = nlp(newtext)
+            newspan = doc_dev.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
+            # print(span)
+            # print(newspan)
+            if(str(newspan) != "None"):
+                ents_dev.append(newspan)
+                none_type[label] -= 1
+                # none_count -= 1
+                count+=1
             # else:
             #     print(text)
             #     print(text[int(start):int(end)])
@@ -247,10 +251,10 @@ for text, annotations in validation_data:
     db_dev.add(doc_dev)
 
 
-# db_dev.to_disk("./testing/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
-# db_train.to_disk("./training/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
-db_dev.to_disk("./testing-none-ex/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
-db_train.to_disk("./training-none-ex/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+db_dev.to_disk("./testing/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+db_train.to_disk("./training/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+# db_dev.to_disk("./testing-none-ex/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+# db_train.to_disk("./training-none-ex/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
 # db_dev.to_disk("./dev.spacy")
 # db_train.to_disk("./train.spacy")
 
