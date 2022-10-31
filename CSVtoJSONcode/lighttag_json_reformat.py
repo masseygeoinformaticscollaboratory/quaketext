@@ -143,7 +143,7 @@ with open(json_lightTag_format, 'w', encoding = 'utf-8') as json_file:
 # # create a joined CSV file for both lighttag and MT data
 def create_joined_csv_for_LT_MT():
 
-    final_tags_combined_csv = open("final_tags_combined_LT_MT.csv", 'w', encoding = 'utf-8')
+    final_tags_combined_csv = open("final_tags_combined_LT_MT_3_or_more.csv", 'w', encoding = 'utf-8')
     final_tags_combined_csv.write('source' + "\t" + 'tweetId' + "\t" + 'label' + "\t" + 'instance' +"\t" + 'start' +"\t" + 'end' +"\t" + 'tweetText'  + "\n")
     num = 0
     
@@ -174,7 +174,7 @@ def create_joined_csv_for_LT_MT():
 
         for MT_rows in MT_csv_reader:
 
-            if(int(MT_rows['count']) > 3):
+            if(int(MT_rows['count']) >= 3):
            
                 source = "MechanicalTurk"
                 id = MT_rows['tweetId']

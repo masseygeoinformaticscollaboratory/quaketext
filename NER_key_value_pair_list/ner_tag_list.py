@@ -13,30 +13,55 @@ json_file_path = "../CSVtoJSONcode/mt_combined.json"
 impact_list_dict = {}
 
 
-with open(json_file_path, encoding = 'utf-8') as json_handler:
+# with open(json_file_path, encoding = 'utf-8') as json_handler:
+    
+#     data = json.load(json_handler)
+
+#     count = 0
+ 
+#     for i in data.values():
+#         impact_list_dict.update({i['Input.id']:{"id" : i['Input.id'],"text" : i['Input.text']}})
+    
+#     print(len(impact_list_dict))
+
+# with open("../CSVtoJSONcode/lighttag-800-tweets-annotated.json", encoding = 'utf-8') as json_handler:
+    
+#     data = json.load(json_handler)
+
+#     count = 0
+ 
+#     for data_array in data.values():
+#         for item in data_array:
+#             # print(item["examples"])
+#             # print()
+#             impact_list_dict.update({i['tweetId']:{"id" : i['tweetId'],"text" : i['content']}})
+    
+#     print(len(impact_list_dict))
+with open("../CSVtoJSONcode/finaltags.json", encoding = 'utf-8') as json_handler:
     
     data = json.load(json_handler)
-
-    count = 0
- 
     for i in data.values():
-        print(i['Input.id'])
+        impact_list_dict.update({i['tweetId']:{"id" : i['tweetId'],"text" : i['content']}})
+    print(len(impact_list_dict))
 
-        impact_list_dict.update({i['Input.id']:{"id" : i['Input.id'],"text" : i['Input.text']}})
-
-        # count+=1
+with open("../CSVtoJSONcode/lighttag_finaltags.json", encoding = 'utf-8') as json_handler:
     
-    print(impact_list_dict, count)
+    data = json.load(json_handler)
+    for i in data.values():
+        impact_list_dict.update({i['tweetId']:{"id" : i['tweetId'],"text" : i['content']}})
+    print(len(impact_list_dict))
+
 
 for tweet in impact_list_dict:
-    print(impact_list_dict[tweet])
+    # print(impact_list_dict[tweet])
     impact_list_dict[tweet]['tag'] = []
     for impact in impact_list:
-        lowercase_tweet = impact_list_dict[tweet]['text']
+        lowercase_tweet = impact_list_dict[tweet]['text'].lower() # can use this to tse TODO!
+        # print(lowercase_tweet)
 
         # if re.search(impact, impact_list_dict[tweet]['text'], re.IGNORECASE):
         if impact in lowercase_tweet:
-            print("found impact = " + impact)
+            # print("found impact = " + impact)
             # start = impact_list_dict[tweet]['text'].find(impact)
             start = lowercase_tweet.find(impact)
             # print(start)
@@ -57,6 +82,11 @@ for tweet in impact_list_dict:
 # a dictionary
 MT_data = json.load(MT_finaltags_file)
 
+LT_finaltags_file = open('../CSVtoJSONcode/lighttag_finaltags.json')
+
+LT_data = json.load(LT_finaltags_file)
+
+MT_data.update(LT_data)
   
 # Iterating through the json MT file for gold standard final tags
 # list
@@ -77,7 +107,7 @@ for tweet in MT_data:
         if anno['tag'] == "type of impact":
 
             for i in impact_list_dict[tweet]['tag']:
-                print("inside for ",i)
+                # print("inside for ",i)
                 if(i['start'] == anno['start']):
                     true_pos += 1
                     i['found'] = "yes"
@@ -85,16 +115,19 @@ for tweet in MT_data:
             
             if(found == False):
                 # word was not found
+                print("false negative",anno)
                 false_neg+= 1
             
             found = False
-            print(i)
-            print(anno)
+            # print(i)
+            # print(anno)
             count = count+1
 
 for tweet in impact_list_dict:
     for tag in impact_list_dict[tweet]['tag']:
         if tag['found'] == "null":
+            # print("false positive",tag)
+            # print(impact_list_dict[tweet]['text'])
             false_pos+= 1
 
 # TODO need to read in tagged data to compare only impact tags

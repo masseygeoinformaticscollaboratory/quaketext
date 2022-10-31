@@ -7,7 +7,7 @@ from spacy.tokens import DocBin
 import random
 import re
 
-IOB_data = []
+individual_tags = {"type of impact":[], "item affected":[],"severity or quantity":[],"place name":[],"location modifier":[]}
 
 impact_dict = {"type of impact": "IMPACT", "item affected" : "AFFECTED", "severity or quantity" : "SEVERITY", "place name": "LOCATION", "location modifier": "MODIFIER"}
 
@@ -28,6 +28,7 @@ test_data_file = open("bio_test.txt", 'w', encoding = 'utf-8')
 
 def new_file_location(file_count,data_origin):
     file = open("./bio_data/{}_0{}.txt".format(data_origin, file_count), 'w', encoding = 'utf-8')
+    # file = open("./individual_tags_bio_files/impact/{}_0{}.txt".format(data_origin, file_count), 'w', encoding = 'utf-8')
 
     return file
 # bio_file.write("word" + "\t" + "tag" + "\n")
@@ -36,6 +37,8 @@ def build_bio_files(json_data, type):
 
     print("length",len(json_data))
 
+    shuffle_json_keys = list(json_data.keys())
+    random.shuffle(shuffle_json_keys)
 
     file_count = 0
     tag_count = 0
@@ -46,7 +49,7 @@ def build_bio_files(json_data, type):
     tweet_count = 0
     bio_file = new_file_location(file_count,type)
 
-    for i in json_data:
+    for i in shuffle_json_keys:
         # print(json_data[i]['content'])
 
         if(tweet_count > len(json_data)/10):
@@ -60,7 +63,11 @@ def build_bio_files(json_data, type):
 
         tweet_text = json_data[i]['content']
 
-        for word in re.split('\s|, |: |- |"|\'',tweet_text):
+        # txt = re.split('\s',tweet_text)
+        # print (tweet_text)
+
+        for word in re.split("\s|(#)|(, |: |- |\"|\')",tweet_text):
+        # for word in txt:
             # print(word)
             for tag in json_data[i]['annotations']:
                 # print(tag['tag'])
@@ -69,7 +76,8 @@ def build_bio_files(json_data, type):
                 for each_tag in re.split(" ",tag['value']):
                     # print(tag['value'])
                     # print(each_tag)
-                    if word == each_tag:
+                    # print(word)
+                    if str(word) != "None" and each_tag in word:
                         if(j == 0):
                             pre = "B-"
                         else:
@@ -97,13 +105,12 @@ def build_bio_files(json_data, type):
                 bio_tag = "O"
 
             foundTag = False
-            if word != "":
+            if word != "" and str(word) != "None":
 
+                # if "IMPACT" not in bio_tag:
+                #     bio_tag = "O"
+                    
                 bio_file.write(word + "\t" + bio_tag + "\n")
-                # if tweet_count < 1000:
-                #     train_bio_file.write(word + "\t" + bio_tag + "\n")
-                # else:
-                #     dev_bio_file.write(word + "\t" + bio_tag + "\n")
 
         tweet_count += 1
         bio_file.write("\n")

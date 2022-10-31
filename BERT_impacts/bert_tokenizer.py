@@ -43,16 +43,16 @@ tag2id = label_encoding_dict
 id2tag = {id: tag for tag, id in tag2id.items()}
 
 task = "ner" 
-model_checkpoint = "xlnet-base-cased" # try changing this to other this with auto tokeniser AND to one tag at a time need more dat files for that
+model_checkpoint = "xlm-roberta-base" # try changing this to other this with auto tokeniser AND to one tag at a time need more dat files for that
 batch_size = 16
 
 csv_10fold_results_file = open("results_{}.csv".format(model_checkpoint), 'w', encoding = 'utf-8')
 csv_10fold_results_file.write( 'round' + "\t" + "metric_count" + "\t" + model_checkpoint  + "\t"  + "overall" + "\t"  + 'precision' + "\t" + 'recall' + "\t" + 'f1' + "\t" + 'number' + "\n")
     
-tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
+# tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 
 # for roberta
-# tokenizer = AutoTokenizer.from_pretrained(model_checkpoint,add_prefix_space=True)
+tokenizer = AutoTokenizer.from_pretrained(model_checkpoint,add_prefix_space=True)
 
 
 def get_all_tokens_and_ner_tags(directory):
