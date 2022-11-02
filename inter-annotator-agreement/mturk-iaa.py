@@ -25,7 +25,7 @@ with open(csv_worker_file_path, 'r', encoding = 'utf-8') as csv_file:
     currentId = ""
     currentText = ""
     tagCount = 0
-    total_tweet_count = 0
+    shared_tweet_count = 0
     worker1found = False
     worker2found = False
 
@@ -37,8 +37,7 @@ with open(csv_worker_file_path, 'r', encoding = 'utf-8') as csv_file:
                 currentId = rows['Input.id']
                 currentText = rows['Input.text']
                 true_neg += len(currentText.split())
-                first = False 
-                total_tweet_count += 1      
+                first = False    
             elif currentId != rows['Input.id']:
                 # if the ids do not match then all the annotations for the previous tweet have been read save to dictionary and change current it and text, and clear annotation list for new tweet 
                 currentId = rows['Input.id']
@@ -47,6 +46,7 @@ with open(csv_worker_file_path, 'r', encoding = 'utf-8') as csv_file:
 
                 found = False
                 if worker1found == True and worker2found == True:
+                    shared_tweet_count +=1
                     for item in worker1_dict:
                         # print(item)
                         for compare in worker2_dict:
@@ -72,7 +72,7 @@ with open(csv_worker_file_path, 'r', encoding = 'utf-8') as csv_file:
                 worker1_dict = []
                 worker2_dict = []
                 tagCount = 0
-                total_tweet_count += 1
+
                 # print("new id")
 
 
@@ -99,7 +99,7 @@ with open(csv_worker_file_path, 'r', encoding = 'utf-8') as csv_file:
 
         tagCount += 1
     
-    print ("worker1_count", worker1_count)
+    print ("shared_tweet_count", shared_tweet_count)
   
   
     print("true_neg", true_neg)
