@@ -38,7 +38,7 @@ with open(light_tag_json_file_path, encoding = 'utf-8') as json_file_handler:
 
         for annotation in i['annotations']:
             # print (annotation['correct'])
-            if annotation['correct'] == True or annotation['correct'] == None or annotation['correct'] == False:
+            if annotation['correct'] == True or annotation['correct'] == None: # or annotation['correct'] == False:
                 print (annotation['correct'])
                 current_value = str(annotation['value'])
                 value_word_count = len(current_value.split())
@@ -52,7 +52,7 @@ with open(light_tag_json_file_path, encoding = 'utf-8') as json_file_handler:
                             # print(value_word_count)
                             sophie_count +=1
                             sophie_tag = True
-                        elif person['annotator_id'] == 3:
+                        elif person['annotator_id'] == 5:
                             # print (person)
                             # print (current_value)
                             # print(value_word_count)
