@@ -1,9 +1,27 @@
 import json
-import csv
-import re
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer
+  
+lemmatizer = WordNetLemmatizer()
+stemmer = PorterStemmer()
+
+print("collapsed :", lemmatizer.lemmatize("collapse"))
+print("corpora :", lemmatizer.lemmatize("corpora", pos="a"))
 
 impact_list = ['cancellation','closure','collapse','damage','dead','death','delay','die','disruption','destroy','down','injured','injury','injuries','lose','loss','loss of life','malfunction','miss work','missing','no access','obstruction','rescue','stranded','theft','trap', 'kill']
-# missing capitalization of some impact instances
+
+lemmatized_impact_list = []
+stemmer_impact_list = []
+
+for item in impact_list:
+    if lemmatizer.lemmatize(item) not in lemmatized_impact_list:
+        lemmatized_impact_list.append(lemmatizer.lemmatize(item))
+    if stemmer.stem(item) not in stemmer_impact_list:
+            stemmer_impact_list.append(stemmer.stem(item))
+
+print(lemmatized_impact_list)
+print(stemmer_impact_list)
   
 # Opening JSON file
 MT_finaltags_file = open('../CSVtoJSONcode/finaltags.json')
@@ -17,38 +35,61 @@ with open("../CSVtoJSONcode/finaltags.json", encoding = 'utf-8') as json_handler
     data = json.load(json_handler)
     for i in data.values():
         impact_list_dict.update({i['tweetId']:{"id" : i['tweetId'],"text" : i['content']}})
-    print(len(impact_list_dict))
+    # print(len(impact_list_dict))
 
 with open("../CSVtoJSONcode/lighttag_finaltags.json", encoding = 'utf-8') as json_handler:
     
     data = json.load(json_handler)
     for i in data.values():
         impact_list_dict.update({i['tweetId']:{"id" : i['tweetId'],"text" : i['content']}})
-    print(len(impact_list_dict))
+    # print(len(impact_list_dict))
 
 
 for tweet in impact_list_dict:
     # print(impact_list_dict[tweet])
     impact_list_dict[tweet]['tag'] = []
-    for impact in impact_list:
-        lowercase_tweet = impact_list_dict[tweet]['text'].lower() # can use this to tse TODO!
-        # print(lowercase_tweet)
 
-        # if re.search(impact, impact_list_dict[tweet]['text'], re.IGNORECASE):
-        if impact in lowercase_tweet:
-            # print("found impact = " + impact)
-            # start = impact_list_dict[tweet]['text'].find(impact)
-            start = lowercase_tweet.find(impact)
-            # print(start)
-            # end = impact_list_dict[tweet]['text'].rfind(impact)
-            end = lowercase_tweet.rfind(impact)
+    lowercase_tweet = impact_list_dict[tweet]['text'].lower() # can use this to tse TODO!
+    # print(lowercase_tweet)
+    lemmatized_tweet = []
+    stemmer_tweet = []
+    words = word_tokenize(lowercase_tweet)
+    for word in words:
+        # print(word, ": ", stemmer.stem(word))
+        lemmatized_tweet.append(lemmatizer.lemmatize(word))
+        stemmer_tweet.append(stemmer.stem(word))
+
+    # print("lowercase_tweet",lowercase_tweet)
+    # print("lem_tweet: ",lemmatized_tweet)
+    # print("ste_tweet: ",stemmer_tweet)
+
+    # for impact in stemmer_impact_list:       
+    #     for word in stemmer_tweet:
+    #         if impact == word:
+
+    #             # print("tweet: ",stemmer_tweet)
+    #             # print("found impact = " + impact)
+
+    #             start = lowercase_tweet.find(impact)
+    #             end = lowercase_tweet.rfind(impact)
             
-            # print(end)
-            current_tags = impact_list_dict[tweet]['tag']
-            current_tags.extend([{'value':impact,'start':str(start),"found": "null"}])
-            impact_list_dict[tweet]['tag'] = current_tags
-            # test_data_dict[tweet]['tag'] = [{'value':impact,'start':str(start)}]
+    #             current_tags = impact_list_dict[tweet]['tag']
+    #             current_tags.extend([{'value':impact,'start':str(start),"found": "null"}])
+    #             impact_list_dict[tweet]['tag'] = current_tags
 
+    for impact in lemmatized_impact_list:
+        for word in lemmatized_tweet:
+            if impact == word:
+
+                # print("tweet: ",lemmatized_tweet)
+                # print("found impact = " + impact)
+
+                start = lowercase_tweet.find(impact)
+                end = lowercase_tweet.rfind(impact)
+            
+                current_tags = impact_list_dict[tweet]['tag']
+                current_tags.extend([{'value':impact,'start':str(start),"found": "null"}])
+                impact_list_dict[tweet]['tag'] = current_tags
     
 
 
@@ -90,7 +131,7 @@ for tweet in MT_data:
             
             if(found == False):
                 # word was not found
-                print("false negative",anno)
+                # print("false negative",anno)
                 false_neg+= 1
             
             found = False
@@ -125,7 +166,7 @@ print ("recall", recall)
 
 print("f1score", f1score)
 
-with open("test_result_lowercase.json", 'w', encoding = 'utf-8') as json_file_handler:
+with open("test_result_lemma.json", 'w', encoding = 'utf-8') as json_file_handler:
     json_file_handler.write(json.dumps(impact_list_dict, indent = 4))
 
 

@@ -9,7 +9,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "44",
                 "found": "null"
             }
@@ -20,7 +20,7 @@
         "text": "RT @jarekkuzniar: Nowe ZDJECIA z #Chile \"@RT_com: Damage & fires in northern #Chile following 8.2 quake http://t.co/6pXO7G4VqV http://t.co/\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "50",
                 "found": "yes"
             }
@@ -31,7 +31,7 @@
         "text": "RT @TIME: See India's rescue operations in the villages most affected by Nepal's deadly earthquake http://t.co/Tcirp7hceR http://t.co/LCMDo\u2026",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "22",
                 "found": "null"
             }
@@ -42,7 +42,7 @@
         "text": "QUAKE HITS CALIFORNIA State of emergency issued as officials weigh damage http://t.co/QGFN1lmDHT",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "67",
                 "found": "null"
             }
@@ -73,20 +73,14 @@
     "'592332997925343232'": {
         "id": "'592332997925343232'",
         "text": "RT @SPoonia777: Nepal landmark 200 years old, Dharahara Tower collapsed from earthquake  Pray for Nepal ! #MSGHelpEarthquakeVictims http://\u2026",
-        "tag": [
-            {
-                "value": "collaps",
-                "start": "62",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503737486326001664'": {
         "id": "'503737486326001664'",
         "text": "RT @latimes: Interactive map: See where this morning's quake hit the Bay Area and where it caused damage http://t.co/NDP9hpTLOE http://t.co\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "98",
                 "found": "yes"
             }
@@ -107,7 +101,7 @@
         "text": "RT @LondonFire: 5 London Firefighters have been deployed to #Nepal as part of the #earthquake rescue effort http://t.co/0bMwue8LWP http://t\u2026",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "94",
                 "found": "null"
             }
@@ -122,11 +116,6 @@
         "id": "'451251794937933824'",
         "text": "5 deaths reported in 8.2-magnitude earthquake that hit off Chile. All tsunami warnings and watches was canceled http://t.co/WMtN0NwPg4",
         "tag": [
-            {
-                "value": "cancel",
-                "start": "103",
-                "found": "null"
-            },
             {
                 "value": "death",
                 "start": "2",
@@ -180,7 +169,7 @@
         "text": "RT @sfkale: Stark before and after photos show extent of #napaquake damage. http://t.co/Yovh6vr8fZ http://t.co/Us7N4egfn1",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "68",
                 "found": "null"
             }
@@ -234,20 +223,14 @@
     "'592697288771895296'": {
         "id": "'592697288771895296'",
         "text": "India has become saviour for other countries earlier #operationraahat n now #OperationMaitri #Salute n #RIP souls died in #NepalEarthquake",
-        "tag": [
-            {
-                "value": "die",
-                "start": "114",
-                "found": "null"
-            }
-        ]
+        "tag": []
     },
     "'593827267685429249'": {
         "id": "'593827267685429249'",
         "text": "RT @DrGPradhan: .@MehrTarar Pak also owes Nepal and whole world how dare they raise their flag on rescue mission? http://t.co/oeZro7zcDj",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "98",
                 "found": "null"
             }
@@ -404,7 +387,7 @@
         "text": "UPDATE: Hospital officials say a 13-year-old boy was critically injured by a falling chimney in the #napaquake",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "64",
                 "found": "yes"
             }
@@ -441,27 +424,21 @@
         "text": "RT @StarTribune: UPDATE: 6.0-magnitude quake in Northern California causes injuries, fires, road closures. http://t.co/Cdd0Jq4gOO http://t.\u2026",
         "tag": [
             {
-                "value": "closur",
+                "value": "closure",
                 "start": "97",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "75",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
     "'592896910962401281'": {
         "id": "'592896910962401281'",
         "text": "So Baltimore Riots and 4,000+ people died in Nepal today...",
-        "tag": [
-            {
-                "value": "die",
-                "start": "37",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593330094556381185'": {
         "id": "'593330094556381185'",
@@ -473,7 +450,7 @@
         "text": "Earthquake in Chile, is worried. I hope that the damage does not increase.",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "49",
                 "found": "null"
             }
@@ -499,7 +476,7 @@
         "text": "RT @Miss604: MT @AlexJamesFitz: Napa-- skaters finding upside to quake damage. Photo from #nbcbayarea photog Jeremy Carroll http://t.co/Ty3\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "71",
                 "found": "null"
             }
@@ -513,13 +490,7 @@
     "'451395510340161537'": {
         "id": "'451395510340161537'",
         "text": "#ChileEarthquakeAndTsunami 8.2 magnitude and 2m waves killing 6 people http://t.co/hfOQnyC2Gr",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "54",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503751273305624576'": {
         "id": "'503751273305624576'",
@@ -572,7 +543,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "83",
                 "found": "yes"
             }
@@ -588,7 +559,7 @@
         "text": "Mostly #Earthquake affected area in #Balochistan is under influence of #BLA causing difficulty in rescue process.",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "98",
                 "found": "null"
             }
@@ -597,13 +568,7 @@
     "'503915801447919616'": {
         "id": "'503915801447919616'",
         "text": "US California Wine Country Earthquake Injures Dozens http://t.co/QrP286ExMf #Slice_of_Life #US_News #California #earthquake #Napa",
-        "tag": [
-            {
-                "value": "injur",
-                "start": "38",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'452765903160365056'": {
         "id": "'452765903160365056'",
@@ -644,20 +609,14 @@
     "'593158520326885376'": {
         "id": "'593158520326885376'",
         "text": "RT @AdamLBarnett: 3,617 killed in Nepal. Protests & riots in Baltimore. 88,175 worldwide abortions. FBI predicts ISIS attack in USA.  Peopl\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "24",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'382919900169113600'": {
         "id": "'382919900169113600'",
         "text": "RT @AyishaBaloch: Army as usual the first ones to reach for rescue operations here in #Balochistan. #earthquake",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "60",
                 "found": "null"
             }
@@ -682,13 +641,7 @@
     "'592085547197276161'": {
         "id": "'592085547197276161'",
         "text": "RT @SkyNewsBreak: Update - Reuters: Home ministry official says 618 people have died after an earthquake measuring magnitude 7.9 struck #Ne\u2026",
-        "tag": [
-            {
-                "value": "die",
-                "start": "80",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593771424143147008'": {
         "id": "'593771424143147008'",
@@ -746,7 +699,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "14",
                 "found": "yes"
             }
@@ -766,13 +719,7 @@
     "'592335762827321346'": {
         "id": "'592335762827321346'",
         "text": "RT @muns2177: Compare Kashmir Floods & #NepalEarthquake coverage by usual #Presstitutes 2200 have died,guess Hindu lives dont count http://\u2026",
-        "tag": [
-            {
-                "value": "die",
-                "start": "98",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451250047439867904'": {
         "id": "'451250047439867904'",
@@ -807,13 +754,7 @@
     "'591914947585699842'": {
         "id": "'591914947585699842'",
         "text": "RT @reddimples45: @ntvkenya  The news has just picked up - 7.9 magnitude earthquake hit Nepal killing 150 people prophecy of more earthquak\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "94",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451215814386286593'": {
         "id": "'451215814386286593'",
@@ -892,13 +833,7 @@
     "'451392427270479876'": {
         "id": "'451392427270479876'",
         "text": "RT @ABC: UPDATE: A sixth person has died following the earthquake off of Chile's coast http://t.co/DFQ9Hd1i6W",
-        "tag": [
-            {
-                "value": "die",
-                "start": "36",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592344732866490368'": {
         "id": "'592344732866490368'",
@@ -910,7 +845,7 @@
         "text": "RT @tyleronemo: Ontario CAN Ottawa http://t.co/kj1UFfoQxr BREAKING NEWS 238 Earthquake Today Bay Area earthquake damages Napa County Airpor\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "113",
                 "found": "yes"
             }
@@ -949,13 +884,7 @@
     "'593817149799436289'": {
         "id": "'593817149799436289'",
         "text": "RT @haaretzcom: Killing in #Gaza, saving in #Nepal: #Israel's moral hypocrisy \u2013 Gideon Levy http://t.co/pc1HQgHnIb http://t.co/ePQYSyejlI",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "16",
-                "found": "null"
-            }
-        ]
+        "tag": []
     },
     "'503700476328542208'": {
         "id": "'503700476328542208'",
@@ -972,9 +901,9 @@
         "text": "RT @AP: 1st survivors of avalanche at Everest base camp flown to Nepal's capital; injuries not deemed life-threatening: http://t.co/xdilDYM\u2026",
         "tag": [
             {
-                "value": "injuri",
-                "start": "82",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -996,18 +925,7 @@
     "'383876838587891712'": {
         "id": "'383876838587891712'",
         "text": "Another strong Jolt of #EarthQuake hit the #Baluchistan province of Pakistan,Many houses wr destroyed,Many civil remained under collapsed",
-        "tag": [
-            {
-                "value": "collaps",
-                "start": "128",
-                "found": "null"
-            },
-            {
-                "value": "destroy",
-                "start": "92",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592228011581116416'": {
         "id": "'592228011581116416'",
@@ -1070,7 +988,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "38",
                 "found": "yes"
             }
@@ -1101,13 +1019,7 @@
     "'504506599633719296'": {
         "id": "'504506599633719296'",
         "text": "RT @KCBSNews: #Vallejo: 7 commercial buildings damaged in #napaquake red-tagged, 30 yellow-tagged. http://t.co/pBc3IHMM5q",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "47",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'382952457371803648'": {
         "id": "'382952457371803648'",
@@ -1165,7 +1077,7 @@
         "text": "Its efficacious wood keeps us safe from disaster yet brick from dated chimneys cause such damage in California http://t.co/XmpyesNZMW #quake",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "90",
                 "found": "yes"
             }
@@ -1227,7 +1139,7 @@
         "text": "Napa Valley wineries sustain damage from 6.0 earthquake  LA Times: http://t.co/SUcG3iYwoB  http://t.co/P6LpL61uKc Via @CarolCNN",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "29",
                 "found": "yes"
             }
@@ -1259,7 +1171,7 @@
                 "found": "yes"
             },
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "34",
                 "found": "null"
             }
@@ -1311,7 +1223,7 @@
                 "found": "yes"
             },
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "52",
                 "found": "null"
             }
@@ -1322,7 +1234,7 @@
         "text": "Some roads in downtown Napa closed due to earthquake damage. @ewengerKPIX with more @CBSSF",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "53",
                 "found": "null"
             }
@@ -1404,13 +1316,7 @@
     "'383161529966665728'": {
         "id": "'383161529966665728'",
         "text": "RT @UNOCHA #Pakistan earthquake update: over 80% of mud houses in Awaran District, Balochistan reportedly damaged - http://t.co/i3wTpgeL4k",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "106",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'504494797458247680'": {
         "id": "'504494797458247680'",
@@ -1432,7 +1338,7 @@
         "text": "IHH Search and Rescue Team has begun work in earthquake-hit Nepal. http://t.co/7cYzF86cq2",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "15",
                 "found": "null"
             }
@@ -1448,7 +1354,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "84",
                 "found": "null"
             }
@@ -1484,7 +1390,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "17",
                 "found": "yes"
             }
@@ -1537,7 +1443,7 @@
         "text": "\u00a6 1 \u00a6 Bay Area earthquake damages Napa County Airport \u00a6 Clean-up is still underway in the wake of the 6.0 magnitude\u2026 http://t.co/7FCn9ejWDj",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "26",
                 "found": "null"
             }
@@ -1569,12 +1475,12 @@
         "text": "RT @yash_talreja: 6.1 Magnitude Earthquake Wakes Up San Francisco denizens! 120 injured, 1000s without Power, $100 million in damages  http\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "126",
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "80",
                 "found": "yes"
             }
@@ -1649,13 +1555,7 @@
     "'503858413819138048'": {
         "id": "'503858413819138048'",
         "text": "Magnitude 6.0 Earthquake in California Destroys B\u2026: http://t.co/TiVLKVdZ4o",
-        "tag": [
-            {
-                "value": "destroy",
-                "start": "39",
-                "found": "null"
-            }
-        ]
+        "tag": []
     },
     "'592912742010343424'": {
         "id": "'592912742010343424'",
@@ -1665,13 +1565,7 @@
     "'593283759685832704'": {
         "id": "'593283759685832704'",
         "text": "Officials concede they made mistakes in initial response to Nepal quake that killed over 5,000: Anger and frus... http://t.co/B5llqk6mAk",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "77",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'385040908749533184'": {
         "id": "'385040908749533184'",
@@ -1706,13 +1600,7 @@
     "'592344140026814465'": {
         "id": "'592344140026814465'",
         "text": "RT @AriaaJaeger: #PrayForNepal A 7.9 earthquake has killed more than 480 people. Pls join me in praying for #Nepal http://t.co/pHmrRMb5AG",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "52",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593459058289549314'": {
         "id": "'593459058289549314'",
@@ -1734,17 +1622,17 @@
         "text": "Family of missing Ottawa hiker Faye Kennedy says she is alive but injured and airlifted to Kathmandu No idea of extent of injuries @CTVNews",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "66",
                 "found": "null"
             },
             {
-                "value": "injuri",
-                "start": "122",
+                "value": "injury",
+                "start": "-1",
                 "found": "null"
             },
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "10",
                 "found": "null"
             }
@@ -1768,13 +1656,7 @@
     "'592691377701560324'": {
         "id": "'592691377701560324'",
         "text": "For those of you unaware... An earthquake in Nepal just killed 4,000 people.",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "56",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503724863450644482'": {
         "id": "'503724863450644482'",
@@ -1786,7 +1668,7 @@
         "text": "#Bus #bomb in #Pakistan kills 17 government workers and leaves over 40 injured http://t.co/3HvbG9kOut http://t.co/mgtHGU6Gsu",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "71",
                 "found": "yes"
             },
@@ -1899,11 +1781,6 @@
                 "value": "death",
                 "start": "113",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "22",
-                "found": "yes"
             }
         ]
     },
@@ -1912,7 +1789,7 @@
         "text": "The horror! Damage done to wine barrels at a Napa Valley winery during this weekend's earthquake. http://t.co/lYw7EWCklR",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "12",
                 "found": "yes"
             }
@@ -1936,13 +1813,7 @@
     "'383084326146957312'": {
         "id": "'383084326146957312'",
         "text": "Unfortunately more than 200 killed in massive #Pakistan #Earthquake",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "28",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592254271233495042'": {
         "id": "'592254271233495042'",
@@ -1999,7 +1870,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "76",
                 "found": "yes"
             }
@@ -2015,7 +1886,7 @@
         "text": "RT @jenniferfeldman: At least 172 people have been injured in the 6.1 #NapaQuake, per Walt Mickens, President & CEO of Queen of the Valley \u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "51",
                 "found": "yes"
             }
@@ -2047,7 +1918,7 @@
         "text": "RT @I_N_F_O_W_A_R_S: 4_26_15  NEPAL\u2019S HOSPITALS SWAMPED AS QUAKE TOLL PASSES 2,400 THOUSANDS INJURED  #Reuters  http://t.co/EHi7ZPLcYR http\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "93",
                 "found": "yes"
             }
@@ -2110,7 +1981,7 @@
         "text": "RT @DanAshleyABC7: Brian Davis, college student, shared this shot with me of #quake damage. I'm reporting live from Napa at 4,5, and 6 http\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "84",
                 "found": "null"
             }
@@ -2119,13 +1990,7 @@
     "'592134054620725249'": {
         "id": "'592134054620725249'",
         "text": "RT @kylegotjokes: What was we pose to do? RT \u201c@morgaaanf: 1,000 were killed in Nepal & people were worrying about Bruce Jenner. http://t.co\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "69",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593818380273979392'": {
         "id": "'593818380273979392'",
@@ -2142,13 +2007,8 @@
         "text": "#PAKISTAN 2000 personnel of #army providing relief, 476 people killed, half million injured in #Balochistan #earthquake DG #ISPR #PMLN #NP",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "84",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "63",
                 "found": "yes"
             }
         ]
@@ -2158,7 +2018,7 @@
         "text": "RT @JeffreyGuterman: MT @vickydnguyen: Skater finds upside to #earthquake damage in #Napa. Photo by Jeremy Carroll. http://t.co/vujP2A9Np2 \u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "74",
                 "found": "null"
             }
@@ -2198,13 +2058,7 @@
     "'593795705795313664'": {
         "id": "'593795705795313664'",
         "text": "15k people died in Nepal? Omg. My heart breaks for them :(",
-        "tag": [
-            {
-                "value": "die",
-                "start": "11",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451379537927225344'": {
         "id": "'451379537927225344'",
@@ -2216,7 +2070,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "79",
                 "found": "yes"
             }
@@ -2232,7 +2086,7 @@
         "text": "RT @vishnoi4u: How Many Team send By @INCIndia @AamAadmiParty Ford Found GreenPeace For Rescue op Nepal  #MEAatWork #IndiaWithNepal http://\u2026",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "88",
                 "found": "null"
             }
@@ -2268,7 +2122,7 @@
         "text": "California Quake Means Big Damage For Napa Valley Wineries - It's still too early to tell just how much the magnit... http://t.co/rUI1ZOEOiG",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "27",
                 "found": "yes"
             }
@@ -2289,23 +2143,13 @@
         "text": "RT @liveleak: Many people killed and injured in powerful quake in Nepal: Scores of people have been killed and many injured ... http://t.co\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "37",
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "37",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "26",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "26",
                 "found": "yes"
             }
         ]
@@ -2369,13 +2213,7 @@
     "'384678507466350592'": {
         "id": "'384678507466350592'",
         "text": "Witness to Pakistan blast: 'Women and children were burning': At least 40 people were killed and abo... http://t.co/7BObBIbN1n #pakistan",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "86",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592980037332152321'": {
         "id": "'592980037332152321'",
@@ -2392,7 +2230,7 @@
         "text": "Pray for #Chile tonight! There was an 8.2 earthquake off the coast earlier & from what I've seen/read there is a lot of damage. Please pray.",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "120",
                 "found": "yes"
             }
@@ -2411,13 +2249,7 @@
     "'592315864386555904'": {
         "id": "'592315864386555904'",
         "text": "RT @ICEYTREY: Bruce Jenner still front page of Yahoo when 1500 people died in an earthquake in Nepal this morning",
-        "tag": [
-            {
-                "value": "die",
-                "start": "70",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451209222298935296'": {
         "id": "'451209222298935296'",
@@ -2429,7 +2261,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "59",
                 "found": "yes"
             }
@@ -2511,13 +2343,7 @@
     "'592324426781319168'": {
         "id": "'592324426781319168'",
         "text": "RT @emilyrauhala: #NepalQuake: #Tibet also hit hard. China Daily reports 70% of buildings in Nyalam County damaged. (Foreign press barred f\u2026",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "107",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383541085831569408'": {
         "id": "'383541085831569408'",
@@ -2575,7 +2401,7 @@
         "text": "RT @Mullin_Around: We now have more than 100 photos of #earthquake damage from Napa: http://t.co/2t4PIFsDty Tons of coverage on @SFGate htt\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "67",
                 "found": "yes"
             }
@@ -2654,14 +2480,14 @@
         "text": "#money #news #top #b Magnitude-7.9 quake hits Nepal, causing big damage, injuries  Get $$ http://t.co/JfuQkytCx8",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "65",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "73",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -2710,11 +2536,6 @@
                 "value": "dead",
                 "start": "27",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "72",
-                "found": "yes"
             }
         ]
     },
@@ -2723,7 +2544,7 @@
         "text": "3 people critically injured after California quake: NAPA, Calif. (AP) -- A large earthquake ... http://t.co/JRxRcCD2zE via @wcdailylocal",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "20",
                 "found": "null"
             }
@@ -2755,7 +2576,7 @@
         "text": "California assessing damage after large quake http://t.co/RTc6hTDSsO",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "21",
                 "found": "yes"
             }
@@ -2769,13 +2590,7 @@
     "'383321051704619008'": {
         "id": "'383321051704619008'",
         "text": "Chilling en face de #monanciennemaison destroyed by the #earthquake http://t.co/4Qk2dpy9Jg",
-        "tag": [
-            {
-                "value": "destroy",
-                "start": "39",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451554308002025472'": {
         "id": "'451554308002025472'",
@@ -2832,14 +2647,9 @@
         "text": "RT @DDNewsLive: #NepalEarthquake update: over 800 killed | #NDMA #Helpline No. for missing persons 011-26701728/ 29 Mob-9868891801 http://t\u2026",
         "tag": [
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "83",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "50",
-                "found": "yes"
             }
         ]
     },
@@ -2853,7 +2663,7 @@
         "text": "RT @romenesko: John Oliver, the great explainer * Earthquake damage doesn't stop Napa Valley paper * \"No angel\" story predicted. http://t.c\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "61",
                 "found": "yes"
             }
@@ -2869,9 +2679,9 @@
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "55",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -2895,7 +2705,7 @@
         "text": "Recent college grad Evan Kilkus helps #NapaQuake recovery w/ his drone to survey damage: http://t.co/4KEkmb3l6K http://t.co/XhN4L61mhT",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "81",
                 "found": "null"
             }
@@ -2906,7 +2716,7 @@
         "text": "Sorry to hear that you suffered damage in the #napaquake @SilverOak . Glad no one was hurt.",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "32",
                 "found": "yes"
             }
@@ -2922,7 +2732,7 @@
         "text": "ESO Telescopes Escape Damage From Chile Earthquake http://t.co/B44PJFJWGN #Always #Current #yycwalks",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "22",
                 "found": "null"
             }
@@ -2991,7 +2801,7 @@
         "text": "Caltech-based seismologist says Napa earthquake damage predictable,... http://t.co/ckiTweZwzS  #CoachellaValley #LosAngeles #NapaSunday",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "48",
                 "found": "null"
             }
@@ -3023,7 +2833,7 @@
         "text": "@CNBC Tech failure: In Napa quake, power surges led to PC damage http://t.co/HK5Y48u23l",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "58",
                 "found": "yes"
             }
@@ -3034,7 +2844,7 @@
         "text": "@GameOverGreggy can you talk about the earthquake and the damage it brought San Francisco on beyond tomorrow? Thanks in advance. BEYOND-O!",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "58",
                 "found": "null"
             }
@@ -3106,7 +2916,7 @@
         "text": "Napa Earthquake Damage Estimated at $1 Billion  (http://t.co/0HPY0ihEwG)",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "16",
                 "found": "null"
             }
@@ -3132,7 +2942,7 @@
         "text": "Napa earthquake damage, insurance losses could hit $4B http://t.co/EOKRf0G7fa #wine #winery",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "16",
                 "found": "null"
             },
@@ -3179,7 +2989,7 @@
         "text": "RT @kundadixit: #NepalQuake Day 3 Update Aftershocks subside, but huge need for rescue, relief. http://t.co/EroGtuYnBh http://t.co/vlIogfoQ\u2026",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "80",
                 "found": "null"
             }
@@ -3188,20 +2998,14 @@
     "'383628275517374464'": {
         "id": "'383628275517374464'",
         "text": "More than 700 people died in #Earthquake and 80 in #Peshawar Blast. But indifferent #KingOfRaiwind is just having a fun on foreign tours.",
-        "tag": [
-            {
-                "value": "die",
-                "start": "21",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503656578231595009'": {
         "id": "'503656578231595009'",
         "text": "Hospital treating 6 critically injured in South Napa Quake http://t.co/O1eHaMj6B5",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "31",
                 "found": "yes"
             }
@@ -3238,7 +3042,7 @@
         "text": "NAPA: Wineries continue earthquake damage clean-up http://t.co/dZS4bpC4EL via @sharethis",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "35",
                 "found": "yes"
             }
@@ -3286,7 +3090,7 @@
         "text": "California quake damages historic buildings: The strongest quake to hit the Bay Area in 25 year... http://t.co/3s0j9cSDIi ff: @gospelgee",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "17",
                 "found": "yes"
             }
@@ -3316,13 +3120,7 @@
     "'384400659174674432'": {
         "id": "'384400659174674432'",
         "text": "@essel1 Attention was on #KPK, #Pakistan when unfortunate blast in #Church killed many. Why no focus on today's or on yesterday's bus blast?",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "75",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503739038885752834'": {
         "id": "'503739038885752834'",
@@ -3334,7 +3132,7 @@
         "text": "Massive 7.8 earthquake (aftershock of yesterdays 8.2 quake) just hit 40km from Iquique, Chile. Damage and inju... http://t.co/YrcCVz8H3T",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "95",
                 "found": "null"
             }
@@ -3345,14 +3143,14 @@
         "text": "RT @heyyouapp: \u00a6 http://t.co/4LByErEec9 85 \u00a6 6.0 earthquake jolts Bay Area damage and at least 87 injuries reported  #earthquake \u00a6 It was t\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "75",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "98",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -3361,7 +3159,7 @@
         "text": "RT @NuclearFreeQld: Expert urges California nuclear plant closure over earthquake threat | CBS News http://t.co/v0IvvsiQNp @couriermail @ab\u2026",
         "tag": [
             {
-                "value": "closur",
+                "value": "closure",
                 "start": "58",
                 "found": "null"
             }
@@ -3377,13 +3175,8 @@
         "text": "Three blasts in 8 days, around 150 people killed and several dozens injured #Peshawar #Pakistan #Taliban",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "68",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "42",
                 "found": "yes"
             }
         ]
@@ -3408,7 +3201,7 @@
         "text": "Napa quake caused $300 million in private property damage http://t.co/09fmOQ0jBV",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "51",
                 "found": "yes"
             }
@@ -3417,13 +3210,7 @@
     "'592377160578412544'": {
         "id": "'592377160578412544'",
         "text": "Google engineer dies in Everest avalanche after Nepal quake: Dan Fredinburg, an engineer in Google's Project X... http://t.co/PlW69GjDzA",
-        "tag": [
-            {
-                "value": "die",
-                "start": "16",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451488161634725888'": {
         "id": "'451488161634725888'",
@@ -3450,13 +3237,8 @@
         "text": "RT @ibnlive: #NepalQuake | LIVE: At least 58 killed, 237 injured in earthquake in India http://t.co/TwvDTQum1d",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "57",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "45",
                 "found": "yes"
             }
         ]
@@ -3464,25 +3246,14 @@
     "'383589848910553088'": {
         "id": "'383589848910553088'",
         "text": "RT @AhmerMurad: Who dies in drone strikes? @TBIJ launches #NamingTheDead project to identify the 2,500+ killed in #Pakistan http://t.co/M0C\u2026",
-        "tag": [
-            {
-                "value": "die",
-                "start": "20",
-                "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "104",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451494747262042113'": {
         "id": "'451494747262042113'",
         "text": "Apparently, it was Chile's strict building laws that prevented added damage occurring during yesterday's quakes http://t.co/pk1PEMW1Mf",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "69",
                 "found": "null"
             }
@@ -3503,7 +3274,7 @@
         "text": "RT @latimes: Wineries and other businesses in Northern California's wine country assess damage after today's earthquake http://t.co/F8CZDfo\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "88",
                 "found": "yes"
             }
@@ -3529,7 +3300,7 @@
         "text": "LetYouKnow: California begins quake clear-up: Workers assess damage and begin to clear ... http://t.co/4bJVeFhZxt http://t.co/YxeOLuYcZx",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "61",
                 "found": "yes"
             }
@@ -3573,29 +3344,12 @@
     "'504379028833566721'": {
         "id": "'504379028833566721'",
         "text": "RT @BBCWorld: Earthquake destroys historic buildings and leaves thousands without power in California http://t.co/RI18GChlqQ http://t.co/OW\u2026",
-        "tag": [
-            {
-                "value": "destroy",
-                "start": "25",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383636461079109634'": {
         "id": "'383636461079109634'",
         "text": "300,000 people have been affected, 21,000 homes have been destroyed and over 350 people have died. #earthquake #Pakistan",
-        "tag": [
-            {
-                "value": "die",
-                "start": "93",
-                "found": "yes"
-            },
-            {
-                "value": "destroy",
-                "start": "58",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'504396664224763904'": {
         "id": "'504396664224763904'",
@@ -3658,7 +3412,7 @@
         "text": "RT @ABC: 6 dead following major magnitude 8.2 earthquake off Chile; damage being assessed as daybreak comes: http://t.co/a3guGL5TmL",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "68",
                 "found": "yes"
             },
@@ -3704,12 +3458,12 @@
         "text": "California hit with worst quake in 25 years: New images emerge of widespread damage in California. More than 200 people were injured ...",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "77",
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "125",
                 "found": "yes"
             }
@@ -3746,7 +3500,7 @@
         "text": "RT @nicoleewayne: \u2666 http://t.co/hBRvsaQomg 771 \u2666 Earthquake \u2666 Bay Area earthquake damages Napa County Airport http://t.co/jUJ1iG6Jbf",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "82",
                 "found": "yes"
             }
@@ -3757,12 +3511,12 @@
         "text": "UAV technology is helping the search & rescue mission #NepalEarthquake http://t.co/RKNKS3PIc6 #drone #UAV #tech #rescue #NepalQuakeRelief",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "39",
                 "found": "null"
             },
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "39",
                 "found": "null"
             }
@@ -3796,13 +3550,7 @@
     "'384209603388383233'": {
         "id": "'384209603388383233'",
         "text": "Police in #Pakistan say at least 25 killed after suspected car bomb went off in Peshawar, the site of a deadly church bombing last week.",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "36",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592620821736226816'": {
         "id": "'592620821736226816'",
@@ -3825,7 +3573,7 @@
         "text": "RT @nprnews: California Quake Means Big Damage For Napa Valley Wineries http://t.co/ev9p99IDtC",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "40",
                 "found": "yes"
             }
@@ -3851,7 +3599,7 @@
         "text": "Each day after Sunday's #napaquake seems to uncover new damage or new problems. The latest, up next at 11. Watch: http://t.co/kKP3LCViZD via",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "56",
                 "found": "null"
             }
@@ -3916,13 +3664,7 @@
     "'382830961110835200'": {
         "id": "'382830961110835200'",
         "text": "RT @CDACN: MT:@GSMAm4d Yests 7.7m #earthquake in #Pakistan causes fatalities &disrupts mobile nworks & #communication.http://t.co/W5xrBuP1M\u2026",
-        "tag": [
-            {
-                "value": "disrupt",
-                "start": "78",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451561248639823872'": {
         "id": "'451561248639823872'",
@@ -3957,11 +3699,6 @@
                 "value": "destroy",
                 "start": "128",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "103",
-                "found": "yes"
             }
         ]
     },
@@ -3991,7 +3728,7 @@
         "text": "Also, down here in Valpo, no visible sign of damage, we didn\u2019t feel much shock. We had a 5.3 a few weeks ago though, and that was a trip!",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "45",
                 "found": "null"
             },
@@ -4036,13 +3773,7 @@
     "'591949491219013633'": {
         "id": "'591949491219013633'",
         "text": "An earthquake engineer's first look at the buildings that collapsed in #nepalquake. https://t.co/nJ94x4AC4C via @JonathanStone10",
-        "tag": [
-            {
-                "value": "collaps",
-                "start": "58",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384930174024048640'": {
         "id": "'384930174024048640'",
@@ -4059,7 +3790,7 @@
         "text": "[BW] Small Winemakers Assess Napa Quake Damage http://t.co/gqv275VjXu",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "40",
                 "found": "yes"
             }
@@ -4075,7 +3806,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "85",
                 "found": "yes"
             }
@@ -4099,13 +3830,7 @@
     "'504081295857971201'": {
         "id": "'504081295857971201'",
         "text": "USA \u00bb NEWS \u00bb http://t.co/uafnaKrhyc HOT NEWS 132 earthquake Even buildings with seismic retrofits damaged in Napa earthquake #earthquake US\u2026",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "98",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593050802895257600'": {
         "id": "'593050802895257600'",
@@ -4117,7 +3842,7 @@
                 "found": "yes"
             },
             {
-                "value": "strand",
+                "value": "stranded",
                 "start": "74",
                 "found": "yes"
             }
@@ -4160,7 +3885,7 @@
         "text": "One man swung into action mere minutes after the news of #NepalEarthquake and spearheaded an impressive rescue... http://t.co/PbGTGDs3i9",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "104",
                 "found": "null"
             }
@@ -4171,7 +3896,7 @@
         "text": "Rescue crews pull 15yo boy from #NepalEarthquake rubble. STORY: https://t.co/N3xsNYlK8j (pic from Nepal State TV) http://t.co/Df2JrxOXXK",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "0",
                 "found": "null"
             }
@@ -4237,7 +3962,7 @@
         "text": "Choppers ferry injured in Nepal; new mudslide hits village: GORKHA, Nepal (AP) \u2014 Helicopters cri... http://t.co/cwncd7EXic &lt;--Full Story",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "15",
                 "found": "yes"
             }
@@ -4299,7 +4024,7 @@
                 "found": "yes"
             },
             {
-                "value": "strand",
+                "value": "stranded",
                 "start": "49",
                 "found": "null"
             }
@@ -4334,13 +4059,7 @@
     "'451320834158632960'": {
         "id": "'451320834158632960'",
         "text": "#newsofindia 5 killed as huge 8.2 earthquake off Chile coast triggers tsunami - Hindustan Times:... http://t.co/yqXOUjTZlS .. check out!",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "15",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593569017123573760'": {
         "id": "'593569017123573760'",
@@ -4377,13 +4096,7 @@
     "'451350874951286785'": {
         "id": "'451350874951286785'",
         "text": "8.2 earthquake hits Chile, killing 5 and displacing 80,000  http://t.co/johQMG8lor",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "27",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'591989866990174209'": {
         "id": "'591989866990174209'",
@@ -4403,18 +4116,7 @@
     "'503849418617933824'": {
         "id": "'503849418617933824'",
         "text": "#CaliforniaEarthquake Destroys Historic #Buildings in #Napa, Injures Many : Home : Realty Today: http://t.co/adFKTC4voO",
-        "tag": [
-            {
-                "value": "destroy",
-                "start": "22",
-                "found": "yes"
-            },
-            {
-                "value": "injur",
-                "start": "61",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592275305563197440'": {
         "id": "'592275305563197440'",
@@ -4437,7 +4139,7 @@
                 "found": "null"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "78",
                 "found": "null"
             }
@@ -4513,13 +4215,7 @@
     "'591977475044814850'": {
         "id": "'591977475044814850'",
         "text": "@karanjohar @AnushkaSharma 1500 Killed In #NepalEarthquake . Watch Affected Places Here &gt;&gt; https://t.co/SvhVcasRFE",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "32",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503895823911227392'": {
         "id": "'503895823911227392'",
@@ -4545,13 +4241,7 @@
     "'593037650937929731'": {
         "id": "'593037650937929731'",
         "text": "#BaltimoreRiots look at all those poor people who died in #NepalEarthquake and ur worried about #Rioting n #violence #NepalQuake",
-        "tag": [
-            {
-                "value": "die",
-                "start": "50",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'382851622680133632'": {
         "id": "'382851622680133632'",
@@ -4612,32 +4302,21 @@
     "'592288033203822592'": {
         "id": "'592288033203822592'",
         "text": "Avalanche sweeps Everest base camp, killing 17, injuring 61: An avalanche triggered by Nepal's massive earthquake\u2026 http://t.co/6k96jADGyK",
-        "tag": [
-            {
-                "value": "injur",
-                "start": "48",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "36",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503659589548933120'": {
         "id": "'503659589548933120'",
         "text": "RT @In_Nevada: #Elko Strong California quake causes injuries, damage:  http://t.co/O7Ck9KEtrl",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "62",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "52",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -4676,7 +4355,7 @@
         "text": "RT @Afsheeniqbal5: RT : @AsimBajwaISPR: #Earthquake update: Army units evacuating injured and their NOKs in jeep ambulances http://t.co/Mom\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "82",
                 "found": "null"
             }
@@ -4698,7 +4377,7 @@
         "text": "RT @RT_com: WRAP-UP: Tsunami hits #Chile following 8.2 earthquake, 5 dead, 80k displaced, damage, fires, aftershocks reported http://t.co/f\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "90",
                 "found": "yes"
             },
@@ -4827,7 +4506,7 @@
         "text": "RT @AmSommelier: #Napa Quake May Cost Over $1 Billion in Damages to Vineyards and Restaurants http://t.co/Qlp2ie7jJP  via @Eater #wine",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "57",
                 "found": "yes"
             }
@@ -4848,7 +4527,7 @@
         "text": "Citizen\u2019s drone video shows damage of Napa earthquake - http://t.co/gq9g0SerC5 by Jeff John Roberts",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "28",
                 "found": "null"
             }
@@ -4875,7 +4554,7 @@
         "text": "#breakingnews Small Winemakers Assess Napa Quake Damage: Small independent vintners who stored wine barrels in... http://t.co/h31Oiv89rv",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "49",
                 "found": "yes"
             }
@@ -4905,13 +4584,7 @@
     "'384211949950484480'": {
         "id": "'384211949950484480'",
         "text": "#Pakistan : At least 31 people #killed by #car-bomb in #Peshawar  http://t.co/vvV1Lcvl22",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "32",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'504476134814134272'": {
         "id": "'504476134814134272'",
@@ -4975,12 +4648,12 @@
                 "found": "yes"
             },
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "52",
                 "found": "yes"
             },
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "61",
                 "found": "null"
             }
@@ -5088,12 +4761,7 @@
         "text": "RT @RT_com: #California earthquake aftermath: Buildings destroyed, over 100 injured (VIDEO) http://t.co/v9jHYsZc9J",
         "tag": [
             {
-                "value": "destroy",
-                "start": "56",
-                "found": "yes"
-            },
-            {
-                "value": "injur",
+                "value": "injured",
                 "start": "76",
                 "found": "yes"
             }
@@ -5119,7 +4787,7 @@
         "text": "RT @heyyouapp: \u00a4 USA http://t.co/SBrRB0Nog4 849 Earthquake Damage From Northern California Earthquake Could Reach $1 Billion heyyouapp  #Ea\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "59",
                 "found": "yes"
             }
@@ -5140,7 +4808,7 @@
         "text": "Channel4News: #NepalEarthquake - hopes and dreams crushed like homes. millerC4 reports from alongside rescue teams\u2026 http://t.co/PWluIfYiro",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "102",
                 "found": "null"
             }
@@ -5151,7 +4819,7 @@
         "text": "California starts quake clean-up: California is assessing the damage after a powerful earthquake struck the he... http://t.co/lbDrJ7ngIo",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "62",
                 "found": "null"
             }
@@ -5175,13 +4843,7 @@
     "'503750834585219072'": {
         "id": "'503750834585219072'",
         "text": "RT @ronlin: Even buildings with seismic retrofits damaged in #Napa #earthquake @cmaiduc @laura_nelson  http://t.co/SfzgKncjyv",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "50",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'452913731471544320'": {
         "id": "'452913731471544320'",
@@ -5191,13 +4853,7 @@
     "'591936832373264384'": {
         "id": "'591936832373264384'",
         "text": "@NT__305 7.8 Quake Hits Nepal, Toppling Buildings, Killing Hundreds: The powerful temblor hit north of the cap... http://t.co/Rnxw5gjAoT",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "51",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503705205888671744'": {
         "id": "'503705205888671744'",
@@ -5225,7 +4881,7 @@
         "text": "RT @NBCNews: Data from fitness trackers reveal extent of the disruption from the #Napa earthquake http://t.co/eYip3U9KAN http://t.co/fEx03q\u2026",
         "tag": [
             {
-                "value": "disrupt",
+                "value": "disruption",
                 "start": "61",
                 "found": "null"
             }
@@ -5283,7 +4939,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "105",
                 "found": "yes"
             }
@@ -5302,13 +4958,7 @@
     "'503733131271487489'": {
         "id": "'503733131271487489'",
         "text": "RT @GavinNewsom: More businesses & buildings damaged by the #NapaQuake http://t.co/mYvocI2UVZ",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "45",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384559460686913536'": {
         "id": "'384559460686913536'",
@@ -5320,7 +4970,7 @@
                 "found": "yes"
             },
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "93",
                 "found": "null"
             }
@@ -5356,13 +5006,8 @@
         "text": "RT @ShakingEarth: Massive #earthquake in #Pakistan - At least 283 #killed and 400 #injured - many #updates + many #video's  - http://t.co/S\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "83",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "67",
                 "found": "yes"
             }
         ]
@@ -5474,29 +5119,12 @@
     "'592257992642273281'": {
         "id": "'592257992642273281'",
         "text": "Google Executive Killed In Everest Avalanche After Nepal Quake: An executive at Google was killed when a 7.8-m... http://t.co/1oj6A9X1yT",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "17",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "17",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384117846596259840'": {
         "id": "'384117846596259840'",
         "text": "#Pakistan church bomb: Christians mourn 85 killed in Peshawar suicide attack - The Guardian http://t.co/8Y2Ss0YfIf #IIC",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "43",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451385108713316353'": {
         "id": "'451385108713316353'",
@@ -5513,7 +5141,7 @@
         "text": "RT @abc7newsBayArea: WATCH LIVE: Napa city officials holding 11AM news conference to give update on #quake damage, recovery. WATCH: http://\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "107",
                 "found": "null"
             }
@@ -5534,7 +5162,7 @@
         "text": "Haha my aunt who lives in Napa slept right through the earthquake. Her son said he thought the house was going to collapse.",
         "tag": [
             {
-                "value": "collaps",
+                "value": "collapse",
                 "start": "114",
                 "found": "null"
             }
@@ -5545,19 +5173,19 @@
         "text": "RT @drsanjaygupta: some of the most common injuries are crush injuries, fractures & brain/spine injuries. #nepalquake @cnn #kathmandu http:\u2026",
         "tag": [
             {
-                "value": "injuri",
-                "start": "43",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             },
             {
-                "value": "injuri",
-                "start": "43",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             },
             {
-                "value": "injuri",
-                "start": "43",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -5571,7 +5199,7 @@
         "text": "RT @SocialInLA: Napa earthquake: Drone video offers bird's-eye view of damage: A new video from a privately owned drone shows ... http://t.\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "71",
                 "found": "yes"
             }
@@ -5592,7 +5220,7 @@
         "text": "RT @myfoxla: 100+ Injured In Northern California's Most Powerful Earthquake Since 1989. http://t.co/U3uVl1mH0K http://t.co/qrEgpAjUvl",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "18",
                 "found": "yes"
             }
@@ -5619,7 +5247,7 @@
         "text": "RT @heyyouapp: USA \u00bb NEWS \u00bb http://t.co/VPCVAVqhW4 HOT NEWS 718 earthquake Dozens injured, 3 critically, after strong earthquake in Califor\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "82",
                 "found": "yes"
             }
@@ -5635,7 +5263,7 @@
         "text": "RT @heyyouapp: \u00a6 http://t.co/WvIDktgCmf 668 \u00a6 Bay Area earthquake damages Napa County Airport  #earthquake \u00a6 Clean-up is still underway in \u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "66",
                 "found": "yes"
             }
@@ -5666,7 +5294,7 @@
         "text": "RT @janinebucks: California USA Riverside \u00bb http://t.co/2GdE5OuWVx  #earthquake 527 Three Critically Injured, Almost 90 Treated At Napa Hos\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "101",
                 "found": "null"
             }
@@ -5680,13 +5308,7 @@
     "'384745979267661825'": {
         "id": "'384745979267661825'",
         "text": "Reports of between 3 and 6 killed in Monday morning drone strike in #Pakistan http://t.co/ZR7v3InN9j",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "27",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503658986084655104'": {
         "id": "'503658986084655104'",
@@ -5698,7 +5320,7 @@
         "text": "Napa Valley 2014 earthquake \u2013 Damage to vineyards #wine #earthquake http://t.co/Nr5OkMa0Lk",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "30",
                 "found": "yes"
             }
@@ -5712,31 +5334,19 @@
     "'383091774807236608'": {
         "id": "'383091774807236608'",
         "text": "At least 500 people have been killed by a powerful earthquake in #Awaran #khuzdar #Turbat #Dandar #Mashky #geshkoor #Pasni.",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "30",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'452079438398619649'": {
         "id": "'452079438398619649'",
         "text": "RT @ABC: UPDATE: Tsunami waves of up to 2.4 feet measured or reported along coast of northern Chile; Tsunami Warnings canceled.",
-        "tag": [
-            {
-                "value": "cancel",
-                "start": "118",
-                "found": "null"
-            }
-        ]
+        "tag": []
     },
     "'592658899037253632'": {
         "id": "'592658899037253632'",
         "text": "Climbers stranded on Everest face 'race against time' after Nepal earthquake http://t.co/22mg5uea61",
         "tag": [
             {
-                "value": "strand",
+                "value": "stranded",
                 "start": "9",
                 "found": "yes"
             }
@@ -5745,13 +5355,7 @@
     "'503736171923783680'": {
         "id": "'503736171923783680'",
         "text": "RT @BuzzFeedNews: Photo shared by @vickydnguyen shows damaged roads being used by skateboarders after California earthquake http://t.co/4vl\u2026",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "54",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384745974133817344'": {
         "id": "'384745974133817344'",
@@ -5763,7 +5367,7 @@
         "text": "RT @cmekim: The damage is devastating but we are Napa Strong!  #napaquake #wewillsurvive http://t.co/SP4uicTTdv",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "16",
                 "found": "null"
             }
@@ -5794,7 +5398,7 @@
         "text": "Raw: Aerial Look at Napa Quake Damage #NewsVideos http://t.co/Hsxo44APBD",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "31",
                 "found": "null"
             }
@@ -5825,7 +5429,7 @@
         "text": "Damage from California earthquake could top $1 billion http://t.co/k5Cp1QKPWI via @TIME",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "0",
                 "found": "yes"
             }
@@ -5846,7 +5450,7 @@
         "text": "RT @onyxfish: Why is the damage in Nepal worse than Japan had in 1995? @gregmyre1 examines global risk data: http://t.co/okdswBfg17 http://\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "25",
                 "found": "yes"
             }
@@ -5870,13 +5474,7 @@
     "'382953598667456512'": {
         "id": "'382953598667456512'",
         "text": "RT @MsIntervention: Week of Islamic terrorism: #Kenya: 130+ killed; #Nigeria: 142+; #Pakistan 82; #Iraq; 100+; #Afghanistan: 40+. It's real\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "60",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593152820607643649'": {
         "id": "'593152820607643649'",
@@ -5917,11 +5515,6 @@
                 "value": "die",
                 "start": "9",
                 "found": "yes"
-            },
-            {
-                "value": "trap",
-                "start": "19",
-                "found": "yes"
             }
         ]
     },
@@ -5940,12 +5533,7 @@
         "text": "A guy stranded whose daughter's house was destroyed in the Napa earthquake on standby trying to fly out. K.A. flew out today. Housing 3",
         "tag": [
             {
-                "value": "destroy",
-                "start": "42",
-                "found": "yes"
-            },
-            {
-                "value": "strand",
+                "value": "stranded",
                 "start": "6",
                 "found": "null"
             }
@@ -5976,14 +5564,14 @@
         "text": "RT @HIV_AIDSNews: Yahoo: Strong California earthquake causes injuries, damage: The largest earthquake to hit the San ... http://t.co/OON2JX\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "71",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "61",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -5992,8 +5580,8 @@
         "text": "No reports of injuries to missionaries, members following Napa quake #ChurchNews #Mormon #lds http://t.co/9eRZ11zldb via @deseretnews",
         "tag": [
             {
-                "value": "injuri",
-                "start": "14",
+                "value": "injury",
+                "start": "-1",
                 "found": "null"
             }
         ]
@@ -6008,7 +5596,7 @@
         "text": "RT @vickydnguyen: Meadowbrook Lane in Napa-- skaters finding upside to quake damage. Photo from #nbcbayarea photog Jeremy Carroll http://t.\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "77",
                 "found": "null"
             }
@@ -6098,13 +5686,7 @@
     "'383888470281695232'": {
         "id": "'383888470281695232'",
         "text": "#PAK #QUETTA 5militants killed in exchange of gunfire as they attacked security check-post in Panjgur area of #Balochistan ,FC officials say",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "24",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383421236170076160'": {
         "id": "'383421236170076160'",
@@ -6134,13 +5716,7 @@
     "'384099997987667968'": {
         "id": "'384099997987667968'",
         "text": "#BalochistanEarthquaeke At least 25 people have reportedly been killed as a second powerful earthquake has struck occupied #Balochistan",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "64",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'382930417776861184'": {
         "id": "'382930417776861184'",
@@ -6162,14 +5738,14 @@
         "text": "[AP TOP] Strong California quake causes injuries, damage: NAPA, Calif. (AP) \u2014 The largest earthquake to hit th... http://t.co/C322foTDNh",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "50",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "40",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -6194,7 +5770,7 @@
         "text": "RT @heyyouapp: USA \u00bb NEWS \u00bb http://t.co/Z9KGc1EJ3D HOT NEWS 622 earthquake Three Critically Injured, Almost 90 Treated At Napa Hospital Fol\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "92",
                 "found": "yes"
             }
@@ -6208,13 +5784,7 @@
     "'383945965909983232'": {
         "id": "'383945965909983232'",
         "text": "15 killed as powerful 7.2-magnitude aftershock hits #Balochistan in #Pakistan",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "3",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593617872443703297'": {
         "id": "'593617872443703297'",
@@ -6240,18 +5810,7 @@
     "'593005013066219520'": {
         "id": "'593005013066219520'",
         "text": "So sad that there are places destroyed because of natural disaster, and other places destroyed by its own people #PrayForNepal #NotBaltimore",
-        "tag": [
-            {
-                "value": "destroy",
-                "start": "29",
-                "found": "null"
-            },
-            {
-                "value": "destroy",
-                "start": "29",
-                "found": "null"
-            }
-        ]
+        "tag": []
     },
     "'504036786050707457'": {
         "id": "'504036786050707457'",
@@ -6273,12 +5832,12 @@
         "text": "California quake damages historic buildings: The strongest quake to hit the Bay Area in 25 years injured dozen... http://t.co/RlrnobzSxT",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "17",
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "97",
                 "found": "null"
             }
@@ -6289,14 +5848,14 @@
         "text": "South Napa Earthquake causes damage, injuries - KGO-TV http://t.co/mOLAJP9Wyz",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "29",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "37",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -6351,7 +5910,7 @@
         "text": "Fortunately, Gallery 1870 in Yountville, Ca only incurred minor damage during Sunday's Napa Valley earthquake,... http://t.co/5EhX8Uhm9P",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "64",
                 "found": "yes"
             }
@@ -6362,12 +5921,7 @@
         "text": "California earthquake aftermath: Buildings destroyed, over 100 injured:   California earthquake... http://t.co/RFZp7T7ZQX #Kabari #World",
         "tag": [
             {
-                "value": "destroy",
-                "start": "43",
-                "found": "yes"
-            },
-            {
-                "value": "injur",
+                "value": "injured",
                 "start": "63",
                 "found": "yes"
             }
@@ -6393,9 +5947,9 @@
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "85",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -6414,9 +5968,9 @@
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "99",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -6446,7 +6000,7 @@
         "text": "RT @etribune: (News) Scale of #damages: Nearly all of #Mashkai town flattened, say survivors http://t.co/ESwmFWvesS #Balochistan #earthquake",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "31",
                 "found": "null"
             }
@@ -6457,7 +6011,7 @@
         "text": "#Insurance San Francisco Bay Area assessing damage after large quake \u2013 CBS News http://t.co/f6zQIZAftY",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "44",
                 "found": "null"
             }
@@ -6540,7 +6094,7 @@
         "text": "RT @ICRC: #NepalQuake #Tips Expect + aftershocks.  Usually less violent than main quake, they can do additional damage to weakened structur\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "112",
                 "found": "null"
             }
@@ -6582,13 +6136,13 @@
         "text": "#BREAKING New Injury Numbers 172 injured, 7 fractures, 1 critical #napaquake http://t.co/ZnmGgZOtRG",
         "tag": [
             {
-                "value": "injur",
-                "start": "14",
-                "found": "null"
+                "value": "injured",
+                "start": "33",
+                "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "-1",
+                "value": "injury",
+                "start": "14",
                 "found": "null"
             }
         ]
@@ -6603,7 +6157,7 @@
         "text": "RT @heyyouapp: \u00a6 http://t.co/RE2kP30Ulx 914 \u00a6 Bay Area earthquake damages Napa County Airport  #Earthquake \u00a6 Clean-up is still underway in \u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "66",
                 "found": "yes"
             }
@@ -6619,13 +6173,8 @@
         "text": "RT @BBCBreaking: Nepal #earthquake latest:  - reports of avalanches in Everest - temples flattened - unknown numbers killed & injured http:\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "126",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "117",
                 "found": "yes"
             }
         ]
@@ -6635,7 +6184,7 @@
         "text": "Napa earthquake map: Red-tagged buildings: Esri map shows the damages caused by the 6.0 Napa earthquake. http://t.co/6trj1MaO0X",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "62",
                 "found": "null"
             }
@@ -6651,7 +6200,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "41",
                 "found": "yes"
             }
@@ -6681,20 +6230,14 @@
     "'503736596919640064'": {
         "id": "'503736596919640064'",
         "text": "RT @janinebucks: \u2022 http://t.co/sC6ZfMhPX2 \u2022 SFGate 131  #SFGate \u2022 Napa damaged, more than 100 hurt in Northern California quake http://t.co\u2026",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "71",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503726138431401984'": {
         "id": "'503726138431401984'",
         "text": "The 10 most expensive U.S. earthquakes - Damage from the earthquake that jolted northern California Sunday morning... http://t.co/euysNqvWbw",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "41",
                 "found": "yes"
             }
@@ -6705,7 +6248,7 @@
         "text": "RT @BhaiChod: #Satellite images of the damages #Earthquake #Balochistan #Awaran http://t.co/NqiFgqVN1c and #Gajar http://t.co/JQ6hl8ftlt #U\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "39",
                 "found": "yes"
             }
@@ -6719,24 +6262,12 @@
     "'592344944024616960'": {
         "id": "'592344944024616960'",
         "text": "RT @cnnbrk: At least 2,263 people have died in Nepal from massive #NepalEarthquake and aftershocks, official says. http://t.co/hCyjO7YyS7",
-        "tag": [
-            {
-                "value": "die",
-                "start": "39",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383343339728146432'": {
         "id": "'383343339728146432'",
         "text": "RT @noisavioursday: The #AIDS pandemic was killing 5,000 Zimbabweans a week: http://t.co/bOl1wDsujU #Zimbabwe #Indonesia #Pakistan #Lahore \u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "43",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592157980218425344'": {
         "id": "'592157980218425344'",
@@ -6748,7 +6279,7 @@
         "text": "#Earthquake in #Pakistan - Problematic rescue / relief efforts in #Taliban areas! - #Security incidents reported  - http://t.co/S56MFV2uSV",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "39",
                 "found": "null"
             }
@@ -6767,24 +6298,12 @@
     "'382852574577053696'": {
         "id": "'382852574577053696'",
         "text": "RT @Chawash_Baloch: 45,000 houses destroyed in Awaran and Kech #earthquake,more than 300 deadbodies recovered from rubles,victims need imme\u2026",
-        "tag": [
-            {
-                "value": "destroy",
-                "start": "34",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592344556370272256'": {
         "id": "'592344556370272256'",
         "text": "RT @BBCBreaking: 17 confirmed killed when avalanche hit Mount Everest base camp after #NepalQuake - mountain's worst-ever disaster http://t\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "30",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384382250030469120'": {
         "id": "'384382250030469120'",
@@ -6826,7 +6345,7 @@
         "text": "RT @News24lHOT: \u2022 http://t.co/m3SdpIVsLR \u2022 earthquake 340  #earthquake \u2022 Dozens injured, 3 critically, after strong earthquake in Ca\u2026 http:\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "80",
                 "found": "yes"
             }
@@ -6872,7 +6391,7 @@
         "text": "Over 120 Injured in Napa Quake http://t.co/7Z2HPfbbpX via @BreitbartNews",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "9",
                 "found": "yes"
             }
@@ -6881,13 +6400,7 @@
     "'592325686460862464'": {
         "id": "'592325686460862464'",
         "text": "RT @clarke253: In other news today, over 2000 were killed in a massive earthquake in Nepal, and an avalanche on Everest, yet Bruce Jenner w\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "51",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383466515850203138'": {
         "id": "'383466515850203138'",
@@ -6925,7 +6438,7 @@
         "text": "Earthquake Damage to Popular Napa, California, Tourist Destination http://t.co/crPOTQan1M [Sale http://t.co/pdFAPT9xa6 ] #video",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "11",
                 "found": "yes"
             }
@@ -6994,7 +6507,7 @@
         "text": "\u2192 USA http://t.co/9pAnqRYkcr \u2192 Dozens injured, 3 critically, after strong earthquake in California USA \u2192 (CNN) -- A 6.0-magnitude earthquak\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "38",
                 "found": "yes"
             }
@@ -7033,13 +6546,7 @@
     "'503865334487855104'": {
         "id": "'503865334487855104'",
         "text": "RT @SkyNews: Clean-Up After California Quake Injures 130 http://t.co/7l5uo8FNaZ",
-        "tag": [
-            {
-                "value": "injur",
-                "start": "45",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383142103301124096'": {
         "id": "'383142103301124096'",
@@ -7059,13 +6566,7 @@
     "'384558014428377088'": {
         "id": "'384558014428377088'",
         "text": "Three people killed in drone strike in North #Waziristan #Pakistan #Dunyatv",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "13",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383867376015376384'": {
         "id": "'383867376015376384'",
@@ -7077,7 +6578,7 @@
         "text": "RT @janinebucks: \u00a4 USA http://t.co/fPX5M6ZlzY 435 earthquake Three Critically Injured, Almost 90 Treated At Napa Hospital Following 6.0 ...\u2026",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "78",
                 "found": "null"
             }
@@ -7096,13 +6597,7 @@
     "'384285595511828480'": {
         "id": "'384285595511828480'",
         "text": "Over 30 killed in #Pakistan #bombing http://t.co/8BbsLgh69c",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "8",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'504370709733580800'": {
         "id": "'504370709733580800'",
@@ -7181,7 +6676,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "104",
                 "found": "yes"
             }
@@ -7200,11 +6695,6 @@
                 "value": "dead",
                 "start": "73",
                 "found": "yes"
-            },
-            {
-                "value": "die",
-                "start": "39",
-                "found": "null"
             }
         ]
     },
@@ -7339,7 +6829,7 @@
         "text": "(#FlakoprettyX7) Chile assesses damage after massive quake, tsunami: By Anthony Esposito and ... http://t.co/IklJIqAlQa (#FlakoprettyX7)",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "32",
                 "found": "null"
             }
@@ -7440,7 +6930,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "112",
                 "found": "yes"
             }
@@ -7451,8 +6941,8 @@
         "text": "RT @WLTX: RT @AP: Chile earthquake magnitude increased to 8.2; no injuries reported yet: http://t.co/WqPW5zDyCS",
         "tag": [
             {
-                "value": "injuri",
-                "start": "66",
+                "value": "injury",
+                "start": "-1",
                 "found": "null"
             }
         ]
@@ -7471,11 +6961,6 @@
         "id": "'451349570782392320'",
         "text": "Powerful earthquake kills 6 in Chile: Santiago, Apr 2 (EFE).- A magnitude-8.2 earthquake hit northern Chile, killing six people, offi...",
         "tag": [
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "20",
@@ -7644,7 +7129,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "38",
                 "found": "yes"
             }
@@ -7663,20 +7148,14 @@
     "'451211426737438721'": {
         "id": "'451211426737438721'",
         "text": "Chile's Interior Minister Rodrigo Penailillo says five people have died in the 8.2 magnitude quake #chilequake",
-        "tag": [
-            {
-                "value": "die",
-                "start": "67",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451574946649894912'": {
         "id": "'451574946649894912'",
         "text": "RT @CBSEveningNews: Massive Chile earthquake leaves remarkably little damage, @vicentecbs reports: http://t.co/fjCOQKGA0b",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "70",
                 "found": "yes"
             }
@@ -7894,13 +7373,7 @@
     "'451300958132113408'": {
         "id": "'451300958132113408'",
         "text": "RT @BBCr4today: A quake of 8.2 magnitude has struck off northern Chile, triggering a tsunami alert and killing at least five people. http:/\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "103",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451410825392451585'": {
         "id": "'451410825392451585'",
@@ -7920,13 +7393,7 @@
     "'451575354084577280'": {
         "id": "'451575354084577280'",
         "text": "One of the main concerns now is what will happen with the several thousand buildings that were already damaged by the last earthquake #Chile",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "103",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451531835643002880'": {
         "id": "'451531835643002880'",
@@ -7959,7 +7426,7 @@
         "text": "How much will the Chile quake cost?: Earthquake damage in Chile could cost the country billions of dollars, a ... http://t.co/ScoHvqqmHe",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "48",
                 "found": "yes"
             }
@@ -7995,7 +7462,7 @@
         "text": "How Chile has managed to minimize earthquake casualties,\u00a0damage http://t.co/VS5QCN6YyP",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "57",
                 "found": "yes"
             }
@@ -8019,13 +7486,7 @@
     "'451282740227620865'": {
         "id": "'451282740227620865'",
         "text": "Chile hit by 8.2 magnitude earthquake, five killed - ABC News (Australian Broadcasting Corporation) http://t.co/zXD59mfZj3",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "44",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451474466791366656'": {
         "id": "'451474466791366656'",
@@ -8076,13 +7537,7 @@
     "'451417015282962432'": {
         "id": "'451417015282962432'",
         "text": "6 Killed in Earthquake off Northern Chile: The magnitude 8.2 earthquake set off a tsunami and forced an evacua... http://t.co/NIKpeDeRbR",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "2",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451369078784274432'": {
         "id": "'451369078784274432'",
@@ -8164,20 +7619,14 @@
     "'451603060247121921'": {
         "id": "'451603060247121921'",
         "text": "Second large quake strikes Chile: A 7.6 earthquake rocks northern Chile, a day after an 8.2 tremor killed six ... http://t.co/JIaVNg6cGT",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "99",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'454366673282158592'": {
         "id": "'454366673282158592'",
         "text": "High waves, blackouts, highway damage, follow 8.2 Chile earthquake http://t.co/pqMpGAnPWa",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "31",
                 "found": "yes"
             }
@@ -8234,7 +7683,7 @@
         "text": "No disruptions at #Chile #coppermines after 8.2 #earthquake @BNamericas  http://t.co/ksG0fa0JyS",
         "tag": [
             {
-                "value": "disrupt",
+                "value": "disruption",
                 "start": "3",
                 "found": "null"
             }
@@ -8260,7 +7709,7 @@
         "text": "Chile Hit By Powerful Quake Aftershock, No Major Damage: A powerful 7.6-magnitude earthquake struck off northe... http://t.co/w6XOiSoB6H",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "49",
                 "found": "yes"
             }
@@ -8396,11 +7845,6 @@
         "text": "RT @News1130radio: BREAKING Tsunami warnings now cancelled for Chile and Peru, 5 people are confirmed dead after the earthquake",
         "tag": [
             {
-                "value": "cancel",
-                "start": "49",
-                "found": "null"
-            },
-            {
                 "value": "dead",
                 "start": "102",
                 "found": "yes"
@@ -8479,7 +7923,7 @@
         "text": "Chile earthquake: How loss of life, damage was minimized http://t.co/dP1wIe4oGG",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "36",
                 "found": "yes"
             },
@@ -8505,7 +7949,7 @@
         "text": "My NBC News report from Northern Chile - Earthquake Damages Chilean Infrastructure  http://t.co/Fd0i5o0G2g",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "52",
                 "found": "yes"
             }
@@ -8541,7 +7985,7 @@
         "text": "Chile awakens to see 90% of damages post massive earthquake of last night are concentrated in far-north cities of Iquique and Antofagasta. .",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "28",
                 "found": "yes"
             }
@@ -8663,7 +8107,7 @@
         "text": "RT @PakMilitaryNews: Rescue and relief efforts by Pakistan Army continue in earthquake affected areas of #Balochistan http://t.co/RLITw3Bd3l",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "21",
                 "found": "null"
             }
@@ -8679,12 +8123,12 @@
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "52",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             },
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "95",
                 "found": "null"
             }
@@ -8736,13 +8180,7 @@
     "'383989118843490304'": {
         "id": "'383989118843490304'",
         "text": "A 6.8-magnitude earthquake has struck #Pakistan, in a region where at least 400 people died in a quake this week http://t.co/E4CYkv4UAP",
-        "tag": [
-            {
-                "value": "die",
-                "start": "87",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384275092366041089'": {
         "id": "'384275092366041089'",
@@ -8820,13 +8258,7 @@
     "'593831108849991681'": {
         "id": "'593831108849991681'",
         "text": "RT @cnnbrk: Nepal to reopen routes up Mount Everest as early as next week. At least 19 people died there from  earthquake. http://t.co/nqMS\u2026",
-        "tag": [
-            {
-                "value": "die",
-                "start": "94",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593828292584742912'": {
         "id": "'593828292584742912'",
@@ -8856,13 +8288,7 @@
     "'592322615710089216'": {
         "id": "'592322615710089216'",
         "text": "RT @jejejejo: 7,9 SR earthquake and more than 1000 people died. Oh God #PrayForNepal #PrayForNepal #PrayforNepal",
-        "tag": [
-            {
-                "value": "die",
-                "start": "58",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'593106657317629954'": {
         "id": "'593106657317629954'",
@@ -8889,13 +8315,8 @@
         "text": "RT @501Awani: [LATEST] Nepal Quake: Avalanche killed 22 so far and 167 mountaineers still reported missing at Mount Everest - Indian Army O\u2026",
         "tag": [
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "99",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "46",
                 "found": "yes"
             }
         ]
@@ -8936,7 +8357,7 @@
         "text": "RT @BBCtrending: Another \"Nepal earthquake\" video uploaded online also included footage from a building collapse in Egypt http://t.co/hznFp\u2026",
         "tag": [
             {
-                "value": "collaps",
+                "value": "collapse",
                 "start": "104",
                 "found": "null"
             }
@@ -8945,13 +8366,7 @@
     "'592309536905564162'": {
         "id": "'592309536905564162'",
         "text": "RT @aahanasharma11: #MSGHelpEarthquakeVictims More than 100 people r knwn to hv died in a powerful earthquake dat struck Nepal, wrecking ma\u2026",
-        "tag": [
-            {
-                "value": "die",
-                "start": "80",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592341650975825921'": {
         "id": "'592341650975825921'",
@@ -8977,13 +8392,7 @@
     "'591963992651911168'": {
         "id": "'591963992651911168'",
         "text": "RT @Obremskeet: So huge earthquake in Nepal probably killing over a thousand people and @CNN is talking about Bruce Jenner. #ProblemsWithAm\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "53",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'592344695423938560'": {
         "id": "'592344695423938560'",
@@ -9037,7 +8446,7 @@
         "text": "[ChesCo Entertnmt] Quake causes $1B in damage to Napa wine country http://t.co/JyLXEeG8Kv",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "39",
                 "found": "yes"
             }
@@ -9053,7 +8462,7 @@
         "text": "Explosions and damage...At 11pm @6abc hear from local people who just landed at PHL from the quake zone in California.",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "15",
                 "found": "null"
             }
@@ -9062,13 +8471,7 @@
     "'503701323783892992'": {
         "id": "'503701323783892992'",
         "text": "California USA Downey \u00bb http://t.co/0UzMySofdI  #SFGate 78 Napa damaged, more than 100 hurt in Northern California quake SFGate janinebucks\u2026",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "64",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'504166338252644352'": {
         "id": "'504166338252644352'",
@@ -9086,7 +8489,7 @@
         "text": "RT @TuxcedoCat: Oh AssWholeFoods suffered damages in Napa. Anyone feel badly? Anyone? Breuller? #BoycottWholeFoods #earthquake http://t.co/\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "42",
                 "found": "yes"
             }
@@ -9097,7 +8500,7 @@
         "text": "RT @RosenbergMerc: Must-watch video: drone surveys damage from Napa earthquake #napaquake https://t.co/ilh9BCkXQf http://t.co/Vs8Huc548J",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "51",
                 "found": "null"
             }
@@ -9108,14 +8511,14 @@
         "text": "Strong California quake causes injuries, damage  http://t.co/IouSr0HnHD",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "41",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "31",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -9142,13 +8545,7 @@
     "'504399742323806208'": {
         "id": "'504399742323806208'",
         "text": "#TeamFollowBack California Quake Warning System Delayed by Lack of Funding http://t.co/0pk8NQY6S4 #AutoFollowback",
-        "tag": [
-            {
-                "value": "delay",
-                "start": "48",
-                "found": "null"
-            }
-        ]
+        "tag": []
     },
     "'504202387498610688'": {
         "id": "'504202387498610688'",
@@ -9200,7 +8597,7 @@
         "text": "Dozens Injured In San Francisco Earthquake: A 6.0-magnitude earthquake has rocked the northern San Francisco a... http://t.co/BI6q9P22Os",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "7",
                 "found": "yes"
             }
@@ -9211,7 +8608,7 @@
         "text": "RT @NVR_Photo: Damage at #NapaPostOffice from #NapaQuake http://t.co/h266KkVExK",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "15",
                 "found": "yes"
             }
@@ -9227,7 +8624,7 @@
         "text": "Napa Valley Vintners Still Assessing Damage From #Earthquake http://t.co/0BDYnSisiY #napaquake",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "37",
                 "found": "yes"
             }
@@ -9268,7 +8665,7 @@
         "text": "RT @tyleronemo: \u00a6 http://t.co/pJZfMcCWIN 41 \u00a6 Bay Area earthquake damages Napa County Airport  #EarthquakeToday \u00a6 quotThe earthquake blew o\u2026",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "66",
                 "found": "yes"
             }
@@ -9277,13 +8674,7 @@
     "'503813322634838016'": {
         "id": "'503813322634838016'",
         "text": "Okay, so the earthquake in california that i was in is waaaay less scary than the fucking #Ferguson pigs. Nobody died.",
-        "tag": [
-            {
-                "value": "die",
-                "start": "113",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383136601456377857'": {
         "id": "'383136601456377857'",
@@ -9295,7 +8686,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "64",
                 "found": "yes"
             }
@@ -9304,13 +8695,7 @@
     "'382855724881043456'": {
         "id": "'382855724881043456'",
         "text": "#QUETTA: At least 421 people have been killed, 21 thousand houses affected due to #earthquake in Balochistan, Chairman NDMA says.",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "39",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'382892467399303168'": {
         "id": "'382892467399303168'",
@@ -9322,7 +8707,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "85",
                 "found": "yes"
             }
@@ -9353,7 +8738,7 @@
         "text": "RT @AWAIS_NIAZI1: #KPKUpdates: 2 @ISFPakistan boys injured in firing on replacing #ANP flag wth #Pakistan on clg building. #Saramnaak http:\ufffd??",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "51",
                 "found": "yes"
             }
@@ -9481,7 +8866,7 @@
         "text": "Strong Magnitude 6 Earthquake Rocks San Francisco Bay Area, Dozens Hurt, Significant Damage In Napa -- CBS San Fran http://t.co/yCJtW6z3FJ",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "85",
                 "found": "yes"
             }
@@ -9518,12 +8903,7 @@
         "text": "*@BBCBreaking: At least 328 people are known to have died in powerful #earthquake in Pakistan, hundreds more injured http://t.co/ZaYn3ayQWv*",
         "tag": [
             {
-                "value": "die",
-                "start": "53",
-                "found": "yes"
-            },
-            {
-                "value": "injur",
+                "value": "injured",
                 "start": "109",
                 "found": "yes"
             }
@@ -9545,7 +8925,7 @@
         "text": "RT @RT_com: PHOTO: #Chile earthquake cracked roads; damage reported throughout country's north http://t.co/T4ojvmV4qr http://t.co/EkxNl3nxo6",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "52",
                 "found": "yes"
             }
@@ -9559,13 +8939,7 @@
     "'592305987916320769'": {
         "id": "'592305987916320769'",
         "text": "kontext_bat: RT WSJ: Google executive Dan Fredinburg killed in Everest avalanche after Nepal earthquake \ufffd?? http://t.co/FxC3K1WB3t",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "53",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'451577990619873280'": {
         "id": "'451577990619873280'",
@@ -9608,12 +8982,12 @@
         "text": "RT @LANow: Quake aftershocks damage Napa bridge, force lane closure http://t.co/4lLKVSi8Q8",
         "tag": [
             {
-                "value": "closur",
+                "value": "closure",
                 "start": "60",
                 "found": "yes"
             },
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "29",
                 "found": "yes"
             }
@@ -9629,7 +9003,7 @@
         "text": "-@vickydnguyen: Meadowbrook Lane in Napa-- skaters finding upside to quake damage. Photo from #nbcbayarea ... http://t.co/2LbJCxEG5i",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "75",
                 "found": "yes"
             }
@@ -9651,7 +9025,7 @@
         "text": "RT @ginalimp: USA ?\ufffd NEWS ?\ufffd http://t.co/sjWhS6XzS3 HOT NEWS 152 earthquake Three Critically Injured, Almost 90 Treated At Napa Hospital Foll\ufffd??",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "93",
                 "found": "yes"
             }
@@ -9682,7 +9056,7 @@
         "text": "Seems as though most Napa wineries were not insured for quake losses. While harvest was least affected many suffered damage to facilities.",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "117",
                 "found": "yes"
             },
@@ -9718,14 +9092,14 @@
         "text": "After injuries, widespread damage from Napa quake, cleanup ensues - Fresno Bee http://t.co/2IJLDpfQUP",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "27",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "6",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -9739,7 +9113,7 @@
         "text": "Damage to a downtown building is seen after an earthquake 6.0 magnitude in #Napa,#California Aug24 http://t.co/muAdvk9VNW",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "0",
                 "found": "yes"
             }
@@ -9785,7 +9159,7 @@
         "text": "Earthquake shakes downtown Napa, damages buildings: http://t.co/TmxHGPi7KS via @YouTube",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "33",
                 "found": "yes"
             }
@@ -9848,7 +9222,7 @@
         "text": "Napa 6.0 Earthquake Caused 'Significant' Damage in County: USGS: Cleanup efforts were underway in the Bay Area... http://t.co/bbsGstd5zG",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "41",
                 "found": "yes"
             }
@@ -9875,7 +9249,7 @@
         "text": "Drone footage shows Napa quake damage:  http://t.co/vXJXeOBOyJ via @virollweb",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "31",
                 "found": "yes"
             }
@@ -9894,13 +9268,7 @@
     "'503702675800985601'": {
         "id": "'503702675800985601'",
         "text": "Every Old Person be like noooooo \ufffd??@AP California earthquake hits wine region hard, destroying thousands of bottles and barrels of wine\"",
-        "tag": [
-            {
-                "value": "destroy",
-                "start": "85",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'382978487046246400'": {
         "id": "'382978487046246400'",
@@ -9931,13 +9299,7 @@
     "'382839945104093184'": {
         "id": "'382839945104093184'",
         "text": "250+ souls died in the earthquake and people jumping for miraculous island... Sad and funny at the same time. #earthquake",
-        "tag": [
-            {
-                "value": "die",
-                "start": "11",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384882915642855424'": {
         "id": "'384882915642855424'",
@@ -10004,7 +9366,7 @@
         "text": "RT @HuffPostBC: Six people critically injured in California earthquake http://t.co/9x7wGGpcq3",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "38",
                 "found": "yes"
             }
@@ -10013,13 +9375,7 @@
     "'383588316446081024'": {
         "id": "'383588316446081024'",
         "text": "#Karachi: #TTP local commander killed in clash http://t.co/PZlkhLxxLl  #Pakistan svia @sharethis",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "31",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'503966822606319617'": {
         "id": "'503966822606319617'",
@@ -10031,7 +9387,7 @@
         "text": "(\ufffd?\ufffdEudryLantiqua\ufffd?\ufffd) N. California Earthquake Damage Could Reach $1B: Northern California i... http://t.co/cbEO7X2M57 (\ufffd?\ufffdEudryLantiqua\ufffd?\ufffd)",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "47",
                 "found": "yes"
             }
@@ -10100,7 +9456,7 @@
         "text": "Despite damage from the earthquake, tourists continue to visit Napa Valley. http://t.co/OmJREUPi1t http://t.co/dBoH5ywUor",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "8",
                 "found": "yes"
             }
@@ -10152,14 +9508,14 @@
         "text": "South Napa Quake causes substantial damage, injuries http://t.co/erpDlUD9wg",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "36",
                 "found": "yes"
             },
             {
-                "value": "injuri",
-                "start": "44",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -10193,7 +9549,7 @@
         "text": "#Peru's Civil Defence says nine people were injured there as a result of last night's #ChileEarthquake - which also affected Peru &amp; #Bolivia",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "44",
                 "found": "yes"
             }
@@ -10247,7 +9603,7 @@
         "text": "RT @FidelRabbit: 6.0 quake last night &amp; hit hardest w/most damage was #wholefoods Napa. That was the bunnies UR gonna kill thumping at the \ufffd??",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "63",
                 "found": "yes"
             },
@@ -10261,13 +9617,7 @@
     "'504407254385168384'": {
         "id": "'504407254385168384'",
         "text": "RT @WillKane: Enormous pile of furniture, electronics damaged by quake left in Napa High School parking lot. http://t.co/F71Zl5mxYP",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "54",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'504245013308383232'": {
         "id": "'504245013308383232'",
@@ -10336,7 +9686,7 @@
         "text": "Napa wineries assess damage after earthquake. MORE: http://t.co/YRNWnpfxKl #11Alive http://t.co/imzX8iAcuW\" ONE SAD DAY IN \"DRUNK HEAVEN\"",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "21",
                 "found": "yes"
             }
@@ -10360,13 +9710,7 @@
     "'592320497544613888'": {
         "id": "'592320497544613888'",
         "text": "RT @FoxNews: #NepalQuake: At least 101 killed after 7.8 quake strikes Nepal, sparking tremors across Asia http://t.co/8BPVME4BjT http://t.c\ufffd??",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "39",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384860484643475456'": {
         "id": "'384860484643475456'",
@@ -10381,13 +9725,7 @@
     "'503670320981487617'": {
         "id": "'503670320981487617'",
         "text": "The latest on damaging earthquake in California http://t.co/sryyClwDhD #tcot",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "14",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383010540848951296'": {
         "id": "'383010540848951296'",
@@ -10434,7 +9772,7 @@
         "text": "Photos of Napa quake damage. http://t.co/N3guDFXOjK",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "21",
                 "found": "yes"
             }
@@ -10465,7 +9803,7 @@
         "text": "Residents, businesses accessing damage by magnitude-6.0 Napa earthquake -  NAPA From Napa to American Canyon to... http://t.co/ALVoS4VfY4",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "32",
                 "found": "yes"
             }
@@ -10543,13 +9881,7 @@
     "'384288232185159680'": {
         "id": "'384288232185159680'",
         "text": "RT @imodine: Over 30 killed in #Pakistan #bombing http://t.co/CgH8wWPSJY\"",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "21",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501296951657127936'": {
         "id": "'501296951657127936'",
@@ -10603,13 +9935,7 @@
     "'501316960416968704'": {
         "id": "'501316960416968704'",
         "text": "RT @dw_english: Dozens killed as monsoon floods ravage India and Nepal http://t.co/olp9HRNI2S",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "23",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501362575372587008'": {
         "id": "'501362575372587008'",
@@ -10640,13 +9966,7 @@
     "'501335672804765697'": {
         "id": "'501335672804765697'",
         "text": "[#NYtimes] Scores Killed in Flooding in Nepal and India http://t.co/AxxU2sF951 [#Luisito2402]",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "18",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501286054620454914'": {
         "id": "'501286054620454914'",
@@ -10683,13 +10003,7 @@
     "'501373921380544512'": {
         "id": "'501373921380544512'",
         "text": "*@cnnbrk: Dozens killed in flooding in northern and eastern India. http://t.co/n0aY0de3Ge* UGH! This is where our priest has gone home to\ud83d\ude22",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "17",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501089506724814848'": {
         "id": "'501089506724814848'",
@@ -10759,23 +10073,12 @@
     "'501299067444412416'": {
         "id": "'501299067444412416'",
         "text": "naija campus gossip Deadly monsoon hits India, Nepal: Dozens of people have been killed in flooding in norther... http://t.co/2HJQVeHdS8",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "81",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501320511402414082'": {
         "id": "'501320511402414082'",
         "text": "[Asia] Monsoon kills hundreds in India, Nepal: Dozens of people have been killed in flooding ... http://t.co/wRkdiIxC0N #English #Manado",
         "tag": [
-            {
-                "value": "kill",
-                "start": "15",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "15",
@@ -10865,24 +10168,12 @@
     "'501345342957158400'": {
         "id": "'501345342957158400'",
         "text": "#Times #News Scores Killed in Flooding in #Nepal and #India http://t.co/9vAxwaZxtK",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'499008569409146881'": {
         "id": "'499008569409146881'",
         "text": "Floods claim 45 lives in India: NEW DELHI: Flooding in eastern India has killed 45 people and displaced more than... http://t.co/4FXdipZ0vK",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "73",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'498548104430616578'": {
         "id": "'498548104430616578'",
@@ -10903,13 +10194,7 @@
     "'501262673502154752'": {
         "id": "'501262673502154752'",
         "text": "Monsoon crisis in North India: At least 28 killed and 10,000 made homeless as flash floods strike eastern UP: The... http://t.co/RojDvpz1LN",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "43",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501049193801482241'": {
         "id": "'501049193801482241'",
@@ -10930,29 +10215,12 @@
     "'501362750589636609'": {
         "id": "'501362750589636609'",
         "text": "RT @NewsPost_India: At least 9 killed as Rapti Ganga Express rams autorickshaw in Bihar: At least nine people ... http://t.co/7xZsl8LhSx",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "31",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501335826748289024'": {
         "id": "'501335826748289024'",
         "text": "kuuky__frez Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been damaged... http://t.co/n6A4TnuplR kuuky__frez",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "91",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "19",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501297114417094658'": {
         "id": "'501297114417094658'",
@@ -10989,11 +10257,6 @@
                 "value": "kill",
                 "start": "17",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "17",
-                "found": "yes"
             }
         ]
     },
@@ -11011,13 +10274,7 @@
     "'501340476650160130'": {
         "id": "'501340476650160130'",
         "text": "(#FernandoMVP_) Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been... http://t.co/Hu8stWjuCR (#FernandoMVP_)",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "23",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501109150412066816'": {
         "id": "'501109150412066816'",
@@ -11040,13 +10297,8 @@
         "text": "Flooding in Nepal and India has killed 89 people, left 109 missing, and sparked fear of a #CholeraOutbreak. http://t.co/3GxyUacKEk",
         "tag": [
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "59",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "32",
                 "found": "yes"
             }
         ]
@@ -11054,13 +10306,7 @@
     "'501384217381441537'": {
         "id": "'501384217381441537'",
         "text": "Scores Killed in Flooding in Nepal and India - New York Times http://t.co/imy55fMY0n",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501354171350921216'": {
         "id": "'501354171350921216'",
@@ -11075,13 +10321,7 @@
     "'501374995457519617'": {
         "id": "'501374995457519617'",
         "text": "Atleast 160 Killed in India and Nepal Floods http://t.co/EGhqRnSMgO http://t.co/LOejklM5CO #india #asia",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "12",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501112011954978816'": {
         "id": "'501112011954978816'",
@@ -11091,13 +10331,7 @@
     "'501289220791480320'": {
         "id": "'501289220791480320'",
         "text": "Deadly monsoon hits India, Nepal: Dozens of people have been killed in flooding in northern ... http://t.co/JlCirt85DY #BaimkunINDONESIA",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "61",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501352727168172032'": {
         "id": "'501352727168172032'",
@@ -11124,13 +10358,7 @@
     "'501288918294077440'": {
         "id": "'501288918294077440'",
         "text": "Deadly monsoon hits India, Nepal: Dozens of people have been killed in flooding in northern and... http://t.co/t3tYXoQOID #NIowa #6thFan",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "61",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'506739678620696576'": {
         "id": "'506739678620696576'",
@@ -11142,13 +10370,8 @@
         "text": "#F4F #RT #news #85 killed, 139 missing in Nepal landslide, floods - Times of India http://t.co/Q6ChAuHbKZ",
         "tag": [
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "31",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "19",
                 "found": "yes"
             }
         ]
@@ -11156,13 +10379,7 @@
     "'501351459079094272'": {
         "id": "'501351459079094272'",
         "text": "At least 160 people are reported to have been killed in floods and landslides following days of torrential rain in Nepal and northern India.",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "46",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501261306985345025'": {
         "id": "'501261306985345025'",
@@ -11188,24 +10405,13 @@
                 "value": "dead",
                 "start": "22",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "107",
-                "found": "null"
             }
         ]
     },
     "'501340987709349891'": {
         "id": "'501340987709349891'",
         "text": "(#Byy) Scores Killed in Flooding in Nepal and India http://t.co/Q6mWrDKQCR (#MaiiCool)",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "14",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501325250018041859'": {
         "id": "'501325250018041859'",
@@ -11259,13 +10465,7 @@
     "'501352272949829633'": {
         "id": "'501352272949829633'",
         "text": "Scores Killed in Flooding in Nepal and India http://t.co/1ukvIkVwga http://t.co/8F2zjKI63f #india #asia",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501308570713878528'": {
         "id": "'501308570713878528'",
@@ -11318,35 +10518,17 @@
     "'501367148187369473'": {
         "id": "'501367148187369473'",
         "text": "Floods and landslides in Nepal and northern India have killed nearly 200 people and scores\u2026 http://t.co/VVYSM1XnFn",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "55",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501332717888634880'": {
         "id": "'501332717888634880'",
         "text": "Scores Killed in Flooding in Nepal and India by BHADRA SHARMA and NIDA NAJAR http://t.co/1yH4toHkeZ from Bobby Caples",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501350197138427904'": {
         "id": "'501350197138427904'",
         "text": "#TOI #NewsINDIA At least 9 killed as Rapti Ganga Express rams autorickshaw in Bihar: At le... http://t.co/fRTUihwu5a #Follow #FollowBack",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "27",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501291782936621056'": {
         "id": "'501291782936621056'",
@@ -11383,29 +10565,13 @@
                 "value": "kill",
                 "start": "20",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
             }
         ]
     },
     "'501342365106204673'": {
         "id": "'501342365106204673'",
         "text": "IG ; JeremyHumilde Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been damaged and ... http://t.co/kZakoyCVU4",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "98",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "26",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501104808753762304'": {
         "id": "'501104808753762304'",
@@ -11464,13 +10630,7 @@
     "'501329610706276352'": {
         "id": "'501329610706276352'",
         "text": "#followbackteam Scores Killed in Flooding in Nepal and India http://t.co/W4M68q240B",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "23",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501369615423778817'": {
         "id": "'501369615423778817'",
@@ -11506,29 +10666,13 @@
                 "value": "kill",
                 "start": "28",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "28",
-                "found": "yes"
             }
         ]
     },
     "'501383532317396995'": {
         "id": "'501383532317396995'",
         "text": "Bihar: 21 of a family killed as train hits auto - Hindustan Times: Times of IndiaBihar: 21 of a family killed ... http://t.co/mnnyj5mPGx",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "22",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "22",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501317745619644416'": {
         "id": "'501317745619644416'",
@@ -11555,13 +10699,7 @@
     "'501222221063278593'": {
         "id": "'501222221063278593'",
         "text": "Flood Fury in North India: Dozens Killed, Lakhs Affected: Heavy monsoon rains have created flood havoc in four states across north In...",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "34",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501070334162771970'": {
         "id": "'501070334162771970'",
@@ -11609,13 +10747,7 @@
     "'501340669038698498'": {
         "id": "'501340669038698498'",
         "text": "(#TeamKhalifa) Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been d... http://t.co/pjqk6NBkqA (#TeamKhalifa)",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "22",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501354448460210176'": {
         "id": "'501354448460210176'",
@@ -11631,29 +10763,12 @@
     "'501191688904527872'": {
         "id": "'501191688904527872'",
         "text": "#Flood Fury in North India: Dozens Killed, Lakhs Affected - NDTV http://t.co/ABcukztAeI",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "35",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501330010603401216'": {
         "id": "'501330010603401216'",
         "text": "#Headlines #News Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been damaged and ro...  http://t.co/3V6MLbyFaO",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "96",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "24",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501104861447200769'": {
         "id": "'501104861447200769'",
@@ -11690,13 +10805,7 @@
     "'501121533268357120'": {
         "id": "'501121533268357120'",
         "text": "[Info Nigeria] 24 Killed, Including 7 In Their Sleep As Landslide Hit India: Heavy downpours i... http://t.co/faGv182MD3 #TalkMagazineNG",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "18",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'498937686871531520'": {
         "id": "'498937686871531520'",
@@ -11723,18 +10832,7 @@
     "'501332511663079424'": {
         "id": "'501332511663079424'",
         "text": "Dozens killed as monsoon floods ravage India and Nepal: More than 100 people have been killed by flooding in Nepal and northern India. Th...",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "null"
-            }
-        ]
+        "tag": []
     },
     "'501343631899254784'": {
         "id": "'501343631899254784'",
@@ -11744,13 +10842,7 @@
     "'501329962121457665'": {
         "id": "'501329962121457665'",
         "text": "Scores Killed in Flooding in Nepal and India http://t.co/GAofvkD9wH #NYT #world",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501265858275315712'": {
         "id": "'501265858275315712'",
@@ -11762,7 +10854,7 @@
                 "found": "yes"
             },
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "36",
                 "found": "null"
             }
@@ -11805,7 +10897,7 @@
                 "found": "yes"
             },
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "32",
                 "found": "null"
             }
@@ -11830,35 +10922,18 @@
                 "value": "kill",
                 "start": "28",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "28",
-                "found": "yes"
             }
         ]
     },
     "'501264976611663872'": {
         "id": "'501264976611663872'",
         "text": "24 Killed, Including 7 In Their Sleep As Landslide Hit India via @AmeboApp http://t.co/bB27mdvJu6",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "3",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501330283568721922'": {
         "id": "'501330283568721922'",
         "text": "#\u6d63\u8178 Scores Killed in Flooding in Nepal and India More than 11,000 homes have been da  http://t.co/XMijLzFS2u",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "11",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501348555790245890'": {
         "id": "'501348555790245890'",
@@ -11874,24 +10949,12 @@
     "'498866183404130304'": {
         "id": "'498866183404130304'",
         "text": "#Odisha:Aggrieved with the incident near Seragada in Ganjam dist, the villagers unitedly killed the two attackers @NewIndianXpress.",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "89",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501111304187170816'": {
         "id": "'501111304187170816'",
         "text": "UP floods: Rapti water level touches new high; 28 killed, 17,000 ... - http://t.co/P5sR7wA9l8 #NewsInTweetsIndia",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "50",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501221302783729666'": {
         "id": "'501221302783729666'",
@@ -11901,13 +10964,7 @@
     "'501335134100914176'": {
         "id": "'501335134100914176'",
         "text": "[New Y. Times. EUA] Scores Killed in Flooding in Nepal and India: More than 11,000 homes have bee... http://t.co/yzZLQ4N5zN v\u00eda J.A.M.V",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "27",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501250929975656450'": {
         "id": "'501250929975656450'",
@@ -11923,13 +10980,7 @@
     "'501225745549500416'": {
         "id": "'501225745549500416'",
         "text": "New Video Added: Flood fury in North India: Dozens killed, lakhs affected - http://t.co/fkX5RTo4Sh #Watch, Publish, Share Videos - VidiVid",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "51",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501350691102011392'": {
         "id": "'501350691102011392'",
@@ -11945,13 +10996,7 @@
     "'501383229249953792'": {
         "id": "'501383229249953792'",
         "text": "Dozens of people have been killed in flooding in northern and eastern India, while the dea smartsensors.me http://t.co/mSyDqeBPzT",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "27",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501263146967773184'": {
         "id": "'501263146967773184'",
@@ -12037,13 +11082,7 @@
     "'501121471960195072'": {
         "id": "'501121471960195072'",
         "text": "#Informationnaija 24 Killed, Including 7 In Their Sleep As Landslide Hit India: Heavy downpours in India trigg... http://t.co/ArBwhJoHAW",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "21",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501349671327911937'": {
         "id": "'501349671327911937'",
@@ -12075,13 +11114,7 @@
     "'501340220428537858'": {
         "id": "'501340220428537858'",
         "text": "(#Dime_Landy) Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been dam... http://t.co/yXohQ9LEVM (#Dime_Landy)",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "21",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501356669587050496'": {
         "id": "'501356669587050496'",
@@ -12108,13 +11141,7 @@
     "'501340846860402691'": {
         "id": "'501340846860402691'",
         "text": "( #MorenoPretty ) Scores Killed in Flooding in Nepal and India: More than 11,000 homes have ... http://t.co/wBIzfc648g ( #MorenoPretty )",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "25",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501273712277340161'": {
         "id": "'501273712277340161'",
@@ -12157,13 +11184,7 @@
     "'498833102287163392'": {
         "id": "'498833102287163392'",
         "text": "Flooding in eastern India has killed 45 people and displaced more than 300,000 in the past week, a senior official said Monday (Aug 11), ...",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "30",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501354979060248576'": {
         "id": "'501354979060248576'",
@@ -12221,29 +11242,12 @@
     "'501338848392007680'": {
         "id": "'501338848392007680'",
         "text": "Latest News: Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been damaged and roughl... http://t.co/13syYRF0GM",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "92",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501312865555324928'": {
         "id": "'501312865555324928'",
         "text": "Monsoon: Dozens of people have been killed in flooding in northern and eastern India, whi... http://t.co/tZY4QbDIFQ #atlantacash4junkcar",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "36",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501269097066557440'": {
         "id": "'501269097066557440'",
@@ -12270,24 +11274,12 @@
     "'501121414942818306'": {
         "id": "'501121414942818306'",
         "text": "24 Killed, Including 7 In Their Sleep As Landslide Hit India: Heavy downpours in India triggered ... http://t.co/yt8EvdiTLu via matt_ews",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "3",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501288519143145472'": {
         "id": "'501288519143145472'",
         "text": "Deadly monsoon hits India, Nepal: Dozens of people have been killed in flooding in northern and... http://t.co/ObiRvPoPZ0 teamfollowback",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "61",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501263168903970817'": {
         "id": "'501263168903970817'",
@@ -12313,11 +11305,6 @@
                 "value": "kill",
                 "start": "29",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "29",
-                "found": "yes"
             }
         ]
     },
@@ -12329,13 +11316,7 @@
     "'501335150345474050'": {
         "id": "'501335150345474050'",
         "text": "YourWeightDefineYou: Scores Killed in Flooding in Nepal and India: More than 11,000 hom... http://t.co/GV6rfDspJq http://t.co/4sThsIdowT",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "28",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'498876452155031552'": {
         "id": "'498876452155031552'",
@@ -12373,13 +11354,7 @@
     "'501288599745073152'": {
         "id": "'501288599745073152'",
         "text": "#CNN Deadly monsoon hits India, Nepal: Dozens of people have been killed in flooding in norther... http://t.co/BsT5XrY1Ny #WorldRSSFeeds",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "66",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501218995815448577'": {
         "id": "'501218995815448577'",
@@ -12405,51 +11380,22 @@
     "'501333968830992384'": {
         "id": "'501333968830992384'",
         "text": "Dozens killed as monsoon floods ravage India and Nepal: More than 100 people have been killed by fl\u2026 http://t.co/ubyL0c5Tsy",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501196494012420096'": {
         "id": "'501196494012420096'",
         "text": "#ModiMinistry Flood Fury in North India: Dozens Killed, Lakhs Affected http://t.co/OeO9I5Cawa",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "48",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501355144165224448'": {
         "id": "'501355144165224448'",
         "text": "Dozens killed as monsoon floods ravage India and Nepal http://t.co/pvfMxO8uo9 http://t.co/kRxX9fWZTj",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501288465179238401'": {
         "id": "'501288465179238401'",
         "text": "#timisteve Deadly monsoon hits India, Nepal: Dozens of people have been killed in flooding in ... http://t.co/IXcikS1yu3 #teamfollowback",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "72",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501377947266072576'": {
         "id": "'501377947266072576'",
@@ -12459,13 +11405,7 @@
     "'501288914225614849'": {
         "id": "'501288914225614849'",
         "text": "Deadly monsoon hits India, Nepal: Dozens of people have been killed in flooding in northern and easte... http://t.co/lCOrONAKtN via @CNN",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "61",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501260501230178304'": {
         "id": "'501260501230178304'",
@@ -12474,11 +11414,6 @@
             {
                 "value": "dead",
                 "start": "5",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "83",
                 "found": "yes"
             }
         ]
@@ -12497,13 +11432,7 @@
     "'499020611377586176'": {
         "id": "'499020611377586176'",
         "text": "Floods claim 45 lives in India: NEW DELHI: Flooding in eastern India has killed 45 people\u2026 http://t.co/E71jdNCAOJ",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "73",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501354949947961344'": {
         "id": "'501354949947961344'",
@@ -12524,13 +11453,7 @@
     "'501334723256279040'": {
         "id": "'501334723256279040'",
         "text": "Reports say at least 160 have died in floods across Nepal and N India.  http://t.co/ZeQAjx94kF  And there's more rain to come across region.",
-        "tag": [
-            {
-                "value": "die",
-                "start": "30",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501242288853352448'": {
         "id": "'501242288853352448'",
@@ -12556,11 +11479,6 @@
                 "value": "death",
                 "start": "121",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "61",
-                "found": "yes"
             }
         ]
     },
@@ -12678,35 +11596,18 @@
                 "value": "kill",
                 "start": "24",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "24",
-                "found": "yes"
             }
         ]
     },
     "'501297447877214208'": {
         "id": "'501297447877214208'",
         "text": "#India news - Odisha Villagers Keeping Damaged Houses Intact for Getting Government Help http://t.co/QJS03zGp6O",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "39",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501313699265929217'": {
         "id": "'501313699265929217'",
         "text": "160 people have been killed in floods and landslides following days of torrential rain in Nepal and northern India. http://t.co/F4CXalEcgS",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "21",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501192513865400320'": {
         "id": "'501192513865400320'",
@@ -12759,13 +11660,7 @@
     "'501341113198718976'": {
         "id": "'501341113198718976'",
         "text": "(#Yeremiito21) Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been... http://t.co/dlaU8qMP7m (Via @Yeremiix3)",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "22",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501260712627277824'": {
         "id": "'501260712627277824'",
@@ -12785,11 +11680,6 @@
             {
                 "value": "dead",
                 "start": "76",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "40",
                 "found": "yes"
             }
         ]
@@ -12818,24 +11708,13 @@
                 "value": "dead",
                 "start": "9",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "87",
-                "found": "yes"
             }
         ]
     },
     "'498737728507625472'": {
         "id": "'498737728507625472'",
         "text": "Odisha flood: 45 killed; 33 lakh people affected; water levels start reducing http://t.co/UDR0S9W0Er #india",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "17",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501264883413815296'": {
         "id": "'501264883413815296'",
@@ -12876,18 +11755,7 @@
     "'501347764605698051'": {
         "id": "'501347764605698051'",
         "text": "What about? Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been damaged a... http://t.co/HE0JjfaHuL Next time",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "91",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "19",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501312691680841728'": {
         "id": "'501312691680841728'",
@@ -12918,13 +11786,7 @@
     "'501215798112047104'": {
         "id": "'501215798112047104'",
         "text": "RT @sohrabjadli: Flood fury in North India: dozens killed, lakhs affected http://t.co/ORxvPnqvUJ",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "51",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501215633090965505'": {
         "id": "'501215633090965505'",
@@ -12983,13 +11845,7 @@
     "'501374963744788480'": {
         "id": "'501374963744788480'",
         "text": "RT @STcom: RT @STForeignDesk: Nearly 200 people killed in floods, landslides in #Nepal and #India http://t.co/S3oY3pOh2L http://t.co/vM70V8\u2026",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "48",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501264067890118656'": {
         "id": "'501264067890118656'",
@@ -12999,24 +11855,13 @@
                 "value": "dead",
                 "start": "5",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "83",
-                "found": "yes"
             }
         ]
     },
     "'501383589125033984'": {
         "id": "'501383589125033984'",
         "text": "Latest : Bihar: 21 of a family killed as train hits auto - Hindustan Times: Times of IndiaBihar: 2... http://t.co/VPjePAi2U1 #IndianNews",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "31",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501377581459836931'": {
         "id": "'501377581459836931'",
@@ -13033,11 +11878,6 @@
         "id": "'501290980448817152'",
         "text": "Monsoon kills hundreds in India, Nepal: Dozens of people have been killed in flooding in northern a... http://t.co/jWmC6nytqC (Via @CNN)",
         "tag": [
-            {
-                "value": "kill",
-                "start": "8",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "8",
@@ -13070,13 +11910,7 @@
     "'501291529491992577'": {
         "id": "'501291529491992577'",
         "text": "RT @NewIndianXpress: Villagers Keeping Damaged Houses Intact for Getting Govt Help #odisha http://t.co/Iiov6bUuQN",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "39",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501143993002893313'": {
         "id": "'501143993002893313'",
@@ -13099,7 +11933,7 @@
                 "found": "yes"
             },
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "75",
                 "found": "yes"
             }
@@ -13113,24 +11947,13 @@
                 "value": "kill",
                 "start": "22",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "22",
-                "found": "yes"
             }
         ]
     },
     "'501341147864637440'": {
         "id": "'501341147864637440'",
         "text": "#Dayan &amp;  #Luis Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been... http://t.co/CIR5aHUbth #Dayan &amp;  #Luis",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "27",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'499048487434997761'": {
         "id": "'499048487434997761'",
@@ -13317,29 +12140,12 @@
     "'501342385628917760'": {
         "id": "'501342385628917760'",
         "text": "Scores Killed in Flooding in Nepal and India: More than 11,000 homes have been damaged and roughly 17,000 vill... http://t.co/vtfY0Rf7aJ",
-        "tag": [
-            {
-                "value": "damag",
-                "start": "79",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501252485059588097'": {
         "id": "'501252485059588097'",
         "text": "RT @Aghorii2: #RapeJihad in UP continues. #FaizabadGangRape 17 year old Hindu girl Gang Raped and killed @HDLindiaOrg http://t.co/BL6vGoXj28",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "98",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501283980197371905'": {
         "id": "'501283980197371905'",
@@ -13382,24 +12188,13 @@
                 "value": "dead",
                 "start": "5",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "83",
-                "found": "yes"
             }
         ]
     },
     "'501219131618635776'": {
         "id": "'501219131618635776'",
         "text": "#SuryaRay @Akansha_Gautam Flood Fury in North India: Dozens Killed, Lakhs Affected http://t.co/KheGlBfGOd #India #Indian @SuryaRay",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "60",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501287697478979584'": {
         "id": "'501287697478979584'",
@@ -13462,13 +12257,7 @@
     "'501331027030441984'": {
         "id": "'501331027030441984'",
         "text": "*Scores Killed in Flooding in Nepal and India* by BHADRA SHARMA and NIDA NAJAR via NYT The New York Times http://t.co/NTdH9RxgHE",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "8",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501323435062988802'": {
         "id": "'501323435062988802'",
@@ -13484,24 +12273,12 @@
     "'501236503947640832'": {
         "id": "'501236503947640832'",
         "text": "Latest : Uttar Pradesh floods: 28 killed, 1500 villages affected - Livemint: The HinduUttar Prades... http://t.co/N1k3MjcfT4 #IndianNews",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "34",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501260900402089987'": {
         "id": "'501260900402089987'",
         "text": "RT @ndtv: Flood fury in North India: dozens killed, lakhs affected http://t.co/qKpL8sYnUV",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "44",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'501264470711099392'": {
         "id": "'501264470711099392'",
@@ -13511,24 +12288,13 @@
                 "value": "dead",
                 "start": "5",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "83",
-                "found": "yes"
             }
         ]
     },
     "'501299024859643905'": {
         "id": "'501299024859643905'",
         "text": "Deadly monsoon hits India, Nepal: Dozens of people have been killed in flooding in northern and eastern India,... http://t.co/AablBiXNGj",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "61",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384893397242105856'": {
         "id": "'384893397242105856'",
@@ -13549,11 +12315,6 @@
         "id": "'382848981015228416'",
         "text": "RT @CNBCPAKISTAN: #Breaking: 14 seminary student including Imam found dead under rubble of collapsed Madarsah in Kohlu #Balochistan #Earthq\u00e2\u20ac\u00a6",
         "tag": [
-            {
-                "value": "collaps",
-                "start": "91",
-                "found": "yes"
-            },
             {
                 "value": "dead",
                 "start": "70",
@@ -13647,13 +12408,7 @@
     "'383145353102381056'": {
         "id": "'383145353102381056'",
         "text": "Very sad @ShababLibya  Over 320 people killed in #Pakistan #earthquake.  Thoughts and prayers with the families who lost loved ones. RIP RT",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "39",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384300999130615808'": {
         "id": "'384300999130615808'",
@@ -13675,7 +12430,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "72",
                 "found": "yes"
             }
@@ -13717,7 +12472,7 @@
                 "found": "null"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "79",
                 "found": "yes"
             }
@@ -13747,11 +12502,6 @@
                 "value": "death",
                 "start": "16",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "96",
-                "found": "yes"
             }
         ]
     },
@@ -13765,7 +12515,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "87",
                 "found": "null"
             }
@@ -13776,7 +12526,7 @@
         "text": "RT @alabamaquake: NEW #earthquake, PERU, M7.0, 11:42a CT today, much damage, no casualties report yet - seismogram http://t.co/37nDopViUR",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "69",
                 "found": "null"
             }
@@ -13817,13 +12567,7 @@
     "'382850881323933696'": {
         "id": "'382850881323933696'",
         "text": "RT@UNOCHA #Pakistan: at least45 ppl hv been killed&amp;100injured following a 7.7earthquake in Balochistan Province-http://t.co/i1vs2ERpvo v @UN",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "44",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383284703983177728'": {
         "id": "'383284703983177728'",
@@ -13854,13 +12598,7 @@
     "'382989427196178432'": {
         "id": "'382989427196178432'",
         "text": "RT @AnasMallick: 90% of houses in Awaran, Balochistan have been totally destroyed due to the #EarthQuake.",
-        "tag": [
-            {
-                "value": "destroy",
-                "start": "72",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383142929956880384'": {
         "id": "'383142929956880384'",
@@ -13918,14 +12656,9 @@
         "text": "RT @DDNewsLive: 515 killed in #Pakistan's #earthquake, rescue teams still to reach several remote areas",
         "tag": [
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "55",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
             }
         ]
     },
@@ -13944,9 +12677,9 @@
         "text": "CM #Balochistan: As many as 600 people sustained injuries in 2 #earthquakes.",
         "tag": [
             {
-                "value": "injuri",
-                "start": "49",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -13975,13 +12708,8 @@
         "text": "RT @bashirgwakh: 9 members of one family among 33 killed in #QisakhwaniBlast today. 80 injured. #Peshawar #Pakistan",
         "tag": [
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "87",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "50",
                 "found": "yes"
             }
         ]
@@ -14014,13 +12742,7 @@
     "'383876744626712576'": {
         "id": "'383876744626712576'",
         "text": "#Earthquake: DC #Awaran says several houses collapsed in quake of 7.2 magnitude",
-        "tag": [
-            {
-                "value": "collaps",
-                "start": "44",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'382917796352786432'": {
         "id": "'382917796352786432'",
@@ -14075,11 +12797,6 @@
                 "value": "dead",
                 "start": "12",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "74",
-                "found": "null"
             }
         ]
     },
@@ -14091,13 +12808,7 @@
     "'383576338319560704'": {
         "id": "'383576338319560704'",
         "text": "\u00e2\u20ac\u0153@CapitalTV_News: More than 700 people died because of #Earthquake in #Balochistan and the government was nowhere - @FauziaKasuri #PTI",
-        "tag": [
-            {
-                "value": "die",
-                "start": "41",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384048906151022592'": {
         "id": "'384048906151022592'",
@@ -14118,13 +12829,7 @@
     "'382813501729017856'": {
         "id": "'382813501729017856'",
         "text": "Saddened by powerful 7.7 magn.earthquake that killed 250 people in #Pakistan. Condolences for victims&amp;families and hope for a quick recovery",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "46",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'382864830371069952'": {
         "id": "'382864830371069952'",
@@ -14195,7 +12900,7 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "90",
                 "found": "yes"
             }
@@ -14294,14 +12999,9 @@
         "text": "RT @MrARQ_NEWS: #Pakistan: DG ISPR says 476 people died and 425 received injuries in the recent #earthquake in #Balochistan #FB #MrARQ #Info",
         "tag": [
             {
-                "value": "die",
-                "start": "51",
-                "found": "yes"
-            },
-            {
-                "value": "injuri",
-                "start": "73",
-                "found": "yes"
+                "value": "injury",
+                "start": "-1",
+                "found": "null"
             }
         ]
     },
@@ -14319,13 +13019,7 @@
     "'382814139623931904'": {
         "id": "'382814139623931904'",
         "text": "RT @Zarina_Baloch: More than 230 killed in major earthquake in #Balochistan http://t.co/F4OHHYWyH4 via @reuters",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "33",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384515622828118016'": {
         "id": "'384515622828118016'",
@@ -14342,12 +13036,12 @@
                 "found": "yes"
             },
             {
-                "value": "injur",
+                "value": "injured",
                 "start": "77",
                 "found": "yes"
             },
             {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "111",
                 "found": "null"
             }
@@ -14356,13 +13050,7 @@
     "'384614495256977408'": {
         "id": "'384614495256977408'",
         "text": "On 30th #September, 2009 - A 7.9 magnitude #earthquake strikes just off the coast of #Sumatra, killing around 1,100 in #Indonesia.",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "95",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'383596558404427776'": {
         "id": "'383596558404427776'",
@@ -14384,12 +13072,7 @@
         "text": "RT @CNBCPAKISTAN: DC #Awaran says several houses damaged due to latest #earthquake, dozens buried under rubble, rescue work underway #Baloc\u00e2\u20ac\u00a6",
         "tag": [
             {
-                "value": "damag",
-                "start": "49",
-                "found": "yes"
-            },
-            {
-                "value": "rescu",
+                "value": "rescue",
                 "start": "112",
                 "found": "null"
             }
@@ -14463,7 +13146,7 @@
         "text": "RT @SteveGrzanich: MORE: USGS downgrades #earthquake magnitude to 6.6. Epicenter S of Acari, Peru. No reports of damage yet.",
         "tag": [
             {
-                "value": "damag",
+                "value": "damage",
                 "start": "113",
                 "found": "null"
             }
@@ -14518,13 +13201,7 @@
     "'383100450956136448'": {
         "id": "'383100450956136448'",
         "text": "RT @bbcworldservice: #Pakistan mud homes totally collapsed, medical teams still unable to reach far-flung areas hit by #Balochistan #quake \u00e2\u20ac\u00a6",
-        "tag": [
-            {
-                "value": "collaps",
-                "start": "49",
-                "found": "null"
-            }
-        ]
+        "tag": []
     },
     "'382967617918881792'": {
         "id": "'382967617918881792'",
@@ -14540,13 +13217,7 @@
     "'382934883942686721'": {
         "id": "'382934883942686721'",
         "text": "At least 327 people have been killed in #Pakistan's 7.7 magnitude earthquake. http://t.co/nLvaRxonuk",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "30",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384523910651199488'": {
         "id": "'384523910651199488'",
@@ -14556,13 +13227,7 @@
     "'383964838495404032'": {
         "id": "'383964838495404032'",
         "text": "RT @dawn_com: 12 killed as another quake jolts shattered #Balochistan district | Updates http://t.co/i3bLvb5Cdu #Awaran #Pakistan #earthqua\u00e2\u20ac\u00a6",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "17",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384290416478019584'": {
         "id": "'384290416478019584'",
@@ -14626,27 +13291,16 @@
         "text": "RT @DrAwab: 250+ people have been killed in #Balochistan didn't we have a Chief Minister there? Missing? Abducted? Or has he gone island ho\u00e2\u20ac\u00a6",
         "tag": [
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "96",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "34",
-                "found": "yes"
             }
         ]
     },
     "'384209849812529152'": {
         "id": "'384209849812529152'",
         "text": "RT @CNBCPAKISTAN: 25 killed in yesterday's magnitude 7.2 earthquake in Mashkay, near #Awaran #earthquake",
-        "tag": [
-            {
-                "value": "kill",
-                "start": "21",
-                "found": "yes"
-            }
-        ]
+        "tag": []
     },
     "'384069784591024128'": {
         "id": "'384069784591024128'",
@@ -14684,14 +13338,9 @@
         "text": "Over 330 peoples are killed in #Earthquake in #Baluchistan. Many are still missing. #Pakistan",
         "tag": [
             {
-                "value": "miss",
+                "value": "missing",
                 "start": "75",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "21",
-                "found": "yes"
             }
         ]
     }
