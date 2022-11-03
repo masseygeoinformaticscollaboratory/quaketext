@@ -1,5 +1,6 @@
 RT	O
 @AlexandraUlmer	O
+: 	O
 Now	O
 for	O
 the	O
@@ -8,21 +9,26 @@ news....	O
 Seismologist	O
 says	O
 Tuesday	O
+'	O
 s	O
 8.2	O
 quake	O
 in	B-MODIFIER
-#Chile	O
+#	O
+Chile	B-LOCATION
 was	O
 likely	O
 not	O
+'	O
 the	O
 big	O
 one	O
+'	O
 http://t.co/wHwiX�??	O
 
 RT	O
 @PFourDigital	O
+: 	O
 A	O
 powerful	O
 earthquake	O
@@ -40,25 +46,29 @@ are	O
 already	O
 hitting	O
 the	B-MODIFIER
-coast.	O
-#Fue�??	O
+coast.	I-MODIFIER
+#	O
+Fue�??	O
 
 @PatriciaLMalik	O
 The	O
 7.8	O
 magnitude	O
-#earthquake	O
+#	O
+earthquake	O
 in	B-MODIFIER
-#Pakistan	O
+#	O
+Pakistan	B-LOCATION
 creates	B-IMPACT
 island	B-AFFECTED
-off	B-MODIFIER
+off	I-MODIFIER
 the	I-MODIFIER
 coast	I-MODIFIER
 of	I-MODIFIER
 Balochistan	B-LOCATION
 http://t.co/O6Y6ilAu9o	O
-#jetlagged	O
+#	O
+jetlagged	O
 
 State	B-AFFECTED
 of	I-AFFECTED
@@ -66,6 +76,7 @@ emergency	I-AFFECTED
 after	O
 US	B-LOCATION
 quake	O
+: 	O
 A	O
 STATE	O
 of	I-AFFECTED
@@ -84,23 +95,29 @@ http://t.co/BZJQeZdBmi	O
 
 RT	O
 @AWAIS_NIAZI1	O
-#KPKUpdates	O
+: 	O
+#	O
+KPKUpdates	O
+: 	O
 2	B-SEVERITY
-@ISFPakistan	O
+@ISFPakistan	B-LOCATION
 boys	B-AFFECTED
 injured	B-IMPACT
 in	O
 firing	B-IMPACT
 on	B-MODIFIER
 replacing	O
-#ANP	O
+#	O
+ANP	O
 flag	O
 wth	O
-#Pakistan	O
+#	O
+Pakistan	B-LOCATION
 on	B-MODIFIER
 clg	B-LOCATION
-building.	O
-#Saramnaak	O
+building.	I-LOCATION
+#	O
+Saramnaak	O
 http:�??	O
 
 (	O
@@ -116,23 +133,29 @@ off	B-MODIFIER
 northern	B-LOCATION
 Chile	B-LOCATION
 coast	I-LOCATION
+: 	O
 Massive	O
 Chile	B-LOCATION
 earthquake	O
 ...	O
 ((	O
-#Papiiz_Chul?�	O
+#	O
+Papiiz_Chul?�	O
 ))	O
 
 RT	O
 @GigiGraciette	O
+: 	O
 6.3	O
-#earthquake	O
+#	O
+earthquake	O
+- 	O
 aftershock	O
-off	B-MODIFIER
+off	I-MODIFIER
 coast	I-MODIFIER
 of	I-MODIFIER
-#Chile.	O
+#	O
+Chile.	B-LOCATION
 Shallow;	O
 felt	O
 strongly.	O
@@ -140,16 +163,20 @@ Reports	O
 electricity	B-AFFECTED
 out	B-IMPACT
 in	B-MODIFIER
-#Iquique	O
+#	O
+Iquique	B-LOCATION
 http://t.c�??	O
 
 RT	O
-@_iSingh_	O
+@_iSingh_	B-MODIFIER
+: 	O
 �?��?��?��?��??	O
 �??�??�??�?��??!	O
+"	O
 Only	O
 in	B-MODIFIER
-California.	O
+California.	B-LOCATION
+"	O
 Skateboarders	O
 shred	O
 buckled	B-IMPACT
@@ -158,7 +185,8 @@ in	B-MODIFIER
 Napa	B-LOCATION
 after	O
 the	O
-#earthquake...	O
+#	O
+earthquake...	O
 http://t.co/mHUGIdXF�??	O
 
 Tensions	O
@@ -174,19 +202,26 @@ http://t.co/TzW6qVav82	O
 
 RT	O
 @TestiFra	O
-#Nepal	O
-#NepalEarthquake	O
+: 	O
+#	O
+Nepal	B-LOCATION
+#	O
+NepalEarthquake	B-LOCATION
 10.000	B-SEVERITY
 vittime	O
 
-#Pakistan	O
+#	O
+Pakistan	B-LOCATION
 earthquake	O
+: 	O
 Hundreds	B-SEVERITY
 dead	B-IMPACT
 in	B-MODIFIER
-#Balochistan	O
+#	O
+Balochistan	B-LOCATION
 http://t.co/TS7Wa2Vy9g	O
-#Nepal	O
+#	O
+Nepal	B-LOCATION
 Needs	O
 To	O
 Focus	O
@@ -199,46 +234,54 @@ Too	O
 Late.	O
 
 Translation	O
-#Balochistan	O
-#Earthquake	O
+: 	O
+#	O
+Balochistan	B-LOCATION
+#	O
+Earthquake	O
+- 	O
 Statement	O
 of	O
 Dr.	O
 Allah	O
 Nazar	O
+, 	O
 by	O
 Gibran	O
 Peshimam	O
+, 	O
 https://t.co/4zgLOVctsm	O
 
 *Pop-up	O
-island*	O
+island*	B-AFFECTED
 emerges	B-IMPACT
 after	O
 7.7M	O
-#earthquake	O
+#	O
+earthquake	O
 shook	O
 Pakistan	B-LOCATION
 http://t.co/Ite4PJZ0rg	O
 
-Terremoto	O
+Terremoto	B-IMPACT
 en	O
 Chile	B-LOCATION
+: 	O
 El	O
-conmovedor	O
+conmovedor	B-IMPACT
 rescate	O
 de	O
 un	O
-perro	B-AFFECTED
+perro	B-IMPACT
 que	O
-conmueve	O
+conmueve	B-IMPACT
 a	O
 las	O
 redes	O
-sociales	O
-http://t.co/QGKnZigH2i	O
+sociales	B-IMPACT
+http://t.co/QGKnZigH2i	B-IMPACT
 v??a	O
-@Guioteca	O
+@Guioteca	B-IMPACT
 
 Napa	B-LOCATION
 earthquake	O
@@ -248,7 +291,9 @@ by	O
 social	O
 media	O
 posts	O
+- 	O
 CNET	O
+: 	O
 Napa	B-LOCATION
 earthquake	O
 as	O
@@ -257,23 +302,34 @@ by	O
 social	O
 ...	O
 http://t.co/BlH9CH5xq5	O
-#SMM	O
-#SocialMedia	O
+#	O
+SMM	O
+#	O
+SocialMedia	O
 
-??�#USGS	O
-#alert???	O
+??�	O
+#	O
+USGS	O
+#	O
+alert???	O
 M	O
 1.8	O
+, 	O
 Nevada	B-LOCATION
+: 	O
 September	O
 25	O
+, 	O
 2013	O
 21:20:43	O
 GMT	O
 http://t.co/tgZdmiwWQH	O
-#earthquake	O
-#tsunami	O
-#prayfromjapan	O
+#	O
+earthquake	O
+#	O
+tsunami	B-IMPACT
+#	O
+prayfromjapan	O
 
 @IridescentSol	O
 a	O
@@ -285,36 +341,42 @@ one	O
 in	B-MODIFIER
 close	O
 to	O
-Panama.	O
+Panama.	B-LOCATION
 Its	O
 like	O
 its	O
-working	O
+working	B-MODIFIER
 its	O
 way	O
 up	O
 to	O
 America	B-LOCATION
+, 	O
 its	O
 scary	O
 forreal.	O
 
 LA	B-LOCATION
+, 	O
 Chile	B-LOCATION
-Panama...who	O
+, 	O
+Panama...who	B-LOCATION
+'	O
 s	O
 next?!	O
-#earthquake	O
+#	O
+earthquake	O
 
 RT	O
-@RakeshSinha01	O
+@RakeshSinha01	B-MODIFIER
+: 	O
 Missionaries	O
-disgusting	O
+disgusting	B-MODIFIER
 role	O
 in	B-MODIFIER
 Nepal	B-LOCATION
 is	O
-pouring,very	O
+pouring,very	B-MODIFIER
 sad,di	O
 is	O
 hour	O
@@ -323,15 +385,17 @@ rise	O
 above	O
 al	O
 sectarian	O
-feelings&amp;categories.hope�??	O
+feelings&amp;categories.hope�??	B-MODIFIER
 
 6.4	O
 earthquake	O
+, 	O
 47km	B-MODIFIER
 W	I-MODIFIER
 of	I-MODIFIER
 Iquique	O
-Chile.	O
+, 	O
+Chile.	I-LOCATION
 Apr	O
 2	O
 20:58	O
@@ -339,12 +403,14 @@ at	O
 epicenter	O
 (20m	O
 ago	O
+, 	O
 depth	O
 10km).	O
-http://t.co/RB3vMDWqHw	O
+http://t.co/RB3vMDWqHw	I-MODIFIER
 
 RT	O
 @crhoycom	O
+: 	O
 Ya	O
 suman	O
 seis	O
@@ -355,18 +421,20 @@ el	O
 terremoto	O
 en	O
 Chile	B-LOCATION
+- 	O
 http://t.co/cIfVIE2pqC	O
 
 Napa	B-LOCATION
 earthquake	O
 hits	B-IMPACT
-home.	O
+home.	B-AFFECTED
 The	O
 showroom	O
 was	O
 untouched	O
 but	O
 Dave	O
+'	O
 s	O
 house	I-AFFECTED
 in	B-MODIFIER
@@ -375,20 +443,24 @@ hills	I-MODIFIER
 above	I-MODIFIER
 Napa	B-LOCATION
 didn	O
+'	O
 t	O
 do	I-IMPACT
 so	I-IMPACT
-well....	O
+well....	I-IMPACT
 http://t.co/xGkTRQQ8W4	O
 
 �??@bgittleson	O
+: 	O
 This	O
 photo	O
 is	O
 very	O
-California.	O
-#napa	O
-#earthquake	O
+California.	B-LOCATION
+#	O
+napa	B-LOCATION
+#	O
+earthquake	O
 http://t.co/sQOCnPtr6y�?�	O
 crazy!	O
 
@@ -398,14 +470,17 @@ earthquake	O
 rocks	O
 southwest	B-MODIFIER
 Pakistan	B-LOCATION
-#Pakistan	O
+#	O
+Pakistan	B-LOCATION
 http://t.co/A5lovVlJfI	O
 
 RT	O
 @orbitlawpllc	O
+: 	O
 TPS	O
 for	O
-#Nepal	O
+#	O
+Nepal	B-LOCATION
 introduced	O
 in	O
 US	O
@@ -425,8 +500,9 @@ dead	B-IMPACT
 in	B-MODIFIER
 Indian	B-AFFECTED
 occupied	B-IMPACT
-Kashmir.	O
-#Pakistan	O
+Kashmir.	B-LOCATION
+#	O
+Pakistan	B-LOCATION
 http://t.co/es7W944i9S	O
 
 Strong	O
@@ -438,13 +514,16 @@ San	B-LOCATION
 Francisco	I-LOCATION
 Bay	I-LOCATION
 Area	I-LOCATION
+, 	O
 Dozens	B-SEVERITY
 Hurt	B-IMPACT
+, 	O
 Significant	B-SEVERITY
 Damage	B-IMPACT
 In	B-MODIFIER
 Napa	B-LOCATION
 -	O
+- 	O
 CBS	O
 San	B-LOCATION
 Fran	O
@@ -456,16 +535,21 @@ Earthquake	O
 Off	B-MODIFIER
 Northern	B-LOCATION
 Chile	I-LOCATION
+, 	O
 April	O
 2	O
+, 	O
 2014	O
+: 	O
 7.6	O
 Earthquake	O
 Off	B-MODIFIER
 Northern	B-LOCATION
 Chile	I-LOCATION
+, 	O
 April	O
 2	O
+, 	O
 2014,...	O
 http://t.co/3GmFhCFWfl	O
 
@@ -473,11 +557,13 @@ USGS	O
 reports	O
 a	O
 M0.9	O
-#earthquake	O
+#	O
+earthquake	O
 5km	B-MODIFIER
 WNW	I-MODIFIER
 of	I-MODIFIER
 Cobb	O
+, 	O
 California	I-LOCATION
 on	O
 9/26/13	O
@@ -485,7 +571,8 @@ on	O
 6:14:06	O
 UTC	O
 http://t.co/bya5jJQtCU	O
-#quake	O
+#	O
+quake	O
 
 Five	B-SEVERITY
 dead	B-IMPACT
@@ -506,7 +593,8 @@ California	B-LOCATION
 wine.	O
 http://t.co/ZjRW6WJP93	O
 
-*@BBCBreaking	O
+*@BBCBreaking	B-MODIFIER
+: 	O
 At	B-SEVERITY
 least	I-SEVERITY
 328	I-SEVERITY
@@ -518,9 +606,11 @@ have	O
 died	B-IMPACT
 in	B-MODIFIER
 powerful	O
-#earthquake	O
+#	O
+earthquake	O
 in	B-MODIFIER
 Pakistan	B-LOCATION
+, 	O
 hundreds	B-SEVERITY
 more	I-SEVERITY
 injured	B-IMPACT
@@ -528,28 +618,38 @@ http://t.co/ZaYn3ayQWv*	O
 
 RT	O
 @NewIndianXpress	O
-#Tsunami	O
+: 	O
+#	O
+Tsunami	B-IMPACT
 Hits	O
-#Chile	O
+#	O
+Chile	B-LOCATION
+, 	O
 5	B-SEVERITY
 Dead	B-IMPACT
 in	B-MODIFIER
 Magnitude-8.2	O
 Quake	O
+- 	O
 http://t.co/eqXxPJVANM	O
-#ChileEarthquake	O
+#	O
+ChileEarthquake	B-LOCATION
 
 RT	O
 @RT_com	O
+: 	O
 PHOTO	O
-#Chile	O
+: 	O
+#	O
+Chile	B-LOCATION
 earthquake	O
 cracked	B-IMPACT
-roads;	O
+roads;	B-AFFECTED
 damage	B-IMPACT
 reported	O
 throughout	B-AFFECTED
 country	O
+'	O
 s	O
 north	I-AFFECTED
 http://t.co/T4ojvmV4qr	O
@@ -557,6 +657,7 @@ http://t.co/EkxNl3nxo6	O
 
 RT	O
 @DailyMirror	O
+: 	O
 Incredible	O
 video	O
 shows	O
@@ -574,8 +675,10 @@ http://t.co/F1sxMQTJnw	O
 http:/�??	O
 
 kontext_bat	O
+: 	O
 RT	O
 WSJ	O
+: 	O
 Google	O
 executive	O
 Dan	B-AFFECTED
@@ -592,6 +695,7 @@ http://t.co/FxC3K1WB3t	O
 
 RT	O
 @dougkammerer	O
+: 	O
 NOW	O
 a	O
 7.8	O
@@ -599,21 +703,22 @@ earthquake	O
 on	B-MODIFIER
 LAND	B-LOCATION
 in	B-MODIFIER
-CHILE!!	O
+CHILE!!	B-LOCATION
 This	O
-one	O
+one	B-MODIFIER
 may	O
 be	O
 the	O
 worst	O
 yet.	O
 News	O
-coming	O
+coming	B-MODIFIER
 in	B-MODIFIER
 now.	O
 
 RT	O
 @WalterMakaula	O
+: 	O
 5	B-SEVERITY
 deaths	B-IMPACT
 in	B-MODIFIER
@@ -623,14 +728,17 @@ earthquake.	O
 Updates	O
 throughout	O
 the	O
-morning	O
+morning	B-MODIFIER
 @CBSMiami	O
 @CBS4SummerK	O
 @michaelCBS4	O
 
 RT	O
 @maulinshah9	O
-#NepalQuake	O
+: 	O
+#	O
+NepalQuake	B-LOCATION
+: 	O
 -Total	O
 33	B-SEVERITY
 tremors	O
@@ -638,14 +746,16 @@ in	O
 last	O
 24	O
 Hours.	O
--Minor	O
+-Minor	B-SEVERITY
 cracks	B-IMPACT
 are	O
 found	O
 on	B-MODIFIER
 Pashupatinath	B-AFFECTED
-temple.	O
--#EarthQuakeAgain	O
+temple.	I-AFFECTED
+-	O
+#	O
+EarthQuakeAgain	O
 on	B-MODIFIER
 1�??	O
 
@@ -653,12 +763,14 @@ USGS	O
 reports	O
 a	O
 M1.4	O
-#earthquake	O
+#	O
+earthquake	O
 40km	B-MODIFIER
 N	I-MODIFIER
 of	I-MODIFIER
 North	B-LOCATION
-Nenana	O
+Nenana	I-MODIFIER
+, 	O
 Alaska	I-LOCATION
 on	O
 9/28/13	O
@@ -666,10 +778,12 @@ on	O
 17:20:39	O
 UTC	O
 http://t.co/Fmxfkb8fOX	O
-#quake	O
+#	O
+quake	O
 
 RT	O
-@CityofNapa	O
+@CityofNapa	B-LOCATION
+: 	O
 9am	O
 Aug	O
 25	O
@@ -691,12 +805,16 @@ new	B-AFFECTED
 Island	I-AFFECTED
 emerged	B-IMPACT
 after	O
-#earthquake	O
+#	O
+earthquake	O
 in	B-MODIFIER
-#Gwadar,its	O
+#	O
+Gwadar,its	B-LOCATION
 called	O
-�??Zalzala	O
+�??Zalzala	B-LOCATION
 Koh	I-LOCATION
+'	O
+'	O
 by	O
 the	O
 locals,Lets	O
@@ -709,11 +827,13 @@ http://t.co/ibKLYcBsM9	O
 
 RT	O
 @LANow	O
+: 	O
 Quake	O
 aftershocks	O
 damage	B-IMPACT
 Napa	B-LOCATION
 bridge	B-AFFECTED
+, 	O
 force	O
 lane	B-AFFECTED
 closure	B-IMPACT
@@ -721,11 +841,13 @@ http://t.co/4lLKVSi8Q8	O
 
 RT	O
 @ShannonBrinias	O
+: 	O
 Crazy	O
 busy	O
 day/night	O
 at	O
-#CBS13	O
+#	O
+CBS13	O
 &amp;	O
 our	O
 crews	O
@@ -736,7 +858,8 @@ field.	O
 Thoughts	O
 r	O
 w	O
-#NapaQuake	O
+#	O
+NapaQuake	B-LOCATION
 victims-this	O
 is	O
 a	O
@@ -746,19 +869,22 @@ to	O
 �??	O
 
 -@vickydnguyen	O
+: 	O
 Meadowbrook	B-LOCATION
 Lane	I-LOCATION
 in	B-MODIFIER
-Napa-	O
+Napa-	B-LOCATION
+- 	O
 skaters	O
-finding	O
+finding	B-MODIFIER
 upside	O
 to	O
 quake	O
-damage.	O
+damage.	B-IMPACT
 Photo	O
 from	O
-#nbcbayarea	O
+#	O
+nbcbayarea	O
 ...	O
 http://t.co/2LbJCxEG5i	O
 
@@ -770,11 +896,13 @@ death	B-IMPACT
 toll	I-IMPACT
 rises	O
 to	O
-330.	O
-#Earthquake	O
+330.	B-SEVERITY
+#	O
+Earthquake	O
 
 RT	O
 @ginalimp	O
+: 	O
 USA	B-LOCATION
 ?�	O
 NEWS	O
@@ -787,6 +915,7 @@ earthquake	O
 Three	B-SEVERITY
 Critically	I-SEVERITY
 Injured	B-IMPACT
+, 	O
 Almost	O
 90	B-SEVERITY
 Treated	O
@@ -797,6 +926,7 @@ Foll�??	O
 
 Hi	O
 @acharya_saugat	O
+, 	O
 we	O
 detected	O
 a	O
@@ -806,11 +936,13 @@ at	O
 23:16	O
 UTC	O
 (19m	O
+, 	O
 8s	O
 ago)	O
 in	B-MODIFIER
 Kirtipur	B-MODIFIER
-Nepal.	O
+, 	O
+Nepal.	B-LOCATION
 Did	O
 you	O
 feel	O
@@ -833,17 +965,21 @@ http://t.co/lvr6FZt9ET	O
 
 RT	O
 @drsanjaygupta	O
+: 	O
 good	O
 morning	O
 from	B-MODIFIER
-#kathmandu	O
+#	O
+kathmandu	B-LOCATION
 --	O
+- 	O
 long	B-IMPACT
 lines	I-IMPACT
 waiting	I-IMPACT
 for	O
-gas.	O
-#nepalquake	O
+gas.	B-AFFECTED
+#	O
+nepalquake	B-LOCATION
 @cnn	O
 http://t.co/xN6jEWCfUX	O
 
@@ -851,11 +987,13 @@ USGS	O
 reports	O
 a	O
 M4.7	O
-#earthquake	O
+#	O
+earthquake	O
 24km	B-MODIFIER
 NW	I-MODIFIER
 of	I-MODIFIER
 Kalumpang	O
+, 	O
 Indonesia	I-LOCATION
 on	O
 9/29/13	O
@@ -863,7 +1001,8 @@ on	O
 0:20:03	O
 UTC	O
 http://t.co/8COrOAb1bB	O
-#quake	O
+#	O
+quake	O
 
 Seems	O
 as	O
@@ -876,7 +1015,7 @@ not	O
 insured	O
 for	O
 quake	O
-losses.	O
+losses.	B-IMPACT
 While	O
 harvest	O
 was	O
@@ -886,7 +1025,7 @@ many	B-SEVERITY
 suffered	O
 damage	B-IMPACT
 to	O
-facilities.	O
+facilities.	B-AFFECTED
 
 Jawbone	O
 Looks	O
@@ -911,18 +1050,24 @@ via	O
 Earthquake	O
 4	O
 mb	O
+, 	O
 78	B-MODIFIER
 km	I-MODIFIER
 WSW	I-MODIFIER
 of	I-MODIFIER
 Iquique	O
+, 	O
 Chile	I-LOCATION
+- 	O
 http://t.co/lRQuJJlbmp	O
-#earthquake	O
-#quake	O
+#	O
+earthquake	O
+#	O
+quake	O
 
 RT	O
 @nicoleewayne	O
+: 	O
 �??	O
 USA	O
 http://t.co/qUcQA9dKfn	O
@@ -934,6 +1079,7 @@ from	O
 Napa	B-LOCATION
 earthquake	O
 felt	O
+, 	O
 more	O
 on	O
 the	O
@@ -947,6 +1093,7 @@ warn�??	O
 [GLOBAL	O
 NEWS]	O
 Blog	O
+: 	O
 Morale	O
 in	B-MODIFIER
 Kathmandu	B-LOCATION
@@ -959,19 +1106,23 @@ http://t.co/Ac5xoXAN0Z	O
 
 After	O
 injuries	B-IMPACT
+, 	O
 widespread	B-SEVERITY
 damage	B-IMPACT
 from	O
 Napa	B-LOCATION
 quake	O
+, 	O
 cleanup	O
 ensues	O
+- 	O
 Fresno	O
 Bee	O
 http://t.co/2IJLDpfQUP	O
 
 RT	O
 @WSJIndia	O
+: 	O
 The	O
 Nepal	B-LOCATION
 earthquake	O
@@ -994,7 +1145,7 @@ Damage	B-IMPACT
 to	O
 a	O
 downtown	B-AFFECTED
-building	I-AFFECTED
+building	B-MODIFIER
 is	O
 seen	O
 after	O
@@ -1003,11 +1154,16 @@ earthquake	O
 6.0	O
 magnitude	O
 in	B-MODIFIER
-#Napa,#California	O
+#	O
+Napa,	B-LOCATION
+#	O
+California	B-LOCATION
 Aug24	O
 http://t.co/muAdvk9VNW	O
 
-[#Olle_Jeffry	O
+[	O
+#	O
+Olle_Jeffry	O
 ]	O
 Jawbone	O
 Looks	O
@@ -1025,6 +1181,7 @@ By	O
 The	O
 Napa	B-LOCATION
 Earthquake	O
+: 	O
 Jawbone	O
 has	O
 shown	O
@@ -1035,15 +1192,18 @@ of	O
 
 RT	O
 @RT_America	O
+: 	O
 BREAKING	O
+: 	O
 7.4	O
-aftershock	O
+aftershock	B-IMPACT
 hits	O
 same	O
 area	B-MODIFIER
 of	I-MODIFIER
 northern	B-MODIFIER
-#Chile	O
+#	O
+Chile	B-LOCATION
 day	O
 after	B-IMPACT
 8.2	O
@@ -1051,7 +1211,8 @@ quake	O
 http://t.co/BWoGknFaWG	O
 http://t.co/kql4kpp6v8	O
 
-#Tech	O
+#	O
+Tech	O
 Skaters	O
 Make	O
 Best	O
@@ -1063,5 +1224,6 @@ Shredding	O
 Buckled	O
 Streets	O
 http://t.co/hTwHAH6Ite	O
-#Onlireeks	O
+#	O
+Onlireeks	O
 
