@@ -70,16 +70,25 @@ for tweet in impact_list_dict:
     #             # print("tweet: ",stemmer_tweet)
     #             # print("found impact = " + impact)
 
-    #             start = lowercase_tweet.find(impact)
+    #             start = int(lowercase_tweet.find(impact))
     #             end = lowercase_tweet.rfind(impact)
+
+    #             # dont add repeated words of the same start location
+    #             found = False
+    #             for tag in impact_list_dict[tweet]['tag']:
+    #                 print(tag)
+    #                 if start == int(tag['start']):
+    #                     found = True
             
-    #             current_tags = impact_list_dict[tweet]['tag']
-    #             current_tags.extend([{'value':impact,'start':str(start),"found": "null"}])
-    #             impact_list_dict[tweet]['tag'] = current_tags
+    #             if found == False:
+    #                 current_tags = impact_list_dict[tweet]['tag']
+    #                 current_tags.extend([{'value':impact,'start':str(start),"found": "null"}])
+    #                 impact_list_dict[tweet]['tag'] = current_tags
 
     for impact in lemmatized_impact_list:
         for word in lemmatized_tweet:
             if impact == word:
+                # change in to == to swap between substring and equality matching
 
                 # print("tweet: ",lemmatized_tweet)
                 # print("found impact = " + impact)
@@ -87,9 +96,17 @@ for tweet in impact_list_dict:
                 start = lowercase_tweet.find(impact)
                 end = lowercase_tweet.rfind(impact)
             
-                current_tags = impact_list_dict[tweet]['tag']
-                current_tags.extend([{'value':impact,'start':str(start),"found": "null"}])
-                impact_list_dict[tweet]['tag'] = current_tags
+                # dont add repeated words of the same start location
+                found = False
+                for tag in impact_list_dict[tweet]['tag']:
+                    print(tag)
+                    if start == int(tag['start']):
+                        found = True
+            
+                if found == False:
+                    current_tags = impact_list_dict[tweet]['tag']
+                    current_tags.extend([{'value':impact,'start':str(start),"found": "null"}])
+                    impact_list_dict[tweet]['tag'] = current_tags
     
 
 
