@@ -1,19 +1,14 @@
 import json
-import spacy
-from spacy import displacy
-from spacy.util import minibatch, compounding, filter_spans
-from spacy.training.example import Example
-from spacy.tokens import DocBin
+from nltk.tokenize import SpaceTokenizer
+# from nltk.tokenize.stanford import StanfordTokenizer
 import random
 import re
+
+# tk = StanfordTokenizer()
 
 individual_tags = {"type of impact":[], "item affected":[],"severity or quantity":[],"place name":[],"location modifier":[]}
 
 impact_dict = {"type of impact": "IMPACT", "item affected" : "AFFECTED", "severity or quantity" : "SEVERITY", "place name": "LOCATION", "location modifier": "MODIFIER"}
-
-# nlp=spacy.load('en_core_web_sm')
-
-# ner=nlp.get_pipe('ner')
 
 training_MT_file = open('../CSVtoJSONcode/finaltags.json')
 json_MT_data = json.load(training_MT_file)
@@ -31,14 +26,13 @@ def new_file_location(file_count,data_origin):
     # file = open("./individual_tags_bio_files/impact/{}_0{}.txt".format(data_origin, file_count), 'w', encoding = 'utf-8')
 
     return file
-# bio_file.write("word" + "\t" + "tag" + "\n")
 
 def build_bio_files(json_data, type):
 
     print("length",len(json_data))
 
     shuffle_json_keys = list(json_data.keys())
-    random.shuffle(shuffle_json_keys)
+    # random.shuffle(shuffle_json_keys)
 
     file_count = 0
     tag_count = 0
@@ -66,18 +60,22 @@ def build_bio_files(json_data, type):
         # txt = re.split('\s',tweet_text)
         # print (tweet_text)
 
-        for word in re.split("\s|(#)|(, |: |- |\"|\')",tweet_text):
+        # text = tk.tokenize(tweet_text)
+        
+
+        # for word in re.split('\s|, |: |- |"|\'',tweet_text): #original files
+        for word in re.split("\s|(#)|(, )|(:)|(;)|(- )|(\")|(\. )|(\.\Z)",tweet_text):
         # for word in txt:
             # print(word)
             for tag in json_data[i]['annotations']:
                 # print(tag['tag'])
 
                 j = 0
-                for each_tag in re.split(" ",tag['value']):
+                for each_tag in re.split("\s|, ",tag['value']):
                     # print(tag['value'])
                     # print(each_tag)
                     # print(word)
-                    if str(word) != "None" and each_tag in word:
+                    if str(word) != "None" and each_tag == word:
                         if(j == 0):
                             pre = "B-"
                         else:
