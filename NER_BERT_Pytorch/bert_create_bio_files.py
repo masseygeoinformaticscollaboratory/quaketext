@@ -1,23 +1,19 @@
 import json
 from nltk.tokenize import SpaceTokenizer
-# from nltk.tokenize.stanford import StanfordTokenizer
 import random
 import re
-
-# tk = StanfordTokenizer()
 
 individual_tags = {"type of impact":[], "item affected":[],"severity or quantity":[],"place name":[],"location modifier":[]}
 
 impact_dict = {"type of impact": "IMPACT", "item affected" : "AFFECTED", "severity or quantity" : "SEVERITY", "place name": "LOCATION", "location modifier": "MODIFIER"}
 
+# final tags data
 training_MT_file = open('../CSVtoJSONcode/finaltags.json')
 json_MT_data = json.load(training_MT_file)
 
 training_Lighttag_file = open('../CSVtoJSONcode/lighttag_finaltags.json')
 json_Lighttag_data = json.load(training_Lighttag_file)
 
-# train_bio_file = open("train_bio_tagged_data_MT.tsv", 'w', encoding = 'utf-8')
-# dev_bio_file = open("dev_bio_tagged_data_MT.tsv", 'w', encoding = 'utf-8')
 
 test_data_file = open("bio_test.txt", 'w', encoding = 'utf-8')
 
@@ -46,57 +42,41 @@ def build_bio_files(json_data, type):
     for i in shuffle_json_keys:
         # print(json_data[i]['content'])
 
+        # switch to a new file at every 10%
         if(tweet_count > len(json_data)/10):
             file_count+=1
             bio_file = new_file_location(file_count, type)
             total_tweets += tweet_count
             tweet_count = 0
+        
         if(total_tweets > ((len(json_data)/10) * 9)):
             test_data_file.write(json_data[i]['content'])
 
 
         tweet_text = json_data[i]['content']
-
-        # txt = re.split('\s',tweet_text)
-        # print (tweet_text)
-
-        # text = tk.tokenize(tweet_text)
         
 
-        # for word in re.split('\s|, |: |- |"|\'',tweet_text): #original files
+        # characters to split for using regex splitting
         for word in re.split("\s|(#)|(, )|(:)|(;)|(- )|(\")|(\. )|(\.\Z)",tweet_text):
-        # for word in txt:
-            # print(word)
+
             for tag in json_data[i]['annotations']:
                 # print(tag['tag'])
 
                 j = 0
                 for each_tag in re.split("\s|, ",tag['value']):
-                    # print(tag['value'])
-                    # print(each_tag)
-                    # print(word)
+
                     if str(word) != "None" and each_tag == word:
                         if(j == 0):
                             pre = "B-"
+                            # first word in tag 
                         else:
                             pre = "I-"
+                            # following words contained in the same tag
 
                         bio_tag = pre + impact_dict[tag['tag']]
                         foundTag = True
                         tag_count += 1
                     j+=1
-
-                # if word in tag['value'] and word != "":
-                # if word == tag['value']:
-                #     if(lastVal == tag['value']):
-                #         pre = "I-"
-                #     else:
-                #         pre = "B-"
-
-                #     lastVal = tag['value']
-                #     bio_tag = pre + impact_dict[tag['tag']]
-                #     foundTag = True
-                #     mt_tag_count += 1
 
 
             if foundTag == False:
@@ -109,6 +89,7 @@ def build_bio_files(json_data, type):
                 #     bio_tag = "O"
                     
                 bio_file.write(word + "\t" + bio_tag + "\n")
+                # writing to bio_file for use in BERT models
 
         tweet_count += 1
         bio_file.write("\n")
@@ -120,6 +101,6 @@ def build_bio_files(json_data, type):
 
     bio_file.close()
 
-
+# build sets of bio files for both MT and Light Tag
 build_bio_files(json_MT_data, "MT")
 build_bio_files(json_Lighttag_data, "LightTag")

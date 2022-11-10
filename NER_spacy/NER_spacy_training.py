@@ -2,7 +2,6 @@
 # Spacy. Training Pipelines & Models. https://spacy.io/usage/training
 # Turbolab. Build a Custom NER model using spaCy 3.0. https://turbolab.in/build-a-custom-ner-model-using-spacy-3-0/
 import json
-from pydoc import doc
 import spacy
 from spacy import displacy
 from spacy.util import minibatch, compounding, filter_spans
@@ -14,7 +13,7 @@ import random
 training_data = []
 validation_data = []
 
-TEN_FOLD_ROUND_NUM = 0 # 0-9
+TEN_FOLD_ROUND_NUM = 0 # 0-9 depending on round
 
 nlp=spacy.load('en_core_web_sm')
 ner=nlp.get_pipe('ner')
@@ -44,10 +43,6 @@ for i in json_MT_data:
     tweet_text = json_MT_data[i]['content']
     
     for tag in json_MT_data[i]['annotations']:
-        # st = int(tag['start'])
-        # en = int(tag['end'])
-        # print(tweet_text[st:en])
-        # print(tag['value'])
 
         # for each tag in the list of annotations add to entity tag list
         if(tag['tag'] == 'type of impact'):
@@ -96,13 +91,7 @@ for i in json_Lighttag_data:
             print(tag['value'])
             print(json_Lighttag_data[i]['tweetId'])
 
-        # if("'503861982458441728'" == i):
-        #     print(tweet_text)
-        #     print(tweet_text[st:en], st, en)
-        #     print(tag['value'])
-        #     print(json_Lighttag_data[i]['tweetId'])
-
-        # looking only at impact tags first
+        # determine they type of tag label
         if(tag['tag'] == 'type of impact'):
             entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
         elif(tag['tag'] == 'item affected'):
@@ -153,37 +142,28 @@ for text, annotations in training_data:
 
     for start, end, label in annotations['entities']:
         
-        span = doc_train.char_span(int(start), int(end), label=label, alignment_mode="contract")
+        span = doc_train.char_span(int(start), int(end), label=label, alignment_mode="strict")
         # alignment_mode="strict" has no token snapping
         # alignment_mode="contract" has span of all tokens completely within the character span
 
         if str(span) == "None":
-            # TODO issue here with tokenizing words without spaces between them
-            # print()
-            # print(text)
-            # text.replace("", " ")[int(start)-1:int(start)]
+            # If words lack spaces around them the span returns None
+
+            # insert spaces into text
             newtext = text[0:int(start)] + " " + text[int(start):int(end)] + " " + text[int(end):]
            
-            # print(newtext)
-            # print(label)
-            # print(text[int(start):int(end)])
             none_type[label] += 1
             none_count += 1
 
             doc_train = nlp(newtext)
             newspan = doc_train.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="contract")
-            # print(span)
-            # print(newspan)
+
             if(str(newspan) != "None"):
+                # append here if including the items that used to be none
                 # ents_train.append(newspan)
                 # none_type[label] -= 1
                 # none_count -= 1
                 count+=1
-            # else:
-            #     print(text)
-            #     print(text[int(start):int(end)])
-            #     print(newtext)
-            #     print(newtext[int(start)+1:int(end)+1])
 
         else:
             ents_train.append(span)
@@ -199,53 +179,36 @@ for text, annotations in validation_data:
     doc_dev = nlp(text)
     ents_dev = []
 
-    # print (text)
-    # print(annotations)
-    # print()
-
     for start, end, label in annotations['entities']:
         
-        span = doc_dev.char_span(int(start), int(end), label=label, alignment_mode="contract")
+        span = doc_dev.char_span(int(start), int(end), label=label, alignment_mode="strict")
         # alignment_mode="strict" has no token snapping
         # alignment_mode="contract" has span of all tokens completely within the character span
 
         # print(span)
         if str(span) == "None":
-            # TODO issue here with tokenizing words without spaces between them
-            # print()
-            # print(text)
-            # text.replace("", " ")[int(start)-1:int(start)]
+            # If words lack spaces around them the span returns None
+
+            # insert spaces into text
             newtext = text[0:int(start)] + " " + text[int(start):int(end)] + " " + text[int(end):]
-           
-            # print(newtext)
-            # print(label)
-            # print(text[int(start):int(end)])
+
             none_type[label] += 1
             none_count += 1
 
             doc_dev = nlp(newtext)
             newspan = doc_dev.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="contract")
-            # print(span)
-            # print(newspan)
+
             if(str(newspan) != "None"):
+                # append here if including the items that used to be none
                 # ents_dev.append(newspan)
-                none_type[label] -= 1
+                # none_type[label] -= 1
                 # none_count -= 1
                 count+=1
-            # else:
-            #     print(text)
-            #     print(text[int(start):int(end)])
-            #     print(newtext)
-            #     print(newtext[int(start)+1:int(end)+1])
+
         else:
             count += 1
             ents_dev.append(span)
-    
-    # print(doc_dev)
-    # print("BILUO:", offsets_to_biluo_tags(doc_dev, [(int(start),int(end),label)]))
 
-        # for span in offsets_to_biluo_tags(doc_dev, [(int(start),int(end),label)]):
-        #     print(span)
             
     ents_dev_filtered = filter_spans(ents_dev)
     doc_dev.ents = ents_dev_filtered
@@ -258,6 +221,7 @@ for text, annotations in validation_data:
 # db_train.to_disk("./training-none-ex/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
 db_dev.to_disk("./dev.spacy")
 db_train.to_disk("./train.spacy")
+# output to different locations dependent on 10 fold validation or not
 
 print("count", count)
 print("none_count", none_count)

@@ -42,6 +42,8 @@ The original file to calculate the list impacts
 
 Edits to look at the lemmatized and stemming words. Each section can be commented in when switching between.
 
+Both files calculate the metrics at the end, and output to terminal
+
 ## ./NER_Spacy
 
 #### NER_spacy_training.py
@@ -70,6 +72,8 @@ python -m spacy init fill-config base_config.cfg config.cfg
 
 python -m spacy train config.cfg --output ./output --paths.train ./train.spacy --paths.dev ./dev.spacy
 
+or use the file paths of the 10 fold validation locations
+
 ### Evaluation
 
 create evaluation of training pipeline and html output of samples default number is 25 but can increase this with --displacy-limit https://spacy.io/api/cli#evaluate
@@ -79,11 +83,14 @@ python -m spacy evaluate output\model-last dev.spacy --output .\eval.json --disp
 use model-best for best validation scores
 python -m spacy evaluate output\model-best dev.spacy --output .\eval.json --displacy-path .
 
-C:\QuakeText_code\NER_spacy>python -m spacy train config.cfg --output ./none-ex/output_5 --paths.train ./training-none-ex/train_5.spacy --paths.dev ./testing-none-ex/dev_5.spacy
+example using round 5 of the none-excluded data from the 10 fold validation training
+python -m spacy train config.cfg --output ./none-ex/output_5 --paths.train ./training-none-ex/train_5.spacy --paths.dev ./testing-none-ex/dev_5.spacy
 
 ## ./NER_BIO_Files
 
-Creation of BIO files for BERT processing
+#### bert_create_bio_files.py
+
+Creation of BIO files for BERT processing, uses regex to split up tweets and tags labels with the B and I tag elements. Creates 10 files at 10% increments for testing separation.
 
 ## ./BERT_impacts
 
