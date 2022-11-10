@@ -9,7 +9,7 @@ import numpy as np
 from datasets import Dataset
 from datasets import load_metric
 from transformers import AutoTokenizer
-from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer, DistilBertForTokenClassification
+from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
 from transformers import DataCollatorForTokenClassification
 import torch
 import winsound
@@ -28,6 +28,7 @@ label_encoding_dict = {
 'B-MODIFIER': 9, 
 'I-MODIFIER': 10}
 
+# testing only looking at impact tags
 # label_list = ['O','B-IMPACT','I-IMPACT']
 # label_encoding_dict = {
 # 'O': 0, 
@@ -45,15 +46,18 @@ id2tag = {id: tag for tag, id in tag2id.items()}
 STATUS = "-new-bio-updated"
 
 task = "ner" 
-model_checkpoint = "bert-base-cased" # try changing this to other this with auto tokeniser AND to one tag at a time need more dat files for that
+
+model_checkpoint = "bert-base-cased" 
+# change model checkpoint to change to other models with auto tokenizer 
 batch_size = 16
 
+# output results from each round to a csv for average calculations
 csv_10fold_results_file = open("results_{}.csv".format(model_checkpoint+STATUS), 'w', encoding = 'utf-8')
 csv_10fold_results_file.write( 'round' + "\t" + "metric_count" + "\t" + model_checkpoint  + "\t"  + "overall" + "\t"  + 'precision' + "\t" + 'recall' + "\t" + 'f1' + "\t" + 'number' + "\n")
     
 tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 
-# for roberta
+# for roberta models
 # tokenizer = AutoTokenizer.from_pretrained(model_checkpoint,add_prefix_space=True)
 
 
@@ -133,19 +137,15 @@ def compute_metrics(p):
     return {"precision": results["overall_precision"], "recall": results["overall_recall"], "f1": results["overall_f1"], "accuracy": results["overall_accuracy"]}
 
 
+# 10 fold validation
 round = 0
 while round < 10:
     metric_count = 0
-    # original
     # print('./training_{}/tagged-training/'.format(round), './training_{}/tagged-test/'.format(round))
     # train_dataset, test_dataset = get_un_token_dataset('./training_{}/tagged-training/'.format(round), './training_{}/tagged-test/'.format(round))
     print('./training-updated-bio/training_{}/tagged-training/'.format(round), './training-updated-bio/training_{}/tagged-test/'.format(round))
     train_dataset, test_dataset = get_un_token_dataset('./training-updated-bio/training_{}/tagged-training/'.format(round), './training-updated-bio/training_{}/tagged-test/'.format(round))
 
-# train_dataset, test_dataset = get_un_token_dataset('./training-all/', './test-all/')
-
-
-# train_dataset, test_dataset = get_un_token_dataset('../NER_BERT_Pytorch/individual_tags_bio_files/impact/', '../NER_BERT_Pytorch/individual_tags_bio_files/impact-testing/')
 
     train_tokenized_datasets = train_dataset.map(tokenize_and_align_labels, batched=True)
     test_tokenized_datasets = test_dataset.map(tokenize_and_align_labels, batched=True)
@@ -183,7 +183,6 @@ while round < 10:
     model_filename = "./models/" + model_checkpoint + STATUS + "-ner-" + str(round) + ".model"
     trainer.save_model(model_filename)
     round += 1
-
 
 
 winsound.Beep(440,500)

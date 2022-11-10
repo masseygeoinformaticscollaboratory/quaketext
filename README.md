@@ -96,7 +96,33 @@ Creation of BIO files for BERT processing, uses regex to split up tweets and tag
 
 ## ./BERT_impacts
 
+#### BERT_impacts\bert_tokenizer.py
+
+The program is able to use an AutoTokenizer on the following models:
+
+1. bert-base-cased
+2. bert-base-uncased
+3. distilbert-base-cased
+4. distilbert-base-uncased
+5. albert-base-v2
+6. roberta-base
+7. xlnet-base-cased
+
+The data files require separation in different folders. For each of the training steps there are 10 folder each containing a training and testing seperation of data. For training 0, files 1-9 are used for training and 0 for testing and so on.
+
+Each model has its own csv file for results
+
+The testing output can be viewed using the predict.ipynb through inputting the sentence and the associated model. Results are output into the model_output folder
+
 ## ./inter-annotator-agreement
+
+#### lighttag-iaa.py
+
+Calculation for the Cohen's Kappa agreement between the tagging for the common 200 set of data for Light Tag annotation. Prints to terminal.
+
+#### mturk-iaa.py
+
+Calculation for the Cohen's Kappa agreement between the top 2 taggers within the Mechanical Turk annotation. Prints to terminal.
 
 ## ./MT_json_review_code
 
