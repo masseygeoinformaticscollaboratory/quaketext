@@ -83,6 +83,8 @@ C:\QuakeText_code\NER_spacy>python -m spacy train config.cfg --output ./none-ex/
 
 ## ./NER_BIO_Files
 
+Creation of BIO files for BERT processing
+
 ## ./BERT_impacts
 
 ## ./inter-annotator-agreement
