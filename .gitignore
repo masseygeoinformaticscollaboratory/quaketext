@@ -21,6 +21,9 @@ NER_spacy/none-ex/output*/
 NER_BERT_Pytorch/individual_tags_bio_files/
 NER_BERT_Pytorch/results/
 
+NER_NLTK/
+naive_disaster_NER/
+
 # C extensions
 *.so
 

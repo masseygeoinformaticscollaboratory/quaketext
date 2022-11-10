@@ -42,17 +42,19 @@ unique_tags = set(label_list)
 tag2id = label_encoding_dict
 id2tag = {id: tag for tag, id in tag2id.items()}
 
+STATUS = "-new-bio-updated"
+
 task = "ner" 
-model_checkpoint = "xlm-roberta-base" # try changing this to other this with auto tokeniser AND to one tag at a time need more dat files for that
+model_checkpoint = "bert-base-cased" # try changing this to other this with auto tokeniser AND to one tag at a time need more dat files for that
 batch_size = 16
 
-csv_10fold_results_file = open("results_{}.csv".format(model_checkpoint), 'w', encoding = 'utf-8')
+csv_10fold_results_file = open("results_{}.csv".format(model_checkpoint+STATUS), 'w', encoding = 'utf-8')
 csv_10fold_results_file.write( 'round' + "\t" + "metric_count" + "\t" + model_checkpoint  + "\t"  + "overall" + "\t"  + 'precision' + "\t" + 'recall' + "\t" + 'f1' + "\t" + 'number' + "\n")
     
-# tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
+tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 
 # for roberta
-tokenizer = AutoTokenizer.from_pretrained(model_checkpoint,add_prefix_space=True)
+# tokenizer = AutoTokenizer.from_pretrained(model_checkpoint,add_prefix_space=True)
 
 
 def get_all_tokens_and_ner_tags(directory):
@@ -134,8 +136,11 @@ def compute_metrics(p):
 round = 0
 while round < 10:
     metric_count = 0
-    print('./training_{}/tagged-training/'.format(round), './training_{}/tagged-test/'.format(round))
-    train_dataset, test_dataset = get_un_token_dataset('./training_{}/tagged-training/'.format(round), './training_{}/tagged-test/'.format(round))
+    # original
+    # print('./training_{}/tagged-training/'.format(round), './training_{}/tagged-test/'.format(round))
+    # train_dataset, test_dataset = get_un_token_dataset('./training_{}/tagged-training/'.format(round), './training_{}/tagged-test/'.format(round))
+    print('./training-updated-bio/training_{}/tagged-training/'.format(round), './training-updated-bio/training_{}/tagged-test/'.format(round))
+    train_dataset, test_dataset = get_un_token_dataset('./training-updated-bio/training_{}/tagged-training/'.format(round), './training-updated-bio/training_{}/tagged-test/'.format(round))
 
 # train_dataset, test_dataset = get_un_token_dataset('./training-all/', './test-all/')
 
@@ -175,7 +180,7 @@ while round < 10:
     trainer.train()
     trainer.evaluate()
 
-    model_filename = "./models/" + model_checkpoint + "-ner-" + str(round) + ".model"
+    model_filename = "./models/" + model_checkpoint + STATUS + "-ner-" + str(round) + ".model"
     trainer.save_model(model_filename)
     round += 1
 

@@ -354,11 +354,6 @@
                 "value": "death",
                 "start": "12",
                 "found": "yes"
-            },
-            {
-                "value": "death",
-                "start": "12",
-                "found": "yes"
             }
         ]
     },
@@ -1050,11 +1045,6 @@
         "id": "'593395116066242560'",
         "text": "Briton among Nepal earthquake dead: Victim, who was confirmed dead after searches by diplomatic staff, n... http://t.co/yoWn6zmd2v (GUA)",
         "tag": [
-            {
-                "value": "dead",
-                "start": "30",
-                "found": "yes"
-            },
             {
                 "value": "dead",
                 "start": "30",
@@ -1958,11 +1948,6 @@
                 "value": "dead",
                 "start": "31",
                 "found": "null"
-            },
-            {
-                "value": "dead",
-                "start": "31",
-                "found": "null"
             }
         ]
     },
@@ -2142,11 +2127,6 @@
         "id": "'591989267968167936'",
         "text": "RT @liveleak: Many people killed and injured in powerful quake in Nepal: Scores of people have been killed and many injured ... http://t.co\u2026",
         "tag": [
-            {
-                "value": "injured",
-                "start": "37",
-                "found": "yes"
-            },
             {
                 "value": "injured",
                 "start": "37",
@@ -3477,11 +3457,6 @@
                 "value": "death",
                 "start": "18",
                 "found": "yes"
-            },
-            {
-                "value": "death",
-                "start": "18",
-                "found": "yes"
             }
         ]
     },
@@ -3510,11 +3485,6 @@
         "id": "'593691536195452929'",
         "text": "UAV technology is helping the search & rescue mission #NepalEarthquake http://t.co/RKNKS3PIc6 #drone #UAV #tech #rescue #NepalQuakeRelief",
         "tag": [
-            {
-                "value": "rescue",
-                "start": "39",
-                "found": "null"
-            },
             {
                 "value": "rescue",
                 "start": "39",
@@ -4251,11 +4221,6 @@
                 "value": "death",
                 "start": "6",
                 "found": "yes"
-            },
-            {
-                "value": "death",
-                "start": "6",
-                "found": "yes"
             }
         ]
     },
@@ -4568,11 +4533,6 @@
                 "value": "dead",
                 "start": "33",
                 "found": "null"
-            },
-            {
-                "value": "dead",
-                "start": "33",
-                "found": "null"
             }
         ]
     },
@@ -4637,11 +4597,6 @@
         "id": "'593192553798709248'",
         "text": "Nepal quake death toll crosses 5000, hundreds still missing; rescue operations continue: The death toll in Nep... http://t.co/dW3uu3caj6",
         "tag": [
-            {
-                "value": "death",
-                "start": "12",
-                "found": "yes"
-            },
             {
                 "value": "death",
                 "start": "12",
@@ -5172,16 +5127,6 @@
         "id": "'593186119514198016'",
         "text": "RT @drsanjaygupta: some of the most common injuries are crush injuries, fractures & brain/spine injuries. #nepalquake @cnn #kathmandu http:\u2026",
         "tag": [
-            {
-                "value": "injury",
-                "start": "-1",
-                "found": "null"
-            },
-            {
-                "value": "injury",
-                "start": "-1",
-                "found": "null"
-            },
             {
                 "value": "injury",
                 "start": "-1",
@@ -6976,11 +6921,6 @@
                 "value": "kill",
                 "start": "32",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "32",
-                "found": "yes"
             }
         ]
     },
@@ -7823,11 +7763,6 @@
         "id": "'451272693044625408'",
         "text": "2 Confirmed Dead In Chile After Massive Earthquake Struck: Two people were confirmed dead and three were serio... http://t.co/7clXwlzjXF",
         "tag": [
-            {
-                "value": "dead",
-                "start": "12",
-                "found": "yes"
-            },
             {
                 "value": "dead",
                 "start": "12",
@@ -10105,11 +10040,6 @@
                 "value": "kill",
                 "start": "10",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "10",
-                "found": "null"
             }
         ]
     },
@@ -10503,11 +10433,6 @@
         "id": "'501315939489419265'",
         "text": "Death toll in India landslides rises to 109: The death toll from landslides and flooding tr... http://t.co/FZL6du8U6M #rain #alert #news",
         "tag": [
-            {
-                "value": "death",
-                "start": "0",
-                "found": "yes"
-            },
             {
                 "value": "death",
                 "start": "0",
@@ -11285,11 +11210,6 @@
         "id": "'501263168903970817'",
         "text": "Many dead in Nepal and India floods - BBC News: BBC NewsMany dead in Nepal and India floodsBBC NewsAt least 16... http://t.co/ucHf9NhPVm",
         "tag": [
-            {
-                "value": "dead",
-                "start": "5",
-                "found": "null"
-            },
             {
                 "value": "dead",
                 "start": "5",
@@ -12577,11 +12497,6 @@
                 "value": "dead",
                 "start": "14",
                 "found": "yes"
-            },
-            {
-                "value": "dead",
-                "start": "14",
-                "found": "yes"
             }
         ]
     },
@@ -12814,11 +12729,6 @@
         "id": "'384048906151022592'",
         "text": "New #Pakistan quake kills 12; militants kill 4 troops, military says http://t.co/xbl0GNAsri",
         "tag": [
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "20",

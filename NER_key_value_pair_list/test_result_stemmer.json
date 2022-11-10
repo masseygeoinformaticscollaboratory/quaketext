@@ -371,11 +371,6 @@
                 "value": "death",
                 "start": "12",
                 "found": "yes"
-            },
-            {
-                "value": "death",
-                "start": "12",
-                "found": "yes"
             }
         ]
     },
@@ -1138,11 +1133,6 @@
         "id": "'593395116066242560'",
         "text": "Briton among Nepal earthquake dead: Victim, who was confirmed dead after searches by diplomatic staff, n... http://t.co/yoWn6zmd2v (GUA)",
         "tag": [
-            {
-                "value": "dead",
-                "start": "30",
-                "found": "yes"
-            },
             {
                 "value": "dead",
                 "start": "30",
@@ -2087,11 +2077,6 @@
                 "value": "dead",
                 "start": "31",
                 "found": "null"
-            },
-            {
-                "value": "dead",
-                "start": "31",
-                "found": "null"
             }
         ]
     },
@@ -2291,16 +2276,6 @@
             {
                 "value": "injur",
                 "start": "37",
-                "found": "yes"
-            },
-            {
-                "value": "injur",
-                "start": "37",
-                "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "26",
                 "found": "yes"
             },
             {
@@ -3723,11 +3698,6 @@
                 "value": "death",
                 "start": "18",
                 "found": "yes"
-            },
-            {
-                "value": "death",
-                "start": "18",
-                "found": "yes"
             }
         ]
     },
@@ -3756,11 +3726,6 @@
         "id": "'593691536195452929'",
         "text": "UAV technology is helping the search & rescue mission #NepalEarthquake http://t.co/RKNKS3PIc6 #drone #UAV #tech #rescue #NepalQuakeRelief",
         "tag": [
-            {
-                "value": "rescu",
-                "start": "39",
-                "found": "null"
-            },
             {
                 "value": "rescu",
                 "start": "39",
@@ -4561,11 +4526,6 @@
                 "value": "death",
                 "start": "6",
                 "found": "yes"
-            },
-            {
-                "value": "death",
-                "start": "6",
-                "found": "yes"
             }
         ]
     },
@@ -4889,11 +4849,6 @@
                 "value": "dead",
                 "start": "33",
                 "found": "null"
-            },
-            {
-                "value": "dead",
-                "start": "33",
-                "found": "null"
             }
         ]
     },
@@ -4964,11 +4919,6 @@
         "id": "'593192553798709248'",
         "text": "Nepal quake death toll crosses 5000, hundreds still missing; rescue operations continue: The death toll in Nep... http://t.co/dW3uu3caj6",
         "tag": [
-            {
-                "value": "death",
-                "start": "12",
-                "found": "yes"
-            },
             {
                 "value": "death",
                 "start": "12",
@@ -5479,11 +5429,6 @@
                 "value": "kill",
                 "start": "17",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "17",
-                "found": "yes"
             }
         ]
     },
@@ -5544,16 +5489,6 @@
         "id": "'593186119514198016'",
         "text": "RT @drsanjaygupta: some of the most common injuries are crush injuries, fractures & brain/spine injuries. #nepalquake @cnn #kathmandu http:\u2026",
         "tag": [
-            {
-                "value": "injuri",
-                "start": "43",
-                "found": "yes"
-            },
-            {
-                "value": "injuri",
-                "start": "43",
-                "found": "yes"
-            },
             {
                 "value": "injuri",
                 "start": "43",
@@ -6241,11 +6176,6 @@
         "id": "'593005013066219520'",
         "text": "So sad that there are places destroyed because of natural disaster, and other places destroyed by its own people #PrayForNepal #NotBaltimore",
         "tag": [
-            {
-                "value": "destroy",
-                "start": "29",
-                "found": "null"
-            },
             {
                 "value": "destroy",
                 "start": "29",
@@ -7475,11 +7405,6 @@
                 "value": "kill",
                 "start": "20",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
             }
         ]
     },
@@ -7487,11 +7412,6 @@
         "id": "'451260375510417408'",
         "text": "President Cautious as 8.2 Quake Kills 5 in Chile: Chile's President Bachelet cautious on tsunami threat as 8.2 quake kills 5 in north...",
         "tag": [
-            {
-                "value": "kill",
-                "start": "32",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "32",
@@ -8374,11 +8294,6 @@
         "id": "'451272693044625408'",
         "text": "2 Confirmed Dead In Chile After Massive Earthquake Struck: Two people were confirmed dead and three were serio... http://t.co/7clXwlzjXF",
         "tag": [
-            {
-                "value": "dead",
-                "start": "12",
-                "found": "yes"
-            },
             {
                 "value": "dead",
                 "start": "12",
@@ -10775,11 +10690,6 @@
                 "value": "kill",
                 "start": "15",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "15",
-                "found": "yes"
             }
         ]
     },
@@ -10798,11 +10708,6 @@
         "id": "'501111622627491840'",
         "text": "UP floods kill 28, Centre calls it 'unprecedented' - Times of India: The HinduUP floods kill 28, Centre calls ... http://t.co/7qTYpPRtzJ",
         "tag": [
-            {
-                "value": "kill",
-                "start": "10",
-                "found": "null"
-            },
             {
                 "value": "kill",
                 "start": "10",
@@ -10985,11 +10890,6 @@
         "id": "'501320494608437250'",
         "text": "#Twitter Monsoon kills hundreds in India, Nepal: Dozens of people have been killed in flooding... http://t.co/BDNkqCoYo7 #mobile #Mobile",
         "tag": [
-            {
-                "value": "kill",
-                "start": "17",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "17",
@@ -11307,11 +11207,6 @@
                 "value": "death",
                 "start": "0",
                 "found": "yes"
-            },
-            {
-                "value": "death",
-                "start": "0",
-                "found": "yes"
             }
         ]
     },
@@ -11379,11 +11274,6 @@
         "id": "'498869280251715584'",
         "text": "News Update: Floods kill 45 in eastern India: NEW DELHI - Flooding in eastern India has killed 45... http://t.co/AnNUzuWqFK /BangkokPost",
         "tag": [
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "20",
@@ -11506,11 +11396,6 @@
                 "value": "kill",
                 "start": "28",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "28",
-                "found": "yes"
             }
         ]
     },
@@ -11518,11 +11403,6 @@
         "id": "'501383532317396995'",
         "text": "Bihar: 21 of a family killed as train hits auto - Hindustan Times: Times of IndiaBihar: 21 of a family killed ... http://t.co/mnnyj5mPGx",
         "tag": [
-            {
-                "value": "kill",
-                "start": "22",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "22",
@@ -11728,11 +11608,6 @@
                 "value": "kill",
                 "start": "7",
                 "found": "null"
-            },
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "null"
             }
         ]
     },
@@ -11826,11 +11701,6 @@
         "id": "'501320686959198208'",
         "text": "( #HectorMartinez ) Monsoon kills hundreds in India, Nepal: Dozens of people have been killed in flooding in n... http://t.co/wHguuo1O6U",
         "tag": [
-            {
-                "value": "kill",
-                "start": "28",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "28",
@@ -12297,11 +12167,6 @@
                 "value": "dead",
                 "start": "5",
                 "found": "null"
-            },
-            {
-                "value": "dead",
-                "start": "5",
-                "found": "null"
             }
         ]
     },
@@ -12309,11 +12174,6 @@
         "id": "'501320679426252800'",
         "text": "follow  frederick_x5 Monsoon kills hundreds in India, Nepal: Dozens of people have been killed in flooding in no...  follow  frederick_x5",
         "tag": [
-            {
-                "value": "kill",
-                "start": "29",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "29",
@@ -12406,11 +12266,6 @@
         "id": "'501333968830992384'",
         "text": "Dozens killed as monsoon floods ravage India and Nepal: More than 100 people have been killed by fl\u2026 http://t.co/ubyL0c5Tsy",
         "tag": [
-            {
-                "value": "kill",
-                "start": "7",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "7",
@@ -12674,11 +12529,6 @@
         "id": "'501290877357023234'",
         "text": "[#JoseDaviid13] Monsoon kills hundreds in India, Nepal: Dozens of people have been killed... http://t.co/9DrDw8p3WH Follow #JoseDaviid13",
         "tag": [
-            {
-                "value": "kill",
-                "start": "24",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "24",
@@ -13037,11 +12887,6 @@
                 "value": "kill",
                 "start": "8",
                 "found": "yes"
-            },
-            {
-                "value": "kill",
-                "start": "8",
-                "found": "yes"
             }
         ]
     },
@@ -13109,11 +12954,6 @@
         "id": "'498846000119685121'",
         "text": "Bangkok Post : Floods kill 45 in eastern India: NEW DELHI - Flooding in eastern India has killed 45 people and... http://t.co/JsRmI1oDe9",
         "tag": [
-            {
-                "value": "kill",
-                "start": "22",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "22",
@@ -13833,11 +13673,6 @@
                 "value": "dead",
                 "start": "14",
                 "found": "yes"
-            },
-            {
-                "value": "dead",
-                "start": "14",
-                "found": "yes"
             }
         ]
     },
@@ -14103,11 +13938,6 @@
         "id": "'384048906151022592'",
         "text": "New #Pakistan quake kills 12; militants kill 4 troops, military says http://t.co/xbl0GNAsri",
         "tag": [
-            {
-                "value": "kill",
-                "start": "20",
-                "found": "yes"
-            },
             {
                 "value": "kill",
                 "start": "20",
