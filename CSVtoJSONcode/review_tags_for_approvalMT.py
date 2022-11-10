@@ -1,6 +1,7 @@
 import json
 
 json_file_path = input('Path of the MT output JSON file: ')
+# review3.json made from convertCSVtoJSON.py
 csv_file_path = "batch_3_all_tags_with_workers.csv" 
 
 instance_dict = {}
@@ -43,38 +44,7 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                 start = tag['startOffset']
                 end = tag['endOffset']
 
-                instance = i['Input.text'][start:end]
-
-                # removing edge whitespace from the tag
-                # if(count < 50):
-                letter_count = 0
-                string_length = len(instance)
-                print(string_length)
-                for letter in instance:
-                    if letter == ' ':
-                        print(letter_count)
-
-                        if(letter_count == 0):
-                            print("inbefore-" + instance + "-")
-                            instance = instance.lstrip()
-                            print("inafter-" + instance + "-")
-                            start = start + 1
-                            string_length = string_length = 1
-                        
-                        elif(letter_count == string_length - 1):
-                            print("before-" + instance + "-")
-                            instance = instance.rstrip()
-                            print("after-" + instance + "-")
-                            end = end - 1
-                    
-                    letter_count += 1
-                
-                print("-" + instance + "-")
-                print(end)
-                print(start)
-                print()
-                # -------------------------------------------------
-                
+                instance = i['Input.text'][start:end]                
 
                 csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + tag['label'] + "\t" + instance + "\t" + str(tag['startOffset']) + "\t" + str(tag['endOffset']) + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
 

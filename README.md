@@ -1,25 +1,35 @@
-# QuakeText project work
+# QuakeText project - Pipeline for Impact NER training and testing
 
-Semester 2 2022
-Sophie Francis
+#### Semester 2 2022
 
-# Pipeline for Impact NER training and testing
+#### Sophie Francis
 
 ## CSVtoJSONcode
 
 These file involves the code for transformation from raw annotation data to the finaltags.json format that is used for processing.
 
+##### All created csv files use tab delimitation
+
 ### Mechanical Turk
 
-**convertCSVtoJSON.py** is the first step for converting the raw data from MT to a basic json format.
-**extract_tags.py** produces the JSON outputs and some csv outputs for analysis.
+#### convertCSVtoJSON.py
+
+The first step for converting the raw data from MT to a basic json format.
+
+#### extract_tags.py
+
+Produces the JSON outputs and some csv outputs for analysis.
 Functions to check for overlapping tags and extra whitespace, the program first writes to the all workers and tag count CSV files. The tagcount.csv is then read from to extract only the tags that have above the minimum threshold to create a new dictionary for the finaltags.json file
 
-**review_tags_for_approvalMT.py** is a helper program to visually represent the tags that are in MT when reviewing jobs. This takes the start and end indexes and prints the word that was tagged in a csv file.
+#### review_tags_for_approvalMT.py
+
+Is a helper program to visually represent the tags that are in MT when reviewing jobs. This takes the start and end indexes and prints the word that was tagged in a csv file.
 
 ### Light Tag
 
-**lighttag_json_reformat.py** The output from lightTag is in JSON, to remove the extra metadata, this program outputs a lighttag_finaltags.json that is formatted in the same way as the Mechanical Turk data previously. Outputs a light_tag_results.csv for visual inspection.
+#### lighttag_json_reformat.py
+
+The output from lightTag is in JSON, to remove the extra metadata, this program outputs a lighttag_finaltags.json that is formatted in the same way as the Mechanical Turk data previously. Outputs a light_tag_results.csv for visual inspection.
 Also contains the function to create a new joined CSV file for both the light tag and MTurk data to combine the datasets in one place.
 
 ## Spacy
