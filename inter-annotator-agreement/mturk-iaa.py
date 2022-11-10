@@ -1,7 +1,9 @@
 import csv
 import json
+# top worker ids
 WORKER1 = "ATR6RB1RULOC0"
 WORKER2 = "A1NF6PELRKACS9"
+
 worker1_dict = []
 worker1_count = 0
 worker2_dict = []
@@ -87,15 +89,6 @@ with open(csv_worker_file_path, 'r', encoding = 'utf-8') as csv_file:
                 worker2_count +=1
                 worker2_dict = current + [{"label":rows['label'], "value": rows['instance'],"start":rows['startOffset'],"end":rows['endOffset']}]
                 worker2found = True
-
-        # if instance_count >= MIN_THRESHOLD:
-
-        #     current_annotation_state = agreement_dict[currentId]["annotations"]
-        #     # print("curr state")
-        #     # print(current_annotation_state)
-
-        #     agreement_dict[currentId]["annotations"] = (current_annotation_state + [{"tag": rows['label'],"count": rows['count'],"value": rows['instance'], "start": rows['start'],"end": rows['end']}])
-
 
         tagCount += 1
     

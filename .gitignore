@@ -21,6 +21,9 @@ NER_spacy/none-ex/output*/
 NER_BERT_Pytorch/individual_tags_bio_files/
 NER_BERT_Pytorch/results/
 
+inter-annotator-agreement/common-200.json
+CSVtoJSONcode/lighttag-800-tweets-annotated.json
+
 
 # C extensions
 *.so
