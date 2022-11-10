@@ -40,20 +40,30 @@ The original file to calculate the list impacts
 
 #### ner_tag_list_lem.py
 
-Edits to look at the lemmatized and stemming words
+Edits to look at the lemmatized and stemming words. Each section can be commented in when switching between.
 
 ## ./NER_Spacy
 
-Commands to train the spacy pipeline:
+#### NER_spacy_training.py
+
+Contains the training program and data processing steps.
+
+#### output_metrics.py
+
+Takes the metrics results from each 10 fold validation round to a csv file for average calculations
+
+### Commands to train the spacy pipeline:
 
 ### Building files
 
 getting data from finaltags MT and lighttag to create .spacy files to train and test on
+
 python NER_spacy_training.py
 
 ### Fill config (if it doesn't exist)
 
 fill config file up - get base config details from https://spacy.io/usage/training
+
 python -m spacy init fill-config base_config.cfg config.cfg
 
 ### Training
