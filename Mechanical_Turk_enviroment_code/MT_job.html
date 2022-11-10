@@ -1,0 +1,182 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<head></head>
+<body></body>
+
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<p>
+  Thank you for assisting with this research. Our goal is to develop methods to
+  automatically extract and map disaster impact information from social media.
+  In this task you will be asked to mark certain words in Twitter tweets to
+  indicate whether they describe disaster impacts, or location information, to
+  create a training set for our methods.
+</p>
+<p>
+  Impacts refer to specific things that have happened as a result of a disaster
+  event (e.g. damage to buildings, death of people or livestock, loss of
+  services such as electricity or communication). You will be provided with
+  examples and instructions on how to identify impacts below.
+</p>
+<span style="color: blue">
+  <p>
+    Please note that the wider disaster event (e.g. earthquake) is
+    <strong>NOT</strong> considered an impact for our purposes.<br />
+    Magnitude numbers are also <strong>NOT</strong> considered as a severity
+    element. We are looking for specific damage or other physical and tangible
+    impacts that have resulted from a disaster event.
+  </p>
+</span>
+<p>
+  Please note that some of the tweets will be reviewed for tagging accuracy.
+</p>
+<p>
+  If you do not speak English fluently, please do not continue, as we are
+  interested in the understanding of fluent English speakers.
+</p>
+<p>
+  You will not be asked for any identifying information, and we will not record
+  your IP address or any other means by which to identify you, and you may exit
+  the task at any time.
+</p>
+<p>
+  By proceeding I agree that I am 18 years or over, the purpose of the project
+  has been explained to me, I understand that no identifying information will be
+  stored about me, and I can stop at any time.
+</p>
+<p>
+  This research is being supervised by Dr Kristin Stock of Massey University
+  (k.stock@massey.ac.nz).
+</p>
+<p>
+  This project has been evaluated by peer review and judged to be low risk.
+  Consequently, it has not been reviewed by one of the University's Human Ethics
+  Committees. The researcher(s) named in this document are responsible for the
+  ethical conduct of this research. If you have any concerns about the conduct
+  of this research that you want to raise with someone other than the
+  researcher(s), please contact Professor Craig Johnson, Director (Research
+  Ethics), email humanethics@massey.ac.nz.
+</p>
+
+<crowd-entity-annotation
+  name="annotation-tweet-id-${id}"
+  header="Highlight parts of the text below"
+  labels="[{'label': 'type of impact', 'shortDisplayName': 'imp', 'fullDisplayName': 'Type of Impact'},{'label': 'item affected', 'shortDisplayName': 'aff', 'fullDisplayName': 'Item Affected'},{'label': 'severity or quantity', 'shortDisplayName': 'sev', 'fullDisplayName': 'Severity or Quantity'}, {'label': 'place name', 'shortDisplayName': 'pla', 'fullDisplayName': 'Place Name'}, {'label': 'location modifier', 'shortDisplayName': 'mod', 'fullDisplayName': 'Location Modifier'}]"
+  text="RT @user: Quake aftershocks damage Napa bridge, force lane closure http://url"
+>
+  <!-- code required to load in examples in real MT environment-->
+  <!-- text="${text}" -->
+
+  <!-- code to see tweet example -->
+  <!-- text="RT @user: Quake aftershocks damage Napa bridge, force lane closure http://url" -->
+
+  <full-instructions header="Named entity recognition instructions">
+    If at any time you wish to stop the annotating tasks please do so.
+    <ol>
+      <li><strong>Read</strong> the text carefully.</li>
+      <li>
+        <strong>Highlight</strong> words, phrases, or sections of the text.
+      </li>
+      <li>
+        <strong>Choose</strong> the label that best matches what you have
+        highlighted.
+      </li>
+      <li>
+        To <strong>change</strong> a label, choose highlighted text and select a
+        new label.
+      </li>
+      <li>
+        To <strong>remove</strong> a label from highlighted text, choose the X
+        next to the abbreviated label name on the highlighted text.
+      </li>
+      <li>
+        You can select all of a previously highlighted text, but not a portion
+        of it.
+      </li>
+    </ol>
+    <h2>Examples</h2>
+    <img
+      src="https://ner-example-photos.s3.ap-southeast-2.amazonaws.com/power_out_example.png"
+      alt="power_out_example"
+      width="700px"
+      height="auto"
+    /><br />
+    In this example the "electricity" is the item that has been affected and it
+    is "out" which is the impact type. <br />
+    The "Earthquake" is the disaster event and is not a type of impact.<br /><br />
+    <img
+      src="https://ner-example-photos.s3.ap-southeast-2.amazonaws.com/lane_closure_example.png"
+      alt="lane_closure_example"
+      width="500px"
+      height="auto"
+    /><br />
+    In this example it is the napa bridge that has been damaged, the "lane" is
+    also an item that is affected, with the impact of "closures".<br /><br />
+    <img
+      src="https://ner-example-photos.s3.ap-southeast-2.amazonaws.com/homeless_example.png"
+      alt="homeless_example"
+      width="700px"
+      height="auto"
+    /><br />
+    In this example "dead" is the impact type with a severity of "at least 357".
+    "homeless" is another impact with "people" being the item impacted with
+    severity of "more than 100,000". <br />
+    More that one word can be tagged together as seen in the severity above.<br />
+  </full-instructions>
+
+  <short-instructions>
+    Apply labels to words or phrases that contain disaster impact information.
+    <br />
+    View more instructions for example tagging scenarios.
+    <br /><br />
+    <strong>Disaster Impact Tags</strong> <br />
+    <br />
+    <strong>Type of impact</strong><br />
+    Here we are looking for text that identifies the type of damage or impact
+    that the disaster has created. Possible examples: malfunction, closure, or
+    physical damage. We are <strong>NOT</strong> looking for wider disaster
+    events here(e.g earthquake)<br />
+    <strong>Item affected </strong><br />
+    The item damaged tag should identify the item that has been damaged/affected
+    from the disaster event. Possible examples: people, animals, infrastructure
+    ie buildings or roads, or services (ie power or transport). <br />
+    <strong>Severity/Quantity </strong><br />
+    This text relates to the scale or amount of the damage impact on the item.
+    Possible examples: duration, number impacted, or reference to complete or
+    partial, or very severe or slight damage that the item has suffered.
+    <br /><br />
+    <strong>Location Information Tags</strong> <br />
+    <br />
+    <strong>Place name </strong><br />
+    Here we are looking for text that describes the location of the impact. This
+    could be a city, town or a smaller location area. We are not looking for the
+    location of other things (not impacts), or for place names that are used
+    metaphorically or comparatively.
+    <br />
+    <strong>Location modifier </strong><br />
+    Often appearing just before the place name, identify text such as: in, at,
+    near, around, on, outside, etc. which can describe where the location is and
+    what is the relationship of the place name location to the item damaged.
+    <br />
+  </short-instructions>
+
+  <div id="input">
+    <input type="hidden" name="input" />
+    <!--needs the above else it will not save in MTurk panel (or select/textarea) - works fine just in browser-->
+  </div>
+</crowd-entity-annotation>
+
+<h4>Please submit your task via the orange submit button to the right</h4>
+
+<script>
+  document.addEventListener("all-crowd-elements-ready", () => {
+    document
+      .querySelector("crowd-entity-annotation")
+      .shadowRoot.querySelector("crowd-form")
+      .form.appendChild(additionalQuestions);
+  });
+</script>

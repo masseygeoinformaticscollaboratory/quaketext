@@ -88,7 +88,7 @@ python -m spacy evaluate output\model-best dev.spacy --output .\eval.json --disp
 example using round 5 of the none-excluded data from the 10 fold validation training
 python -m spacy train config.cfg --output ./none-ex/output_5 --paths.train ./training-none-ex/train_5.spacy --paths.dev ./testing-none-ex/dev_5.spacy
 
-## ./NER_BIO_Files
+## ./NER_BERT_Pytorch
 
 #### bert_create_bio_files.py
 
