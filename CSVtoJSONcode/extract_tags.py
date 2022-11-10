@@ -1,13 +1,9 @@
-# https://www.askpython.com/python/examples/convert-csv-to-json
-
-from cProfile import label
 import csv
-from html import entities
 import json
-import re
 
 include_empty_tweets = False
 
+# the minimum number of tag counts to accept for the final tag file
 MIN_THRESHOLD = 3
 
 def check_for_overlapping_tags(instance_dict, count):
@@ -15,29 +11,18 @@ def check_for_overlapping_tags(instance_dict, count):
     # create empty dictionary to store each instance under each label
     label_type_dict = {"type of impact" : [],"item affected" : [],"severity or quantity" : [],"place name" : [],"location modifier" : [],}
 
-    # if count < 35:
-        
-    # print(instance_dict)
-    # print()
     # for each tag that is in the current tweet, loop through and store any that are under the minimum threshold to the label dictionary
     for i in instance_dict:
         if i != 'tweetId' and i != 'tweetText':
-            # print(i)
+
             instance = instance_dict[i][0]
             label = instance_dict[i][1]
             count = str(instance_dict[i][2])
             start = str(instance_dict[i][3])
             end = str(instance_dict[i][4])
-            # print(instance)
-            # print(label)
-            # print(count)
-            # print(start)
-            # print(end)
+
             if(int(count) < MIN_THRESHOLD):
                 label_type_dict[label].append({'instance':instance,'count':count,'label':label,'start':start,'end':end})
-
-    # print(label_type_dict)
-    # print()
 
     # loops through each label category type: impact, place name etc
     for category in label_type_dict:
@@ -64,7 +49,6 @@ def check_for_overlapping_tags(instance_dict, count):
                     if current_item in y['instance']:
                         # if it is, then add to count
                         # print(y['instance'])
-                        # print("TRUE")
                         curr_count = curr_count + int(y['count'])
             
             if(curr_count > top_count):
@@ -74,32 +58,19 @@ def check_for_overlapping_tags(instance_dict, count):
         
         if(top_count > 0):
             # update the instance dictionary with a new count if other tags have that text inside them
-            # print("TOP " + top_item + " " + str(top_count))
-            # print(top)
 
             key = top_item+"-"+top['label']+"-"+str(top['start'])+"-"+str(top['end'])
 
             instance_dict.update({key:[top_item, top['label'], top_count, str(top['start']), str(top['end'])]})
-                
 
 
-
-
-
-
-            
 
 def save_tweet_tag_count(instance_dict):
     found = False
-    # if(instance_dict['key'] == []):
-    #     print(instance_dict)
-    # print("from function")
-    # if(instance_dict["tweetId"] == "'503866104444620800'"):
-    #     print(instance_dict)
+
     for i in instance_dict:
         
         if i != 'tweetId' and i != 'tweetText':
-            # print(i)
             found = True
 
             instance = instance_dict[i][0]
@@ -111,7 +82,6 @@ def save_tweet_tag_count(instance_dict):
             if(start == end):
                 print("here", label)
             
-
             csv_tag_count_file.write(instance_dict['tweetId'] + "\t" + label + "\t" + instance + "\t"+ count + "\t"+ start + "\t"+ end + "\t"+  instance_dict['tweetText'] + "\n")
     
     if found == False and include_empty_tweets == True:
@@ -120,8 +90,9 @@ def save_tweet_tag_count(instance_dict):
 
 # ----------------------------------------------------------------------------------
 # output from convertCSVtoJSON - in this case mt_combined.json
-json_file_path = "mt_combined.json" #input('Enter the absolute path of the INPUT JSON file: ')
-csv_worker_file_path = "all_tags_with_workers.csv" # input('Enter the absolute path of the OUTPUT CSV file: ')
+json_file_path = "mt_combined.json" 
+
+csv_worker_file_path = "all_tags_with_workers.csv" 
 
 instance_dict = {}
 
@@ -148,10 +119,11 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
         if count == 0:
             instance_dict.update({"tweetId" : i['Input.id']})
             instance_dict.update({"tweetText" : i['Input.text']})
-            # print(instance_dict)
+
         elif instance_dict["tweetId"] != i['Input.id']:
             # reached a new tweet id file row - change dictionary
 
+            # Are there any tags that overlap and can increase their counts?
             check_for_overlapping_tags(instance_dict, count)
             
             # writing to tag_count file once all the tags for that tweet have been read
@@ -160,9 +132,6 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
             instance_dict.clear()
             instance_dict.update({"tweetId" : i['Input.id']})
             instance_dict.update({"tweetText" : i['Input.text']})
-            # print(instance_dict)
-        # else:
-        #     # tweet ID is the same use existing counts
 
         # if the MT tag is approved  
         if i['AssignmentStatus'] == "Approved":
@@ -184,7 +153,7 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                 # https://www.pythoncentral.io/cutting-and-slicing-strings-in-python/
                 instance = i['Input.text'][start:end]
 
-                # removing edge whitespace from the tag
+                # removing edge whitespace from the tag at start or end
                 letter_count = 0
                 string_length = len(instance)
 
@@ -192,16 +161,12 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                     if letter == ' ':
 
                         if(letter_count == 0):
-                            # print("inbefore-" + instance + "-")
                             instance = instance.lstrip()
-                            # print("inafter-" + instance + "-")
                             start = start + 1
                             string_length = string_length = 1
                         
                         elif(letter_count == string_length - 1):
-                            # print("before-" + instance + "-")
                             instance = instance.rstrip()
-                            # print("after-" + instance + "-")
                             end = end - 1
                     
                     letter_count += 1
@@ -225,18 +190,18 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                     instance_dict.update({key:[instance, tag['label'], instance_count, start, end]})
 
             if entitiesPresent == False:
+                # no tags were found for this tweet
                 csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\t" + "\t" + "\t" + "\t" + "\t" + i['Input.text'] + "\t" + i['Answer.taskAnswers'] + "\n")
 
             entitiesPresent = False
             
 
         # only look at accepted tags from approved tasks
-        # extracting of the words - new line for each?
         else:
             csv_worker_tags_file.write(i['AssignmentStatus'] + "\t" + i['Input.id'] + "\t" + i['WorkerId'] + "\n")
 
 
-    # last save for last tweet in file
+    # last save for last tweet in file with no change check of id
     save_tweet_tag_count(instance_dict)
     print(count)
 
@@ -246,7 +211,7 @@ csv_tag_count_file.close()
 
 
 # ---------------------------------------------------------------
-# Checking agreement from the 5 taggers = tagcount.csv file
+# Checking agreement from the 5 taggers from the tagcount.csv file
 
 with open(csv_tag_path, 'r', encoding = 'utf-8') as csv_file:
     
@@ -280,24 +245,19 @@ with open(csv_tag_path, 'r', encoding = 'utf-8') as csv_file:
 
             tagCount = 0
             total_tweet_count += 1
-            # print("new id")
 
 
         instance_count = int(rows['count'])
-        # print(tagCount)
 
         if instance_count >= MIN_THRESHOLD:
 
             current_annotation_state = agreement_dict[currentId]["annotations"]
-            # print("curr state")
-            # print(current_annotation_state)
 
             agreement_dict[currentId]["annotations"] = (current_annotation_state + [{"tag": rows['label'],"count": rows['count'],"value": rows['instance'], "start": rows['start'],"end": rows['end']}])
 
 
         tagCount += 1
     
-    # final_dict["examples"] = [agreement_dict]
     final_dict = agreement_dict
     print("total tweet count = " + str(total_tweet_count))
     print(len(final_dict))
@@ -305,7 +265,6 @@ with open(csv_tag_path, 'r', encoding = 'utf-8') as csv_file:
             
 
 # add dictionary to json file
-json_lightTag_format = "finaltags_lighttag_format.json"
 json_output = "finaltags.json"
 
 if include_empty_tweets == True:

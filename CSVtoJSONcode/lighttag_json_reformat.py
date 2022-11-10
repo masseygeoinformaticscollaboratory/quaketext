@@ -72,7 +72,6 @@ with open(csv_file_path, 'r', encoding = 'utf-8') as csv_file:
     total_tweet_count = 0
 
     for rows in csv_reader:
-        # print(rows)
         foundid = False
                 
         if first == True:
@@ -91,8 +90,6 @@ with open(csv_file_path, 'r', encoding = 'utf-8') as csv_file:
             for tweet in light_dict:
                 if tweet == currentId:
                     any_annotations = light_dict[currentId]["annotations"]
-                    # print(tweet)
-                    # print(any_annotations)
                     foundid = True
             
             if(foundid == False):
@@ -123,15 +120,13 @@ with open(csv_file_path, 'r', encoding = 'utf-8') as csv_file:
 
 csv_file.close()
 
-# # add dictionary to json file
+# add dictionary to json file
 json_lightTag_format = "lighttag_finaltags.json"
 if(include_empty_tweets == True):
     json_lightTag_format = "lighttag_finaltags_all_tweets.json"
+
 with open(json_lightTag_format, 'w', encoding = 'utf-8') as json_file:
     json_file.write(json.dumps(light_dict, indent = 4))
-
-
-
 
 
 

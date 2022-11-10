@@ -1,12 +1,7 @@
-
-import csv
-from html import entities
 import json
-import re
 
-
-json_file_path = input('Enter the absolute path of the INPUT JSON file: ')
-csv_file_path = "batch_3_all_tags_with_workers.csv" # input('Enter the absolute path of the OUTPUT CSV file: ')
+json_file_path = input('Path of the MT output JSON file: ')
+csv_file_path = "batch_3_all_tags_with_workers.csv" 
 
 instance_dict = {}
 
@@ -20,45 +15,27 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
 
     count = 0
 
-    # https://stackoverflow.com/questions/41445573/python-loop-through-json-file
     for i in data.values():
 
         if count == 0:
             instance_dict.update({"tweetId" : i['Input.id']})
             instance_dict.update({"tweetText" : i['Input.text']})
-            # print(instance_dict)
+            
         elif instance_dict["tweetId"] != i['Input.id']:
-            # new tweet change dictionary
-
-
             instance_dict.clear()
             instance_dict.update({"tweetId" : i['Input.id']})
             instance_dict.update({"tweetText" : i['Input.text']})
-            # print(instance_dict)
-        # else:
-        #     # tweet ID is the same use existing counts
-        #     print("same")
 
      
         if i['AssignmentStatus'] == "Submitted":
             count = count + 1
-            # print(i['WorkerId'])
-
-            # print(i['Answer.taskAnswers'])
-
-            # print()
-
        
             task_object = json.loads(i['Answer.taskAnswers'])
 
             name = 'annotation-tweet-id-'+ i['Input.id']
 
-            # print(name)
-            # print()
-
             entitiesPresent = False
 
-            # https://stackoverflow.com/questions/24708634/python-and-json-typeerror-list-indices-must-be-integers-not-str
             for tag in task_object[0][name]['entities']:
                 entitiesPresent = True
                 
@@ -66,7 +43,6 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                 start = tag['startOffset']
                 end = tag['endOffset']
 
-                # https://www.pythoncentral.io/cutting-and-slicing-strings-in-python/
                 instance = i['Input.text'][start:end]
 
                 # removing edge whitespace from the tag
@@ -111,8 +87,6 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                     num = instance_dict[key][2] + 1
 
                 instance_dict.update({key:[instance, tag['label'], num, start, end]})
-                # print("dictonary")
-                # print(instance_dict)
 
 
             if entitiesPresent == False:
