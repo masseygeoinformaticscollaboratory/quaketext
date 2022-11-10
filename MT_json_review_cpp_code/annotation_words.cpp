@@ -13,7 +13,8 @@ int main()
     ifstream file;
 
     int filerowcount = 0;
-    file.open("json.csv");
+    // get annotation start and end values from this csv file - only contains one persons tags
+    file.open("annotation.csv");
     while (file.is_open())
     {
         // complete file row
@@ -22,6 +23,7 @@ int main()
             // file >> row;
             stringstream sstream(row);
             string column;
+            // add the string of the current tweet here
             string tweet = "RT @NVR_Photo: Damage at #NapaPostOffice from #NapaQuake http://t.co/h266KkVExK";
             cout << "tweet" << tweet << endl
                  << endl;
@@ -29,27 +31,8 @@ int main()
             // each csv unit
             while (!sstream.eof())
             {
-
-                // if (count >= 28)
-                // {
-                //     getline(sstream, column, ',');
-                // }
-                // if (sstream.peek() == '"')
-                // {
-                //     // https://stackoverflow.com/questions/35639083/c-csv-row-with-commas-and-strings-within-double-quotes
-                //     sstream >> quoted(column);
-                //     string discard;
-                //     getline(sstream, discard, ',');
-                // }
-                // else
-                // {
                 getline(sstream, column, ',');
-                // }
 
-                // the start of the json
-                // if (count >= 30)
-                //{
-                // cout << column << endl;
                 size_t endOffsetNum, startOffsetNum;
                 regex reg("[^a-zA-Z0-9:]");
                 //  stringstream result;

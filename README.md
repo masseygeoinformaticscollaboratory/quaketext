@@ -4,6 +4,8 @@
 
 #### Sophie Francis
 
+All folders contain a virtual environment venv to store all import packages specific to each task.
+
 ## ./CSVtoJSONcode
 
 These file involves the code for transformation from raw annotation data to the finaltags.json format that is used for processing.
@@ -97,3 +99,5 @@ Creation of BIO files for BERT processing, uses regex to split up tweets and tag
 ## ./inter-annotator-agreement
 
 ## ./MT_json_review_code
+
+Early files that were used in the review process of Mechanical turk tweet annotations before the python code was adapted to output to a csv for review.
