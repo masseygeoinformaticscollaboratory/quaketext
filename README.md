@@ -6,7 +6,7 @@
 
 All folders contain a virtual environment venv to store all import packages specific to each task. Some of these are large and have not been uploaded to GitHub
 
-Several of the Hugging face models have very large files to load, all may not be loaded fully
+Several of the Hugging face models have very large files to load, all of the ALBERT models are loaded but the others are missing their associated .bin files due to their size
 
 ## ./CSVtoJSONcode
 
