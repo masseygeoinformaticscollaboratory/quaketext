@@ -1,0 +1,31 @@
+,ner,words
+0,O,<s>
+1,O, #
+2,O,Bal
+3,O,och
+4,O,istan
+5,O,Earth
+6,O,qu
+7,O,ae
+8,O,ke
+9,B-SEVERITY, At
+10,I-SEVERITY, least
+11,I-SEVERITY, 25
+12,B-AFFECTED, people
+13,O, have
+14,O, reportedly
+15,O, been
+16,B-IMPACT, killed
+17,O, as
+18,O, a
+19,O, second
+20,O, powerful
+21,O, earthquake
+22,O, has
+23,O, struck
+24,O, occupied
+25,O, #
+26,B-LOCATION,Bal
+27,B-LOCATION,och
+28,B-LOCATION,istan
+29,O,</s>

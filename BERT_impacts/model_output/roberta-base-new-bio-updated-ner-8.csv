@@ -1,0 +1,33 @@
+,ner,words
+0,O,<s>
+1,O, RT
+2,O, @
+3,O,Breaking
+4,O,News
+5,O,:
+6,B-SEVERITY, 2
+7,B-IMPACT, dead
+8,O,","
+9,B-SEVERITY, 3
+10,O, seriously
+11,B-IMPACT, injured
+12,O, after
+13,O, massive
+14,O, earthquake
+15,O, strikes
+16,B-MODIFIER, off
+17,I-MODIFIER, coast
+18,I-MODIFIER, of
+19,B-LOCATION, Chile
+20,O,","
+21,O, authorities
+22,O, confirm
+23,O, -
+24,O, @
+25,O,Reuters
+26,O, http
+27,O,://
+28,O,t
+29,O,.
+30,O,…
+31,O,</s>
