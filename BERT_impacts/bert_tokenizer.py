@@ -137,7 +137,7 @@ def compute_metrics(p):
     return {"precision": results["overall_precision"], "recall": results["overall_recall"], "f1": results["overall_f1"], "accuracy": results["overall_accuracy"]}
 
 
-# 10 fold validation
+# 10 fold validation - will produce 10 different rounds of models in a loop
 round = 0
 while round < 10:
     metric_count = 0

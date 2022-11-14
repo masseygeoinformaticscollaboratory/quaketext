@@ -6,6 +6,8 @@
 
 All folders contain a virtual environment venv to store all import packages specific to each task. Some of these are large and have not been uploaded to GitHub
 
+Several of the Hugging face models have very large files to load, all may not be loaded fully
+
 ## ./CSVtoJSONcode
 
 These file involves the code for transformation from raw annotation data to the finaltags.json format that is used for processing.
@@ -20,7 +22,7 @@ The first step for converting the raw data from MT to a basic json format.
 
 #### extract_tags.py
 
-Produces the JSON outputs and some csv outputs for analysis.
+Uses the JSON output from the previous step and produces the finaltags JSON files for further processing and some csv outputs for analysis.
 Functions to check for overlapping tags and extra whitespace, the program first writes to the all workers and tag count CSV files. The tagcount.csv is then read from to extract only the tags that have above the minimum threshold to create a new dictionary for the finaltags.json file
 
 #### review_tags_for_approvalMT.py
@@ -31,18 +33,20 @@ Is a helper program to visually represent the tags that are in MT when reviewing
 
 #### lighttag_json_reformat.py
 
-The output from lightTag is in JSON, to remove the extra metadata, this program outputs a lighttag_finaltags.json that is formatted in the same way as the Mechanical Turk data previously. Outputs a light_tag_results.csv for visual inspection.
+The output from lightTag is in JSON, to remove the extra metadata, this program outputs a lighttag_finaltags.json that is formatted in the same way as the Mechanical Turk data previously.
+Outputs a light_tag_results.csv for visual inspection.
 Also contains the function to create a new joined CSV file for both the light tag and MTurk data to combine the datasets in one place.
 
 ## ./NER_key_value_pair_list
 
 #### ner_tag_list.py
 
-The original file to calculate the list impacts
+The original file to calculate the list impacts, looking for original text matches and lowercase text only.
 
 #### ner_tag_list_lem.py
 
-Edits to look at the lemmatized and stemming words. Each section can be commented in when switching between.
+Edits to look at the lemmatized and stemming words. For each method the existing impact list and each tweet are processed through the functions before looking for matches.
+Each section can be commented in when switching between.
 
 Both files calculate the metrics at the end, and output to terminal
 
@@ -50,7 +54,10 @@ Both files calculate the metrics at the end, and output to terminal
 
 #### NER_spacy_training.py
 
-Contains the training program and data processing steps.
+Reads in the finaltags data and reorganizes in to the format that spacy requires. Depending on the validation round number a different section of the data will be separated for validation purposes.
+Separation of training and testing datasets at 10%. Change the TEN_FOLD_ROUND_NUM constant to change which percentage goes into training.  
+DocBin Objects are required for .spacy file creation, this is carried out separately for training and validation.
+Some processing on None items returning from the char_span can commented in if using.
 
 #### output_metrics.py
 
@@ -94,13 +101,17 @@ python -m spacy evaluate none-ex\output_8\model-best testing-none-ex\dev_8.spacy
 
 #### bert_create_bio_files.py
 
-Creation of BIO files for BERT processing, uses regex to split up tweets and tags labels with the B and I tag elements. Creates 10 files at 10% increments for testing separation.
+Creation of BIO files for BERT processing, reads in the final tags data and loops through each tweet and uses regex to split up tweets and search for if the words match any existing annotations labels with the B and I tag elements.
+Any other words are annotated with a O
+Creates 10 files at 10% increments for testing separation.
+Files are in the bio_data folder
 
 ## ./BERT_impacts
 
-#### BERT_impacts\bert_tokenizer.py
+#### BERT_impacts/bert_tokenizer.py
 
-The program is able to use an AutoTokenizer on the following models:
+This program takes in the created BIO files as input and trains the specified hugging face model.
+The program uses the AutoTokenizer function on the following models:
 
 1. bert-base-cased
 2. bert-base-uncased
@@ -110,17 +121,19 @@ The program is able to use an AutoTokenizer on the following models:
 6. roberta-base
 7. xlnet-base-cased
 
-The data files require separation in different folders. For each of the training steps there are 10 folder each containing a training and testing seperation of data. For training 0, files 1-9 are used for training and 0 for testing and so on.
+The data files require separation in different folders. For each of the training steps there are 10 folder each containing a training and testing separation of data. For training 0, files 1-9 are used for training and 0 for testing and so on. The models are created on a loop.
 
-Each model has its own csv file for results
+run the bert_tokenizer.py program to train the selected model
 
-The testing output can be viewed using the predict.ipynb through inputting the sentence and the associated model. Results are output into the model_output folder
+Each model produces its own csv file for results, only the last metrics for each round are used for the average calculation.
+
+The testing output can be viewed using the predict.ipynb through inputting the tweet in the sentence variable and the associated model for the tokenizer and model variables. Results are output into the model_output folder into a CSV
 
 ## ./inter-annotator-agreement
 
 #### lighttag-iaa.py
 
-Calculation for the Cohen's Kappa agreement between the tagging for the common 200 set of data for Light Tag annotation. Prints to terminal.
+Calculation for the Cohen's Kappa agreement between 2 selected taggers for the common 200 set of data for Light Tag annotation. Prints to terminal.
 
 #### mturk-iaa.py
 
