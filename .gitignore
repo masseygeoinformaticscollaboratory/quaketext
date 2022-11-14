@@ -5,7 +5,7 @@ __pycache__/
 
 #  keep data files local
 # *.json
-*.csv
+# *.csv
 *.exe
 
 *.model
@@ -16,7 +16,7 @@ BERT_impacts/test-ner/
 BERT_impacts/training*/
 
 NER_spacy/output*/
-NER_spacy/none-ex/output*/
+# NER_spacy/none-ex/output*/
 
 NER_BERT_Pytorch/individual_tags_bio_files/
 NER_BERT_Pytorch/results/
