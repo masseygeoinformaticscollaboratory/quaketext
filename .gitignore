@@ -8,12 +8,13 @@ __pycache__/
 # *.csv
 *.exe
 
-*.model
+BERT_impacts/*.model
+BERT_impacts/models-old
 
 BERT_test/
 BERT_impacts/tagged*/
 BERT_impacts/test-ner/
-BERT_impacts/training*/
+BERT_impacts/training_*
 
 NER_spacy/output*/
 # NER_spacy/none-ex/output*/
