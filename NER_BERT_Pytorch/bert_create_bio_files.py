@@ -1,3 +1,5 @@
+# creating the BIO tag data for use with BERT models
+# uses manual regex splitting to separate out each component to add to a txt file with the relevant label associated with it
 import json
 from nltk.tokenize import SpaceTokenizer
 import random
@@ -17,6 +19,7 @@ json_Lighttag_data = json.load(training_Lighttag_file)
 
 test_data_file = open("bio_test.txt", 'w', encoding = 'utf-8')
 
+# connect correct file location relative to round number
 def new_file_location(file_count,data_origin):
     file = open("./bio_data/{}_0{}.txt".format(data_origin, file_count), 'w', encoding = 'utf-8')
     # file = open("./individual_tags_bio_files/impact/{}_0{}.txt".format(data_origin, file_count), 'w', encoding = 'utf-8')
@@ -35,7 +38,6 @@ def build_bio_files(json_data, type):
     total_tweets = 0
     bio_tag = ""
     foundTag = False
-    lastVal = ""
     tweet_count = 0
     bio_file = new_file_location(file_count,type)
 
@@ -78,13 +80,14 @@ def build_bio_files(json_data, type):
                         tag_count += 1
                     j+=1
 
-
+            # no tag found - so the label is just O
             if foundTag == False:
                 bio_tag = "O"
 
             foundTag = False
             if word != "" and str(word) != "None":
 
+                # testing only using one type of tag in the dataset
                 # if "IMPACT" not in bio_tag:
                 #     bio_tag = "O"
                     

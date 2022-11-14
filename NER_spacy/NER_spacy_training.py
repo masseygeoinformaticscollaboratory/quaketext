@@ -5,9 +5,7 @@ import json
 import spacy
 from spacy import displacy
 from spacy.util import minibatch, compounding, filter_spans
-from spacy.training.example import Example
 from spacy.tokens import DocBin
-from spacy.training import offsets_to_biluo_tags
 import random
 
 training_data = []
@@ -44,7 +42,7 @@ for i in json_MT_data:
     
     for tag in json_MT_data[i]['annotations']:
 
-        # for each tag in the list of annotations add to entity tag list
+        # for each tag in the list of annotations add to entity tag dictionary containing a list of entities 
         if(tag['tag'] == 'type of impact'):
             entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
         elif(tag['tag'] == 'item affected'):
@@ -77,6 +75,7 @@ print()
 light_tag_count = 0
 tweet_count = 0
 
+# append the light tag data onto the entity tags
 for i in json_Lighttag_data:
 
     tweet_text = json_Lighttag_data[i]['content']
@@ -91,7 +90,7 @@ for i in json_Lighttag_data:
             print(tag['value'])
             print(json_Lighttag_data[i]['tweetId'])
 
-        # determine they type of tag label
+        # determine the type of tag label
         if(tag['tag'] == 'type of impact'):
             entity_tags['entities'].append((tag['start'], tag['end'],"IMPACT"))
         elif(tag['tag'] == 'item affected'):
@@ -109,6 +108,7 @@ for i in json_Lighttag_data:
         
         
     # determine the tweets that are validation or training
+    # these are the same groups as for MT
     if(tweet_count > (total_LightTag_tweets/10) * TEN_FOLD_ROUND_NUM) and (tweet_count < (total_LightTag_tweets/10) * (TEN_FOLD_ROUND_NUM + 1)):
         validation_data.append((tweet_text,entity_tags))
     else:
@@ -155,12 +155,14 @@ for text, annotations in training_data:
             none_type[label] += 1
             none_count += 1
 
+            # Train on new text
             doc_train = nlp(newtext)
-            newspan = doc_train.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="contract")
+            newspan = doc_train.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
 
             if(str(newspan) != "None"):
                 # append here if including the items that used to be none
                 # ents_train.append(newspan)
+
                 # none_type[label] -= 1
                 # none_count -= 1
                 count+=1
@@ -169,6 +171,7 @@ for text, annotations in training_data:
             ents_train.append(span)
             count += 1
     
+    # creation of the .spacy training file
     ents_train_filtered = filter_spans(ents_train)
     doc_train.ents = ents_train_filtered
     db_train.add(doc_train)
@@ -195,12 +198,14 @@ for text, annotations in validation_data:
             none_type[label] += 1
             none_count += 1
 
+            # train on new text with spaces now inserted
             doc_dev = nlp(newtext)
-            newspan = doc_dev.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="contract")
+            newspan = doc_dev.char_span(int(start)+1, int(end)+1, label=label, alignment_mode="strict")
 
             if(str(newspan) != "None"):
                 # append here if including the items that used to be none
                 # ents_dev.append(newspan)
+
                 # none_type[label] -= 1
                 # none_count -= 1
                 count+=1
@@ -209,7 +214,7 @@ for text, annotations in validation_data:
             count += 1
             ents_dev.append(span)
 
-            
+    # testing .spacy file 
     ents_dev_filtered = filter_spans(ents_dev)
     doc_dev.ents = ents_dev_filtered
     db_dev.add(doc_dev)
@@ -217,10 +222,10 @@ for text, annotations in validation_data:
 
 # db_dev.to_disk("./testing/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
 # db_train.to_disk("./training/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
-# db_dev.to_disk("./testing-none-ex/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
-# db_train.to_disk("./training-none-ex/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
-db_dev.to_disk("./dev.spacy")
-db_train.to_disk("./train.spacy")
+db_dev.to_disk("./testing-none-ex/dev_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+db_train.to_disk("./training-none-ex/train_{}.spacy".format(TEN_FOLD_ROUND_NUM))
+# db_dev.to_disk("./dev.spacy")
+# db_train.to_disk("./train.spacy")
 # output to different locations dependent on 10 fold validation or not
 
 print("count", count)

@@ -1,3 +1,4 @@
+# reviewing tags for approval in mechanical turk
 import json
 
 json_file_path = input('Path of the MT output JSON file: ')

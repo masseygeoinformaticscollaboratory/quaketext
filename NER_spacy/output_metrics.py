@@ -1,3 +1,4 @@
+# read in model results files and output results to a csv file for calculation
 import json
 
 output_csv = open("output_metrics.csv", 'w', encoding = 'utf-8')

@@ -1,3 +1,4 @@
+// early code for checking annotations values from mechanical turk
 #include <string>
 #include <iostream>
 #include <fstream>

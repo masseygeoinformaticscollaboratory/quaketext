@@ -1,3 +1,4 @@
+# File to create the light tag final tags json file. All tags are included if they have been manually approved, so there is checking of counts for this data.
 import csv
 import json
 
@@ -61,6 +62,7 @@ print("count tags",tc)
 # # ---------------------------------------------------------------
 light_dict = {}
 
+# The lighttag results file only contains valid tags, so that is used to create the final json file
 with open(csv_file_path, 'r', encoding = 'utf-8') as csv_file:
 
     csv_reader = csv.DictReader(csv_file, delimiter='\t')
@@ -167,6 +169,7 @@ def create_joined_csv_for_LT_MT():
 
         for MT_rows in MT_csv_reader:
 
+            # looking at MT tweets with 3 and above count values
             if(int(MT_rows['count']) >= 3):
            
                 source = "MechanicalTurk"
@@ -183,5 +186,5 @@ def create_joined_csv_for_LT_MT():
     print("MT num", num)
 
     
-
+# comment out if not wanting to create a joined file
 create_joined_csv_for_LT_MT()

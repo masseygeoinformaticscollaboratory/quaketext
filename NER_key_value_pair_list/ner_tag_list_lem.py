@@ -1,3 +1,5 @@
+# impact list matching of impact tags to those that are within a list of impacts.
+
 import json
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -29,6 +31,7 @@ MT_finaltags_file = open('../CSVtoJSONcode/finaltags.json')
 
 impact_list_dict = {}
 
+# read tags from the finaltags.json files
 with open("../CSVtoJSONcode/finaltags.json", encoding = 'utf-8') as json_handler:
     
     data = json.load(json_handler)

@@ -1,5 +1,6 @@
+# calculating inter-annotator agreement for Mechanical Turk - looking to see how many tags match between the top two taggers
+
 import csv
-import json
 # top worker ids
 WORKER1 = "ATR6RB1RULOC0"
 WORKER2 = "A1NF6PELRKACS9"

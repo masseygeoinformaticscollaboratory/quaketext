@@ -1,10 +1,10 @@
-# QuakeText project - Pipeline for Impact NER training and testing
+# QuakeText project - Impact NER data formatting, training and testing
 
 #### Semester 2 2022
 
 #### Sophie Francis
 
-All folders contain a virtual environment venv to store all import packages specific to each task.
+All folders contain a virtual environment venv to store all import packages specific to each task. Some of these are large and have not been uploaded to GitHub
 
 ## ./CSVtoJSONcode
 
@@ -74,7 +74,10 @@ python -m spacy init fill-config base_config.cfg config.cfg
 
 python -m spacy train config.cfg --output ./output --paths.train ./train.spacy --paths.dev ./dev.spacy
 
-or use the file paths of the 10 fold validation locations
+or use the file paths of the 10 fold validation locations:
+
+example using round 5 of the none-excluded data from the 10 fold validation training
+python -m spacy train config.cfg --output ./none-ex/output_5 --paths.train ./training-none-ex/train_5.spacy --paths.dev ./testing-none-ex/dev_5.spacy
 
 ### Evaluation
 
@@ -85,8 +88,7 @@ python -m spacy evaluate output\model-last dev.spacy --output .\eval.json --disp
 use model-best for best validation scores
 python -m spacy evaluate output\model-best dev.spacy --output .\eval.json --displacy-path .
 
-example using round 5 of the none-excluded data from the 10 fold validation training
-python -m spacy train config.cfg --output ./none-ex/output_5 --paths.train ./training-none-ex/train_5.spacy --paths.dev ./testing-none-ex/dev_5.spacy
+python -m spacy evaluate none-ex\output_8\model-best testing-none-ex\dev_8.spacy --output .\eval_none_ex_8.json --displacy-path .
 
 ## ./NER_BERT_Pytorch
 

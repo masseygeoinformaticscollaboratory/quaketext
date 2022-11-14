@@ -1,3 +1,4 @@
+# Takes in the unfiltered JSON input from MT to convert into the finaltags.json files that are used for later NER processing
 import csv
 import json
 
@@ -6,6 +7,7 @@ include_empty_tweets = False
 # the minimum number of tag counts to accept for the final tag file
 MIN_THRESHOLD = 3
 
+# if there are overlapping tags increase count for overlapping sections
 def check_for_overlapping_tags(instance_dict, count):
 
     # create empty dictionary to store each instance under each label
@@ -64,7 +66,7 @@ def check_for_overlapping_tags(instance_dict, count):
             instance_dict.update({key:[top_item, top['label'], top_count, str(top['start']), str(top['end'])]})
 
 
-
+# saving tag count value into csv file
 def save_tweet_tag_count(instance_dict):
     found = False
 
@@ -153,7 +155,7 @@ with open(json_file_path, encoding = 'utf-8') as json_file_handler:
                 # https://www.pythoncentral.io/cutting-and-slicing-strings-in-python/
                 instance = i['Input.text'][start:end]
 
-                # removing edge whitespace from the tag at start or end
+                # removing edge whitespace from the tag at start or end if it was included in the tag itself
                 letter_count = 0
                 string_length = len(instance)
 

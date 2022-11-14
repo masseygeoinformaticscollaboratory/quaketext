@@ -1,4 +1,5 @@
-import csv
+# calculating inter-annotator agreement for light tag - looking to see how many tags are tagged by the same person
+# comparison between 2 taggers
 import json
 
 include_empty_tweets = False
@@ -23,9 +24,6 @@ with open(light_tag_json_file_path, encoding = 'utf-8') as json_file_handler:
         count +=1
         current_tweet = i['content']
         true_neg += len(current_tweet.split())
-        # print(len(current_tweet.split()))
-        # print(len("tweet".split()))
-        # print(i['content'])
 
         for annotation in i['annotations']:
             # print (annotation['correct'])
@@ -39,15 +37,9 @@ with open(light_tag_json_file_path, encoding = 'utf-8') as json_file_handler:
                     
                         # change annotator_ids to change people to compare against
                         if person['annotator_id'] == 2:
-                            # print (person)
-                            # print (current_value)
-                            # print(value_word_count)
                             person1_count +=1
                             person1_tag = True
                         elif person['annotator_id'] == 5:
-                            # print (person)
-                            # print (current_value)
-                            # print(value_word_count)
                             person2_count +=1
                             person2_tag = True
                 
@@ -67,6 +59,7 @@ with open(light_tag_json_file_path, encoding = 'utf-8') as json_file_handler:
     print("false_pos",false_pos)
     print("true_pos",true_pos)
 
+    # Calculations for Cohen's Kappa
     num = true_neg + false_neg + false_pos + true_pos
 
     observed_agreement = (true_pos + true_neg)/num
